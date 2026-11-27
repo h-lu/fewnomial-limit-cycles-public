@@ -1,0 +1,16 @@
+Exact integrand, disk moments, collected supports and sample-scale scalar inequalities passed.
+At t=10^-20 the eight-term field check is algebraic. U2 proves the cycle count for sufficiently small t.
+m   GS Theorem 2   GS Proposition 1   U2 small-scale bound
+ 4            12                  -             4
+ 5            12                  4             8
+ 6            12                  8            12
+ 7            16                 12            16
+ 8            20                 16            24
+ 9            24                 24            32
+10            32                 32            40
+11             -                 40            48
+12             -                 48            60
+13             -                 60            72
+14             -                 72            84
+15             -                 84            96
+16             -                 96           112

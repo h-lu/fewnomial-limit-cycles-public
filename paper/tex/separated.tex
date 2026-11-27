@@ -1,0 +1,278 @@
+\section{Separated exponential scales}\label{se:sec:separated}
+\begin{theorem}\label{se:main}
+For \(p=2,3,\ k\ge1\), the construction has support \(\splitcount{p+2}{k+1}\) and at least \(8k\lfloor(9p-2)/4\rfloor\) hyperbolic limit cycles. We use \((p,k)=(2,1),(3,4)\) at six and ten terms. Write \(L=\Mclr\) for the even exponent-clearing integer. The actual degree \(E_N\) is the maximum of \(1+L(3+\rho+\alpha_0)\), \(1+L(4+\rho)\), \(1+L(3+q_j+\alpha_j)\) for \(1\le j\le p\), and \(1+3L\). Requiring \(0<\delta<1/16\) at the small-scale step makes the clearing factor exceed 16.
+\end{theorem}
+Section~\ref{sup:primitive-fields} gives the full common factor of the six- through ten-term realizations and the actual degree after cancellation.
+
+\subsection{One center with several energy scales}
+Fix \(k\) and put \(b_i=\delta^i\), \(1\le i\le k\), for \(0<\delta<1\).
+Set \(B=\sum_{i=1}^k b_i\) and
+\begin{equation}
+ W_\delta(u)=B(e^u-1)+\sum_{i=1}^k(1-e^{b_i u}).                    \label{se:W}
+\end{equation}
+It has a nondegenerate minimum \(W_\delta(0)=0\).
+Indeed \(W_\delta'=\sum_i b_i(e^u-e^{b_i u})\) has the sign of \(u\)
+and \(W_\delta''(0)=\sum_i b_i(1-b_i)>0\). The potential tends to
+\(k-B\) on the left and to infinity on the right. For
+\(0<E<k-B\), \(W_\delta(u)+Z^2=E\) is one regular oval surrounding the
+origin.
+
+For \(A(w)=\sum_j c_jw^j\) let
+\[
+ {\cal I}_{\delta,A}(E)=\iint_{W_\delta(u)+Z^2<E} A(Z^2)\dd u\dd Z .
+\]
+On \(0<h<1\) define
+\begin{equation}
+ J_j(h)=\frac{2}{2j+1}\int_0^h\frac{(h-s)^{j+1/2}}{1-s}\dd s,
+ \qquad J[A](h)=\sum_j c_jJ_j(h).                                   \label{se:mom}
+\end{equation}
+For every fixed \(h\) in this interval,
+\begin{equation}
+ b_i\,{\cal I}_{\delta,A}(i-1+h)\longrightarrow J[A](h)
+ \quad(\delta\downarrow0),\qquad i=1,\ldots,k.                       \label{se:decouple}
+\end{equation}
+To prove this, put \(x=-b_i u\). At fixed \(x>0\), the potential tends
+to \(i-1+1-e^{-x}\). The earlier exponentials tend to zero and the
+later ones tend to one. At \(x<0\) the term \(B e^{|x|/b_i}\) dominates
+all the others, since \(B\ge\delta\) and \(b_j\le\delta\). It tends to
+infinity even after division by \(e^{\delta|x|/b_i}\).
+For any fixed \(R>-\log(1-h)\), the entire sublevel set in \((x,Z)\)
+is eventually contained in \([-1,R]\times[-\sqrt{k},\sqrt{k}]\), by
+monotonicity on each side. Dominated convergence and the substitution
+\(s=1-e^{-x}\) give \eqref{se:decouple}. In particular, finitely many strict
+signs at fixed regular energies persist simultaneously at all \(k\) scales.
+
+\subsection{Moments at the two ends of an interval}
+As \(h\downarrow0\),
+\[
+ J_j(h)\sim\frac{4}{(2j+1)(2j+3)}h^{j+3/2}.
+\]
+For the upper endpoint put \(v=1-h>0\). Polynomial division in the
+variable \(y=h-s\) gives
+\begin{equation}
+ \frac{2j+1}{2}J_j(h)=
+ \sum_{l=0}^{j}(-v)^l\frac{h^{j-l+1/2}}{j-l+1/2}
+      +2(-1)^{j+1}v^{j+1/2}\arccos\sqrt v .                         \label{se:explicit}
+\end{equation}
+Thus \(J_j(1-v)\) is analytic in \(\sqrt v\) at zero and its first
+noninteger power is
+\((-1)^{j+1}2\pi v^{j+1/2}/(2j+1)\).
+Writing \(y_j=j+1/2\), its finite Taylor data in \(h-1\) are
+\begin{equation}
+ T_{lj}=\frac{J_j^{(l)}(1^-)}{l!}
+   =\frac{\binom{y_j}{l}}{y_j(y_j-l)},\qquad 0\le l\le j .          \label{se:matrix}
+\end{equation}
+This follows by differentiating \eqref{se:mom} and taking the endpoint
+limit of the integrable power \((1-s)^{j-l-1/2}\).
+
+\begin{lemma}\label{se:det}
+For \(a\ge0\), take rows \(0,\ldots,a\) of \eqref{se:matrix} and any
+\(a+1\) distinct integer columns \(j\ge a\). The resulting matrix is
+nonsingular.
+\end{lemma}
+\begin{proof}
+Remove nonzero column and row factors and put \(Y=2j+1\).
+The row functions become
+\(\prod_{b=0}^{l-1}(Y-2b)/(Y-2l)\).
+Multiply each column by \(\prod_{b=0}^a(Y-2b)\).
+The resulting row polynomial \(P_l(Y)\) reduces modulo two to
+\(Y^{a+l}\). The integer polynomial
+\(\det(P_l(Y_s))_{l,s=0}^a\) is alternating and is divisible in
+\(\mathbb Z[Y_0,\ldots,Y_a]\) by
+\(\Delta=\prod_{i<j}(Y_j-Y_i)\).
+Modulo two the determinant is exactly
+\(\Delta\prod_sY_s^a\). Cancelling the nonzero polynomial \(\Delta\)
+over \(\mathbb F_2\) shows that the integer quotient is odd at any tuple
+of odd integers. At the distinct odd nodes of the lemma the Vandermonde
+is nonzero as well.
+\end{proof}
+
+Define \(A_{2j}\) on the powers \(w^j,\ldots,w^{2j}\) so its data in
+\eqref{se:matrix} through order \(j\) are \(0,\ldots,0,1\).
+Define \(A_{2j+1}\) by taking coefficient one on \(w^j\) and solving on
+\(w^{j+1},\ldots,w^{2j+1}\) to kill the same \(j+1\) data.
+Lemma~\ref{se:det} gives rational solutions. For odd indices, omission of
+the highest power would give a nonzero vector in the kernel of the even
+system. For even indices \(2j>0\), omission of the last power would give
+a kernel on the first \(j\) rows and the \(j\) remaining columns. Thus
+each degree is exactly its index, including \(A_0=1/4\).
+
+\begin{lemma}\label{se:zeros}
+For every \(d\ge1\), there is a rational polynomial \(A\) of degree
+\(d\) for which \(J[A]\) has at least \(2\lfloor(3d+1)/4\rfloor\)
+changes of sign on disjoint regular open intervals in \((0,1)\).
+\end{lemma}
+\begin{proof}
+Write \(e_l=\lceil l/2\rceil\). For \(r=\sqrt{1-h}\) the leading term
+of \(J[A_l](1-r^2)\) is \((-1)^{e_l}c_l r^l\), with \(c_{2j}=1\) and
+\(c_{2j+1}=2\pi/(2j+1)>0\), by \eqref{se:explicit}.
+For a sufficiently small positive rational \(q\) use
+\begin{equation}
+ A=\sum_{l=0}^d(-1)^{l+e_l}q^{(d+1-l)^2-1} A_l .                  \label{se:density}
+\end{equation}
+At \(r=q^{2(d+1-l)}\) the direction of index \(l\) dominates. Indeed
+the leading exponent of \(q\) at index \(v\) exceeds that at \(l\) by
+\((v-l)^2\). The \(d+1\) signs near \(h=1\) are therefore \((-1)^l\).
+
+At \(h=q^{4(d-2j)}\), \(0\le j\le\lfloor(d-1)/2\rfloor\), the term of
+index \(2j+1\) dominates near zero. Divide out \(h^{3/2}\). The odd
+term \(2i+1\) starts with a positive multiple of \(h^i\), and its leading
+exponent of \(q\) exceeds the chosen one by \(4(i-j)^2\). Each even term
+\(2i\) starts at power at least \(i\) and costs an additional
+\(2(d-2i)+1>0\) compared to the odd exponent formula at \(i\). This
+comparison also covers \(2i=d\) by algebraic extrapolation of that
+formula. The signs at the lower marks in increasing \(h\) are
+\((-1)^j\).
+
+The upper list gives \(d\) changes and the lower list gives
+\(\lceil d/2\rceil-1\). In the concatenated list the first and the
+last signs are both positive. Its number of changes is even, hence
+at least the smallest even integer at least \(d+\lceil d/2\rceil-1\),
+which is \(2\lfloor(3d+1)/4\rfloor\). For small \(q\) the lists are
+disjoint and all marks have rational energies.
+\end{proof}
+
+Choose \(A\) as in \eqref{se:density}, then choose a sufficiently small
+rational \(\delta>0\) to preserve the signs by \eqref{se:decouple} and put
+all translated marks below \(k-B\). On every compact regular interval in
+\((0,k-B)\) the functions \({\cal I}_{\delta,A}\) and
+\({\cal I}_{\delta,1}>0\) are real analytic. For example
+\(v=\operatorname{sgn}(u)\sqrt{W_\delta(u)}\) has an increasing analytic
+inverse at and between the turning points. Integration over
+\(v^2+Z^2<E\) then has an analytic integrand on a rescaled fixed disk.
+The ratio \({\cal I}_{\delta,A}/{\cal I}_{\delta,1}\) is nonconstant on
+each closed sign-changing bracket, and its derivative has finitely many
+zeros on their union. Add a single small rational constant \(c\) to
+\(A\), preserving all strict signs and avoiding the negatives of these
+critical values. The resulting integral has a simple zero in every
+selected bracket. This applies to all scales of the same potential.
+
+\subsection{Realizing the density with \texorpdfstring{\(p+2\)}{p+2} powers}
+We give the argument with general \(p\ge2\) since dropping the horizontal
+tilt changes the rank condition from the one used for the paired wells.
+Set \(d=3p-1\), \(N_j=2j\) for \(0\le j<p\), and \(N_p=2p-1\).
+Let \(v_p=1\) and choose the integers \(v_0,\ldots,v_{p-1}\) making
+\(B_0(z)=\sum_{j=0}^p v_j(1+z)^{N_j}\) odd. The triangular even-power
+system fixes them, and gives \((2,-3,1)\) for \(p=2\) and \((-16,20,-5,1)\) for \(p=3\).
+Here \(\ev\) denotes the even part in the displayed variable. Write
+\(L=1+z\) and define
+\[
+ h_j^V=-z^{-1}\int_0^z((1+y)^{N_j}-1)\dd y,\qquad
+ h_*^V=z^{-1}\int_0^z y\log(1+y)\dd y.
+\]
+Take rows \([z^{2i}],\ 0\le i\le d\), on the following functions, in order,
+to form a \(3p\) by \(3p\) rational matrix \(J\).
+\begin{gather}
+ \ev L^{N_j}\ (0\le j<p),\qquad
+ \ev(L^{N_j}\log L)\ (1\le j\le p),\notag\\
+ -\ev(B_0h_j^V)'\ (1\le j<p),\qquad
+ \ev\big(v_0\log L-(B_0h_*^V)'\big).                              \label{se:vertical}
+\end{gather}
+
+\begin{lemma}\label{se:rankv}
+The matrix \(J\) is nonsingular for \(p=2,3\).
+\end{lemma}
+\begin{proof}
+For the columns and rows in the displayed order, rational elimination yields \(\det J=-1/4762800\) and \(-4/35153326333125\), respectively. These fractions can be checked by expanding \(\log(1+z)=\sum_{l=1}^{2d+2}(-1)^{l+1}z^l/l+O(z^{2d+3})\) before the indicated integrations and differentiations. The accompanying program recomputes both determinants.
+\end{proof}
+
+Write the chosen, regularly shifted density as \(A(w)=\sum_{i=0}^d c_i w^i\).
+For small positive rational \(t\) take \(\lambda=t^{2d+2}\) and put
+\begin{equation}
+ (a_0,\ldots,a_{p-1},h_1,\ldots,h_p,s_1,\ldots,s_{p-1},\tau)^{\mathsf T}
+ = J^{-1}(c_i t^{2(d-i)})_{i=0}^d .                                \label{se:controls}
+\end{equation}
+Fix \(a_p=s_p=0\) and an integer
+\(K>2+\|J^{-1}\|_\infty\max_i|c_i|\), using the maximum row sum norm.
+Set
+\begin{align*}
+ \gamma_j&=v_j+\lambda a_j\quad(0\le j\le p),&
+ C_j&=\lambda(s_j+Kv_j)\quad(1\le j\le p),\\
+ q_j&=N_j+\lambda h_j/v_j\quad(1\le j\le p),&
+ C_0&=1-\textstyle\sum_{j=1}^p C_j,\qquad \rho=\lambda\tau .
+\end{align*}
+In the log plane put \(U=e^u,\ L=e^v=1+z\) and use
+\begin{align}
+ \dot u&=C_0e^{\varepsilon\gamma_0 u/C_0}L^{1+\rho}-L^{2+\rho}
+                +\sum_{j=1}^p C_j e^{\varepsilon\gamma_j u/C_j}L^{1+q_j},
+                \notag\\
+ \dot v&=\tfrac12 t^2 \left(BU-\sum_{i=1}^k b_i U^{b_i}\right).       \label{se:logfield}
+\end{align}
+At \(\varepsilon=0\) the field is \((-H_v,H_u)\), with
+\[
+ H=\tfrac12 t^2W_\delta(u)+V(z),\quad V(0)=0,\quad
+ V'(z)=zL^\rho-\sum_{j=1}^p C_j(L^{q_j}-L^\rho).
+\]
+Since \(V''(0)\to1\), there is a uniform analytic increasing vertical
+coordinate \(Y=z\sqrt{2V(z)/z^2}\) with inverse \(z=z(Y)\).
+In the coordinates \(u,Z=Y/t\) the energy is exactly
+\(E=2H/t^2=W_\delta(u)+Z^2\).
+
+In the \(\varepsilon\)-variation of the field, Green's formula on the
+counterclockwise Hamiltonian oval gives the area integral of the divergence
+as the first variation \(M(E)\) of its one-turn displacement in \(H\).
+Explicitly the energy integral is \(\oint(\partial_\varepsilon\dot u)|_0
+\dd v\), and varying the endpoint time gives zero at first order.
+After \(dv=dz/L\), the density is
+\(D_\lambda(z)=\gamma_0L^\rho+\sum_{j=1}^p\gamma_j L^{q_j}\).
+Its even part in the energy coordinate satisfies, on bounded \(Z\)-sets,
+\begin{equation}
+ \frac{\ev[D_\lambda(z(Y))z'(Y)]\big|_{Y=tZ}}{\lambda t^{2d}}
+                    =A(Z^2)+O(t^2).                                  \label{se:transport}
+\end{equation}
+For completeness, at \(\lambda=0\) the density is odd. Differentiating
+at fixed controls transports it under
+\(Y=z+\lambda H_1(z)+O(\lambda^2)\), where
+\(H_1=\tau h_*^V+\sum_{j=1}^p(s_j+Kv_j)h_j^V\).
+The first transport term is \(-\ev(B_0H_1)'\).
+The part proportional to \(K\) vanishes since
+\(\sum_{j=1}^p v_j h_j^V=-z^{-1}\int_0^z B_0(y)\dd y\) is odd.
+The remaining Taylor coefficients to order \(2d\) are exactly
+\eqref{se:vertical} applied to \eqref{se:controls}. The controls are uniformly
+bounded. Analytic inversion on a fixed small disk bounds the nonlinear
+remainder by \(O(\lambda^2)\) and the omitted part of the linear even
+series by \(O(Y^{2d+2})\). This proves \eqref{se:transport}, also with
+one derivative on compact \(Z\)-sets.
+
+For the fixed \(\delta\), \eqref{se:transport} and the regular disk
+parametrization after Lemma~\ref{se:zeros} give
+\[
+        M(E)/(\lambda t^{2d+1})\longrightarrow{\cal I}_{\delta,A}(E)
+              \quad\text{in }C^1
+\]
+on compact regular energy intervals. Around each selected simple zero
+take a smaller closed interval with opposite endpoint signs and derivative
+of fixed nonzero sign. All these properties hold for the first variation
+at one sufficiently small rational \(t\). Fix this \(t\). The one-turn
+map on a transverse section with coordinate \(E\) depends analytically
+on \((E,\varepsilon)\). Its displacement divided by \(\varepsilon\)
+tends to \(2M(E)/t^2\) in \(C^1\). All sufficiently small positive
+rational \(\varepsilon\) therefore give a simple fixed point in each
+interval. The multiplier is positive and differs from one. Each cycle
+stays in its own compact annular neighborhood and surrounds the
+equilibrium \((0,0)\) in log coordinates. The disjoint energy intervals
+give distinct nested hyperbolic cycles for the same field.
+
+\subsection{Expansion in the real variables}
+Put \(\alpha_j=\varepsilon\gamma_j/C_j\) and take \(\Mclr{}\) twice the
+least common multiple of the reduced denominators of all
+\(\alpha_j,\rho,q_j,b_i\), assigning denominator one to zero.
+In each open quadrant make the substitution
+\(u=\Mclr{}\log|x|,\ v=\Mclr{}\log|y|\) and multiply the pulled-back field by the
+positive factor \(\Mclr{} x^{\Mclr} y^{\Mclr}\). The resulting polynomial has components
+\begin{align}
+ P={}&C_0 x^{1+\Mclr{}(1+\alpha_0)}y^{\Mclr{}(2+\rho)}
+       -x^{1+\Mclr{}}y^{\Mclr{}(3+\rho)}
+        +\sum_{j=1}^p C_j x^{1+\Mclr{}(1+\alpha_j)}y^{\Mclr{}(2+q_j)},\notag\\
+ Q={}&\tfrac12t^2 B x^{2\Mclr{}}y^{1+\Mclr{}}
+       -\tfrac12t^2\sum_{i=1}^k b_i x^{\Mclr{}(1+b_i)}y^{1+\Mclr{}}.            \label{se:poly}
+\end{align}
+The scaled rational exponent contributions are even integers and all
+powers are nonnegative for the choices above. The limiting \(y\)-powers
+in \(P\), divided by \(\Mclr{}\), are \(2,3,2+N_1,\ldots,2+N_p\), all
+distinct. We have \(C_0\to1\) and \(|C_j|>2\lambda\) for \(j\ge1\).
+The \(k+1\) distinct horizontal exponents come from \(1,b_1,\ldots,b_k\)
+and have nonzero coefficients. Thus the exact support is \(\splitcount{p+2}{k+1}\).
+The diffeomorphisms and the positive time changes preserve the section
+multipliers in all four quadrants. This proves the family in
+Theorem~\ref{se:main}.

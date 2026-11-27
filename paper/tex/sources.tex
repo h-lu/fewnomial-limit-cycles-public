@@ -1,0 +1,83 @@
+\section{Literature comparisons at exact support}\label{sup:sources}
+Numbered results, equations and tables in this supplement carry an S prefix. References to the main article retain its numbering. Write \(N=|\supp P|+|\supp Q|\) after ordinary expansion, combination of equal powers in each component, and removal of zero coefficients. In \(\splitcount{a}{b}\), \(a\) and \(b\) are the term counts in \(P\) and \(Q\), respectively. We use \(D=\max(i+j)\) among the surviving pairs in either component. Gasull and Santana's Theorem~2 and Table~1 give \(12,12,12,16,20,24,32\) isolated cycles at \(N=4,\ldots,10\), with unrestricted degree \cite[Theorem~2 and Table~1]{GasullSantana2024}. Their Theorem~1 gives \(N^2/2-3N-8\) for every \(N\ge9\). At \(N\le3\) the sharp zero bound follows from Buzzi, Carvalho and Gasull \cite{BuzziCarvalhoGasull2021}. For four terms their proof uses the smooth family \((y,-x+a_0y+a_1y^3)\). First-order averaging supplies two nonzero coefficients giving a hyperbolic cycle. This accounts for the four-term entry at \(D=3\).
+
+\paragraph{A weak focus before and after squaring.}
+With \(k=1,\ldots,5\), write Gasull and Santana's (21) \cite[pp.~11--12]{GasullSantana2024} as
+\[
+ \dot x=a_1xy^2+\sum_{j=2}^k a_jy^{j+1}-a,\qquad
+ \dot y=xy-1,\qquad a=\sum_{j=1}^k a_j .
+\]
+For \(k=4,5\) the construction unfolds a weak focus at \((1,1)\). For \(k=5\), the author version of \cite[(21), p.~11]{GasullSantana2024} (arXiv:2405.04281v3) prints \(a_2=-161/17\). In the coordinates of Section~\ref{sup:focus} this gives \(c_2=19803/7162\). Holding the other displayed coefficients fixed, \(c_2=0\) gives \(a_2=-161/99\). Here \(c_2=c_4=c_6=c_8=0\), \(c_{10}=-1/27\), and the Jacobian of \((c_2,c_4,c_6,c_8)\) with respect to \((a_2,a_3,a_4,a_5)\) has determinant \(33/2\). Together with \(c_0=1+a_1\), these give the order and independent unfolding directions used in the five-cycle argument.
+
+The substitution \(x=u^2,\ y=v^2\) and the time factor \(2uv\) give (22), with components \(vP(u^2,v^2)\) and \(uQ(u^2,v^2)\). On each open quadrant the substitution is invertible and the time factor is nonzero. The last paragraph of their proof of Theorem~2 \cite[Theorem~2, Eq.~(22)]{GasullSantana2024} states that for \(k=1,2,3\) there are parameters yielding \(k+3\) terms and at least \(k\) cycles per quadrant. Their four-term field (3), p.~4, already gives four cycles by Hopf bifurcation. For \(k=2\), (22) has component counts \(\splitcount{3}{2}\), degree seven and eight cycles. For \(k=3\) the truncation sets \(a_4=a_5=0\) and gives
+\[
+ \dot u=a_3v^9+a_2v^7+a_1u^2v^5-av,\qquad \dot v=u^3v^2-u .
+\]
+Here \(a=a_1+a_2+a_3\) and all four coefficients \(a,a_1,a_2,a_3\) are nonzero. Thus the component counts are \(\splitcount{4}{2}\), the degree is nine, and at least twelve cycles coexist for a suitable parameter choice. Gasull and Santana give an existential parameter choice for \(k=3\). Simple-return realizations for all three small truncations are derived in Section~\ref{sup:focus}.
+
+For \(N=4,5,6\) Section~\ref{sup:focus} proves that the following lower counts are hyperbolic at suitable parameters. Each entry is \((C,D)\) after ordinary expansion, with component counts \(\splitcount{k+1}{2}\).
+\begin{center}\small
+\begin{tabular}{rccc}\toprule
+\(N\)&Original (21)&One square&Two squares (22)\\\midrule
+4&\((1,3)\)&\((2,4)\)&\((4,7)\)\\
+5&\((2,3)\)&\((4,4)\)&\((8,7)\)\\
+6&\((3,4)\)&\((6,4)\)&\((12,9)\)\\\bottomrule
+\end{tabular}
+\end{center}
+For \(k=4,5\) the original isolated-cycle counts are \(4,5\) at degrees \(5,6\); after the two squares they become \(16,20\) at degrees \(11,13\).
+
+\paragraph{Cubic comparisons and the Songling quadratic.}
+Gasull and Santana attribute the five-term count of three to Chow, Li and Wang, \S4.2 \cite{GasullSantana2024,ChowLiWang1994}. The degree of the five-term field in Table~\othernumber{tab:small}{3} of the main article comes from Chen and Chen's independent equation
+\[
+ \dot x=y-a_1x-a_2x^3,\qquad \dot y=a_3x+a_4x^3 .
+\]
+In the interior of region~IX there are two small unstable cycles and a large stable one. With all four coefficients nonzero the component counts are \(\splitcount{3}{2}\) and \(D=3\) \cite[Table~2]{ChenChen2018}. Section~\ref{sup:quartic} gives a further cubic realization at \(n=1,d=2\).
+
+The cuspidal-loop and figure-eight-loop studies of Dumortier and Li give cubic systems with at least four and five cycles, respectively \cite{DumortierLi2,DumortierLi4}. In their family \(\dot x=y,\ \dot y=P_3(x)+yQ_2(x)\), the subscripts specify polynomial degrees, and the Hamiltonian of degree four gives a vector field of degree three. The entries marked \(^{a}\) in Table~\othernumber{tab:small}{3} of the main article, at exact term counts \(N=6,7\), follow Gasull and Santana's attribution to these papers in their introduction \cite{GasullSantana2024}. The entries record isolated cycles at the family level.
+
+Li, Liu and Yang's nine-term cubic has \(H_x=x(x+1)(x-\lambda)\), \(H_y=y^3-k^2y\), with a perturbation \(y(\alpha_1+\alpha_2 x+\alpha_3 x^2+\alpha_4 y^2)\) in the second component. The signs and simple zeros in Proposition~1 give thirteen isolated cycles \cite[pp.~3610--3613, Eqs.~(3)--(4)]{LiLiuYang}. Opposite signs on a thirteenth bracket allow a nearby choice occupying all nine positions, even if a coefficient initially vanishes.
+
+For the eight-term comparison, Galias and Tucker use the Songling field
+\[
+ \dot x=\lambda x-y-10x^2+(5+\delta)xy+y^2,\qquad
+ \dot y=x+x^2+(-25+8\varepsilon-9\delta)xy
+\]
+with \(\delta=-10^{-13},\ \varepsilon=-10^{-52},\ \lambda=-10^{-200}\). All five coefficients in the first component and all three in the second are nonzero. Theorem~1 gives exactly four cycles for this fixed quadratic. Lemma~3 encloses the four return derivatives in intervals strictly to either side of one, establishing hyperbolicity of each cycle \cite[Eq.~(1) and Lemma~3, pp.~2, 4]{GaliasTucker2022}.
+
+\paragraph{The fields in Gasull and Santana's Proposition 1.}
+Gasull and Santana use the simple roots from their Lemma~1 in Proposition~1 \cite{GasullSantana2024}. Their derivative identity (7) corresponds to the polynomial
+\[
+ Q_r(x)=\prod_{k=-r}^r(x-k)=x\prod_{j=1}^r(x^2-j^2).
+\]
+In the accepted manuscript and arXiv version~3, (6) prints an additional \(x\) to the left of the first product. At the origin the literal expression has a multiple zero and fails (7). The displayed simple-root choice has \(r+1\) nonzero odd powers by elementary symmetric sums, \(Q'_r(j)=(-1)^{r-j}\prod_{k\ne j}|j-k|\), and alternating centers on \(y=\pm1\) for \(\dot x=y-y^3,\dot y=Q_r(x)\). These are the centers used in the proof of the proposition. With \(m_0=0,\ c_0=1\) use the perturbation in that proof,
+\[
+ P=y-y^3+\epsilon\sum_{i=0}^n c_i x^{2(n-i)+1}y^{2m_i},\qquad Q=Q_r(x).
+\]
+Successively large integers \(m_i\) localize the \(i\)-th contribution between the chosen ovals, preserving finitely many strict previous signs. The coefficients \(c_i\) are nonzero with alternating signs and include the normalization of their vertical marks. Pure \(y\) terms cannot collide with the \(n+1\) terms having distinct positive \(x\) exponents. Every factor of \(Q_r\) is \(x-j\), and the odd part in \(y\) of \(P(j,y)\) is \(y-y^3\), so the two components are coprime. Thus \(N=n+r+4\) and
+\[
+ G(n,r,\mathbf m)=\max\!\left(3,\,2r+1,\,\max_{0\le i\le n}\{2(n-i)+1+2m_i\}\right).
+\]
+The construction guarantees at least \(2n(r+1)+n(1+(-1)^r)\) odd crossings. To maximize this count at \(N=n+r+4\), write \(K=N-2\). At \(r=2t-1\) it is \(4t(K-2t-1)\), below \(4t(K-2t)\) at \(r=2t-2\). The latter equals \(K^2/2-8(t-K/4)^2\). Rounding \(t\) to the nearest integer gives \(4\lfloor K^2/8\rfloor\) for \(N\ge9\), an optimization within the proposition. In the proof of Theorem~2 the choices \((n,r)=(3,2),(4,2)\) give 24 and 32, respectively \cite[Proposition~1 and proof of Theorem~2]{GasullSantana2024}. Since \(0=m_0<m_1<\cdots<m_n\) are integers, \(m_i-i\) is nondecreasing. The largest perturbation degree is therefore \(2m_n+1\). For these two choices it also exceeds \(2r+1=5\), so write \(G_3=2m_3+1\ge7\) and \(G_4=2m_4+1\ge9\) for their actual degrees. For these choices \(n\in\{3,4\}\) and \(N=n+6\), so the cap forces \(m_n\le\lfloor(n+4)/2\rfloor=n\). The identity with \(n\) holds precisely for \(n=3,4\). Strict increase then forces \(m_i=i\) throughout. The successive large-exponent choices prove the sign brackets without furnishing either of these specializations. The nine-term quartic discussed below is a separate construction.
+
+At \(N=9\) the stationary count of the main paper is \(25\), compared with \(24\) from the optimized formula. For \(N\ge10\), twice their difference is at least \((N-6)^2-10>0\). The four-quadrant examples for \(N=4,5,6\) in Gasull and Santana start from the three-cycle planar S-system of Boros and Hofbauer \cite[\S7]{BorosHofbauer2019}.
+
+There is a same-support hyperbolic refinement. On any one regular annulus choose the orientation of its area integral and vary the existing coefficient of \(x^{2n+1}\) by \(c\) in the perturbation. The first-order change is \(cJ\), with \(J(h)=\iint_{\Omega_h}(2n+1)x^{2n}\dd x\dd y>0\), up to the same orientation. The endpoints of each bracket retain their opposite signs for every sufficiently small \(c\). The quotient \(-I/J\) is real analytic on a neighborhood of each closed bracket and nonconstant there by those signs. Its critical values on the finite union of those brackets form a finite set. Choose a common small rational regular value \(c\) avoiding cancellation of that coefficient. Every bracket now contains a simple zero of \(I+cJ\). One sufficiently small positive rational \(\epsilon\) gives simultaneous hyperbolic cycles by first-order return expansion. This coefficient choice gives the hyperbolic refinement at the same \(G(n,r,\mathbf m)\).
+
+\paragraph{The nine-term quartic.}
+Gasull and Santana \cite[\S1]{GasullSantana2024} attribute a nine-term quartic with 24 limit cycles to Br\'ehard, Brisebarre, Joldes and Tucker \cite[\S7.1]{BBJT2024}. For the finite calculation we use the following transcription of \cite[\S7.1, (7.2), Table~2]{BBJT2024}, with the exact inputs listed below
+\[
+ \begin{aligned}P&=-4y^2(y^2-11/10),\qquad Q=4xy(x^2-9/10)+\epsilon g(x,y),\\
+ g&=\alpha_{00}+\alpha_{20}x^2+\alpha_{22}x^2y^2+\alpha_{40}x^4+\alpha_{04}y^4 .\end{aligned}
+\]
+In the displayed monomial order the five coefficients, multiplied by \(10^{20}\), are
+\[
+ \begin{gathered}
+ -78622148667854837664,\quad 87723523612653436051,\quad 10^{20},\\
+ 23742713894293038223,\quad -21823846173078863753 .
+ \end{gathered}
+\]
+The six inner energies are \(0.25,0.6084,0.7744,0.7921,0.801025,0.80766169\); the three outer energies are \(0.811801,0.8649,0.9025\). These terminating decimals specify exact rationals. The five nonzero coefficients fix \(g\), with \(\epsilon>0\) sufficiently small. The supports are \(\splitcount{2}{7}\) and \(D=4\). At the nine transcribed energies the integral below gives signs \(+,-,+,-,+,-\) on a small-oval family and \(-,+,-\) on a large-oval family. Symmetry gives four small families and two large ones, hence at least \(4\cdot5+2\cdot2=24\) isolated cycles. An earlier account explains the numerical error in a claim of 26 for a different choice of coefficients in this family \cite[\S6.2]{BrehardMahboubiPous2019}.
+
+For the ten-term comparison marked \(^{p}\), fix one such \(\epsilon\) so that every marked endpoint has the prescribed return sign. Replace \(Q\) by \(Q+\eta x\). The \(x\) slot is vacant, the degree stays four, and the supports are \(\splitcount{2}{8}\) for \(\eta\ne0\). Return maps on the finitely many compact regular brackets depend continuously on \(\eta\). Hence one sufficiently small nonzero \(\eta\) keeps every endpoint sign and gives at least one isolated fixed point in each open bracket. This supplies the degree-preserving persistence deduction mentioned after Table~1 of Gasull and Santana \cite{GasullSantana2024}. The strict signs alone give no value for an individual return derivative.
+
+A change of an existing coefficient gives a nearby hyperbolic quartic. In the Hamiltonian \(H=(x^2-9/10)^2+(y^2-11/10)^2\), the speed multiplier for the unperturbed field is \(y\) up to orientation. The largest mark is \(h=361/400\), so throughout every selected disk \(y^2\ge11/10-\sqrt h\ge3/20\). Varying \(\alpha_{00}\) therefore changes the Abelian integral in the direction \(\pm\oint\dd x/y\), of absolute value \(\iint y^{-2}\dd x\dd y>0\). The preceding regular-value proof gives 24 hyperbolic cycles at \(\splitcount{2}{7}\) for a nearby coefficient, and their hyperbolic continuations at \(\splitcount{2}{8}\). These multipliers belong to the perturbed coefficients. For the transcribed \(g\) the brackets give the isolated-cycle count. The attribution of these coefficients and marks is to \cite[Theorem~7.1 and Table~2]{BBJT2024}. The first five small-oval marks equal the squares of the radii in \cite[\S6.2, Table~1]{BrehardMahboubiPous2019}. That table gives enclosure widths for basis integrals. The companion archive \cite{LuReplay} gives the 160-bit interval replay for all nine marks. On small ovals take \(z=X_0+t\cos u,\ s=Y_0+t\sin u,\ t=\sqrt h\), and integrate \(t\sin(u)g(\sqrt z,\sqrt s)/(2\sqrt{zs})\) for \(0\le u\le2\pi\). On big ovals set \(z=(X_0+t)\sin^2 u,\ w=\sqrt{X_0+t}\cos u\sqrt{t-X_0+z}\), and integrate the difference of \(g(\sqrt z,\sqrt s)/\sqrt s\) at \(s=Y_0+w,Y_0-w\) against \(2\sqrt{X_0+t}\cos u\,du\) for \(0\le u\le\pi/2\). These are regular parametrizations of the two portions of the positive oval, with orientation fixed by the displayed integrands. The ball quadrature checks analyticity of each square root on complex evaluation boxes.

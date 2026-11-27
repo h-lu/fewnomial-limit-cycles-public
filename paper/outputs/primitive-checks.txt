@@ -1,0 +1,8 @@
+N=6, raw/primitive degree bits 524615/524614, gcd exponents odd/odd, 3(a+b) > raw degree, row SHA-256 d63e2e3530fe4842265e7965e64c00990d749ed520fc2a9f9f1a52412b3d829c
+N=7, raw/primitive degree bits 9106819/9106819, gcd exponents odd/odd, 3(a+b) < raw degree, row SHA-256 d4f843b8c8a0b2f690d19d87e11f4edec031e189c8c87ef466b7e039fe7a0eeb
+N=8, raw/primitive degree bits 9106819/9106819, gcd exponents odd/odd, 3(a+b) < raw degree, row SHA-256 ea1998ec8791cc6578bb1f584343984f2e8d925b3cbefc70bba37aedefcf69c4
+N=9, raw/primitive degree bits 9106819/9106819, gcd exponents odd/odd, 3(a+b) < raw degree, row SHA-256 29e38a3c9b64e21a1d2169ec55a5f782343dbcfc0a0975f3077bc8586d84fb17
+Maximum even cancellation leaves xy. Full cancellation is coprime over C.
+Orientation preserved for xy>0 and reversed for xy<0 by full cancellation.
+N=10: parametric U3.11, horizontal Q and distinct y powers of P; degree E10-a-b.
+The same term counts persist. The analytic quadrant conjugacies transfer the cycles.

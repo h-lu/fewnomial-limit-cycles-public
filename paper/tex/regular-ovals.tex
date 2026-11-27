@@ -1,0 +1,36 @@
+\subsection{From simple zeros to cycles}\label{sec:regular-ovals}
+A compact regular collar is a closed annulus foliated by regular ovals over a compact energy interval. We call such an energy interval a bracket when the area integral below has opposite signs at its endpoints. The following return criterion allows the same perturbation parameter on finitely many disjoint collars \cite[p.~143]{ChristopherLiTorregrosa2024}, \cite[Theorem~3, (5)]{GasullSantana2024}.
+\begin{lemma}[Simultaneous hyperbolic continuation on compact regular collars]
+Let $U\in\R[x]$\label{lem:hyperbolic-return} and $V,F\in\R[y]$, set $H(x,y)=U(x)+V(y)$, and suppose $\{\mathcal{C}_m\}_{m=1}^M$ is a finite family of pairwise disjoint compact annular collars in $\R^2$, each foliated by simple closed regular level curves $\gamma_{m,E}=\partial\Omega_m(E)$ of $H=E$ ($E\in[E_{-,m},E_{+,m}]$) with $|\nabla H|>0$ on $\mathcal{C}_m$. Assume that on every bracket $[E_{-,m},E_{+,m}]$, the area moment $I_m(E):=\iint_{\Omega_m(E)} F'(y)\dd x\dd y$ satisfies $I_m(E_{-,m})I_m(E_{+,m})<0$ and $|I_m'(E)|\ge c_m>0$. Then there exists $\mu_0>0$ such that for every $\mu\in(0,\mu_0)$, the system $\dot{x}=V'(y)$, $\dot{y}=-U'(x)+\mu F(y)$ possesses at least $M$ pairwise distinct, simple closed hyperbolic limit cycles, one contained in the interior of each collar $\mathcal{C}_m$.
+\end{lemma}
+
+\begin{proof}
+In each collar take a transversal parametrized by energy and shorten the bracket about its simple zero, keeping opposite endpoint signs. Smooth dependence of the flow and return time gives a return map \(\Pi_{m,\mu}\) on this shorter bracket, with trajectories in the original collar. Along the flow \(\dot H=\mu F(y)\dot x\). Integration over one turn and Green's theorem give, for a fixed orientation sign \(\sigma_m\),
+\[
+ \frac{\Pi_{m,\mu}(E)-E}{\mu}
+       \ \xrightarrow[\mu\to0]{C^1(E)}\ \oint_{\gamma_{m,E}}F(y)\dd x
+       =\sigma_m I_m(E).
+\]
+The strict endpoint signs and derivative margin persist on all the finitely many brackets for one choice of \(\mu_0\). Each displacement then has a simple zero, hence a fixed point with positive multiplier different from one. The disjoint collars give distinct cycles.
+\end{proof}
+
+\begin{proposition}[Elementary bound]\label{thm:allocation}
+For each integer \(N\ge4\) there exists a field of the form \eqref{eq:separable-template} with rational coefficients, coprime components, exactly \(N\) terms and degree at most \(N-1\) having at least
+\begin{equation}\label{eq:base}
+ \mathcal E(N)=\lfloor(N-2)^2/4\rfloor
+\end{equation}
+simultaneous hyperbolic limit cycles.
+\end{proposition}
+\begin{proof}
+Set \(n=\lfloor(N-1)/2\rfloor,\ t=N-1-n\), so \(1+n+t=N\) and \(n(t-1)=\mathcal E(N)\).
+For the elementary field take \(U=A^2T_n(x)^2,\ V=y^2\), where \(T_n(\cos\theta)=\cos n\theta\), and write \(F'(y)=\sum_{j=0}^{t-1}a_j y^{2j}\), \(F(0)=0\).
+For \(c_j=\binom{2j}{j}/(4^j(j+1))\), choose
+\[
+ \sum_{j=0}^{t-1}c_j a_j E^j=\prod_{i=1}^{t-1}(E-i).
+\]
+Every \(a_j\) is a nonzero rational. On each of the \(n\) simple inverse branches of \(z=AT_n(x)\) near a zero of \(T_n\), the energy is \(z^2+y^2\), and \(A|dx/dz|\) tends smoothly to a positive constant. On compact regular energy intervals the normalized area integral therefore tends in \(C^1\), up to this constant, to \(\pi E\prod_{i=1}^{t-1}(E-i)\), by scaling the disk. All \(t-1\) zeros are simple. Choose one large integer \(A\) for all branches and one small positive rational \(\mu\) for all brackets as in Lemma~\ref{lem:hyperbolic-return}. The derivative of \(T_n^2=(1+T_{2n})/2\) uses every odd \(x\)-power through \(2n-1\). The perturbation uses the \(t\) odd \(y\)-powers through \(2t-1\) in the second component. Thus the field uses one term in the first component and \(n+t\) terms in the second. Its degree \(2\max(n,t)-1\) is at most \(N-1\), and the leading \(x\)-coefficient in the second component is a nonzero constant, giving coprimality.
+\end{proof}
+
+\begin{remark}[Filling vacant monomial positions]\label{rem:exact-fill}
+Let \(X\) have degree at most \(\Delta\) and at most \(N\) terms, where \(1\le N\le(\Delta+1)(\Delta+2)\). Any prescribed finite collection of hyperbolic cycles of \(X\) persists when vacant positions of degree at most \(\Delta\) are filled with sufficiently small nonzero coefficients to give exactly \(N\) terms. The cycles persist in an open coefficient neighborhood and the two components offer \((\Delta+1)(\Delta+2)\) positions. Starting with a rational coprime pair, add a small rational multiple \(tM\) of one vacant monomial at a time. Each irreducible factor of the fixed component excludes at most one value of \(t\), since division of both \(P+t_1M\) and \(P+t_2M\) would imply division of \(P\). If the starting pair has a zero component, coprimality makes the other a nonzero constant, and the first addition may be made in the zero component.
+\end{remark}

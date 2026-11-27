@@ -1,0 +1,71 @@
+\input{tex/preamble}
+\usepackage{tikz,placeins}
+\hypersetup{pdftitle={A superquadratic lower bound for limit cycles of planar polynomial vector fields with N monomials and degree at most N-1},pdfauthor={Haibo Lu},filecolor=blue!50!black}
+\title{A superquadratic lower bound for limit cycles of planar polynomial vector fields with \texorpdfstring{\(N\)}{N} monomials and degree at most \texorpdfstring{\(N-1\)}{N-1}}
+\author{Haibo Lu\thanks{Shanghai Institute of Technology. ORCID: \href{https://orcid.org/0009-0000-2717-5968}{0009-0000-2717-5968}.}}
+\date{November 27, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let \(N\) be the number of monomials in a planar polynomial vector field, counted separately in its two components. With unrestricted degree, Gasull and Santana proved a quadratic lower bound for the number of limit cycles. We obtain a superquadratic lower bound under the additional degree cap \(N-1\). For every integer \(N\ge48\) a single field with exactly \(N\) terms, rational coefficients and coprime components has at least \(\mathcal F(N)>0\) coexisting hyperbolic limit cycles under this cap. The explicit integer \(\mathcal F(N)\) satisfies \(\mathcal F(N)\ge N^2\log_2 N-50N^2\).
+
+The construction uses families of ovals of a separable Hamiltonian. At a saddle merger the regular coefficients before the first fractional power of the outer area integral add across the two inner families. This lets one polynomial create sign changes near several ends. Blocks of quadratic folds return a critical point to zero, raising its local order while retaining enough disjoint rows of ovals. Joint variation of the vertical potential and the perturbation on whole oval disks realizes the selected crossings in one field. With independent budgets the same argument gives \(2\Delta^2\log_2\Delta-O(\Delta^2)\) cycles at every sufficiently large exact degree \(\Delta\) using exactly \(\lceil3\Delta/2\rceil\) pure powers.
+\end{abstract}
+\noindent\textit{2020 Mathematics Subject Classification.} 34C07, 34C23, 37G15.\\
+\textit{Keywords.} Planar polynomial vector fields, limit cycles, number of monomials, Hilbert's sixteenth problem, Abelian integrals.
+
+\section{Introduction}\label{sec:intro}
+A planar polynomial field can have few monomials of arbitrarily high degree. Conversely, a degree bound \(D\) leaves \((D+1)(D+2)\) coefficient positions in its two components. How many limit cycles can one field have when both resources are limited? We study the case of exactly \(N\) monomials and \(D\le N-1\). Thus the number of occupied positions grows linearly even though the number available grows quadratically.
+
+In Gasull's monomial version of Hilbert's sixteenth problem the degree is free \cite[Problem~8(i)]{GasullProblems}. Buzzi, Carvalho and Gasull gave the lower bound \(N-3\) for \(N\ge4\) and a bound of order \(N\log N\) on a sequence \cite[Theorem~1.2]{BuzziCarvalhoGasull2021}. Gasull and Santana proved a quadratic lower bound for all \(N\ge9\) \cite[Theorem~1]{GasullSantana2024}. Their construction localizes successive perturbations by increasing the exponents. Its term count alone gives no linear bound on the resulting degree. We obtain an additional factor \(\log N\) while imposing the linear degree cap for every \(N\ge48\).
+
+For \(X=(P,Q)\) let \(N(X)=|\supp P|+|\supp Q|\) after collecting ordinary monomials in fixed Cartesian coordinates and \(D(X)=\max(\deg P,\deg Q)\). An occupied monomial counts once in each component in which it occurs. Write \(\mathcal H^M(N)\) for the supremum of the isolated-cycle count at exact \(N(X)=N\) with arbitrary degree, and \(\Hhyp(m,\Delta)\) for the supremum of the hyperbolic-cycle count at exact \(N(X)=m\) and \(D(X)\le\Delta\). A hyperbolic cycle has return multiplier different from one. Our construction uses
+\begin{equation}\label{eq:separable-template}
+ \dot x=V'(y),\qquad \dot y=-U'(x)+\mu F(y).
+\end{equation}
+At \(\mu=0\) the ovals are level curves of \(U(x)+V(y)\).
+
+\begin{theorem}[Exact term count under the cap \(N-1\)]\label{cor:linear-cap}
+For each integer \(N\ge48\) there exists a field of the form \eqref{eq:separable-template} with rational coefficients, coprime components, exactly \(N\) terms and degree at most \(N-1\) having at least \(\mathcal F(N)>0\) simultaneous hyperbolic limit cycles, where \(\mathcal F(N)\) is the explicit integer defined in \eqref{eq:finite-main}. Moreover, for every \(N\ge48\),
+\[
+ \mathcal H^M(N)\ \ge\ \Hhyp(N,N-1)\ \ge\ \mathcal F(N)
+       \ \ge\ N^2\log_2N-50N^2 .
+\]
+\end{theorem}
+
+The integer \(\mathcal F(N)\) counts disjoint energy intervals on which the first-order displacement has a simple zero. At \(N=48\) it gives \(168\), whereas the simpler expression \(N^2(\log_2N-50)\) becomes positive only for \(N>2^{50}\). Under the same cap, the quadratic stationary-turn bound \(\mathcal S(N)\) of Proposition~\ref{prop:stationary-budget} exceeds \(\mathcal F(N)\) for \(48\le N<8192\), and the folded bound exceeds \(\mathcal S(N)\) for every integer \(N\ge8192\) (Section~\ref{sec:recipe}). The folded bound exceeds the elementary bound \(\mathcal E(N)\) for \(N\ge512\). Table~\ref{tab:fold} also compares it with \(\mathcal T(N)\), the count for \(\lfloor N/2\rfloor\) separate strips. With unrestricted degree, Gasull and Santana's Theorem~1 gives \(N^2/2-3N-8\) for \(N\ge9\). For these same integers the maximum within their Proposition~1 is \(4\lfloor(N-2)^2/8\rfloor\) \cite{GasullSantana2024}, \cite[\S\othernumber{sup:sources}{S1}]{LuElectronic}.
+
+\paragraph{How the crossings coexist.}
+For a regular oval enclosing the disk \(\Omega(E)\), the first-order energy displacement equals, up to orientation, \(\iint_{\Omega(E)} F'(y)\dd x\dd y\). Consider first the model \(W(X)+Z^{2\alpha}\) with \(\alpha\ge2\) even and \(W=f^2\), where \(f\) has \(q\) simple real roots and the intervening saddle heights are distinct. For example, \(W=(X^2-1)^2\) gives two inner families below energy one and a common outer family above it. In a \(q\)-well cluster there are \(q\) minima, two incoming ends at each of the \(q-1\) saddle mergers, and one outgoing end at each merger. Topology thus provides \(4q-3\) finite ends at which to study the return integral. An end contributes to the bound only when the integral changes sign on a regular energy interval.
+
+On a component \(I\) of \(\{W<E\}\) the moment of \(Z^{2j+1}\) is \(2\int_I(E-W)^{(2j+1)/(2\alpha)}\dd X\). At a merger each regular Taylor coefficient before the first fractional power is an integral over the limiting interval, in the signed variable \(E-E_*\). The two incoming intervals meet at one point to form the outgoing interval. Canceling the incoming coefficients thus cancels the outgoing ones as well. An ordered basis of the remaining coefficients gives alternating signs on separated energy scales. The numbers of sign changes differ on minima, incoming and outgoing branches according to their fractional-term signs. Formula~\eqref{eq:Bqalpha} counts their positive parts. At \(N=48\), for example, each two-well cluster contributes ten crossings near its two minima and four near the two incoming ends. The lower bound at the outgoing end is zero. Two rows of six clusters give \(168\).
+
+A vertical fold creates rows on which the inherited drive is even in the local coordinate. Its area integral vanishes there by reflection. Iterating the Chebyshev fold \(T_2\) alone gives local order two at zero at every depth. We tune blocks of folds to return the critical point to zero, increasing the order available for the horizontal cancellations with a summable loss of real rows. At stage \(k\), the row count grows on the scale \(2^{k+1}\) while the number of available vertical modes per row decreases on the reciprocal scale. The row count times the mode count, multiplied by the horizontal well count, contributes order \(N^2\) per stage before the losses are summed over \(\log_2 N+O(1)\) stages.
+
+To use the coefficients of \(V\) as well as those of \(F\), one must vary the boundary of the oval disk. Lemmas~\ref{lem:whole-disk-division} and~\ref{lem:disk-core} give a regular primitive for the combined variation across the entire disk, including disks that enclose saddles. Corrections on successive rows are chosen small enough to preserve the earlier strict crossings. Rational approximation in the final physical coefficients and one common small rational \(\mu\) then give a hyperbolic cycle in each selected collar (Theorem~\ref{thm:finite-folded}).
+
+\paragraph{Independent budgets.}
+For \(h=\min(m,\Delta)\) sufficiently large and \(m\le(\Delta+1)(\Delta+2)\), the same argument gives
+\[
+ \Hhyp(m,\Delta)\ \ge\ h\min(2h,2m-h)\log_2h-O(h^2)
+\]
+with an absolute implied constant (Theorem~\ref{thm:joint-main}). The construction starts with odd \(y\)-powers in \(P\), odd \(x\)-powers in \(Q\), and positive even \(y\)-powers in \(Q\). At degree cap \(\Delta\) these three sets contain \(\lceil3\Delta/2\rceil\) positions. We call this budget \emph{saturated} for the displayed coefficient. Filling these positions gives pure powers and exact degree \(\Delta\) (Corollary~\ref{cor:degree-only}). Larger feasible exact budgets can involve mixed terms. The estimate already gives \(2\Delta^2\log_2\Delta-O(\Delta^2)\) within \(O(\Delta/\log\Delta)\) terms below saturation.
+
+For comparison, degree alone allows constructions of order \(\Delta^2(\log\Delta)^2\). The preprints of Qin and Sun and of Lu use perturbations with mixed powers \cite{QinSun2026,LuMechanical}. Section~\ref{sec:degree-history} compares their sufficient support budgets. The lower bounds in Theorems~\ref{cor:linear-cap} and~\ref{thm:joint-main} follow from the analytic construction. The electronic supplement and source archive give finite certificates and the integer evaluations \cite{LuElectronic,LuReplay}.
+
+\input{tex/related-budgets}
+\input{tex/regular-ovals}
+\input{tex/fold-proof}
+\input{tex/finite-allocation}
+\input{tex/asymptotic}
+\input{tex/comparison}
+\input{tex/lienard-product}
+\input{tex/small-budgets}
+\input{tex/degree-comparisons}
+
+\section*{Declaration of generative AI and AI-assisted technologies in manuscript preparation}
+The author used OpenAI 6.2 Astra (via Codex) to explore candidate constructions, develop and check parts of the proofs, write reproducibility code, and revise the manuscript. Google Gemini 4 Carbon was used to critique draft manuscripts and identify issues in the arguments, presentation, and references. The author reviewed and revised the resulting material and takes full responsibility for the final manuscript.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

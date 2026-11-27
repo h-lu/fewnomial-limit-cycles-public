@@ -1,0 +1,3 @@
+alpha=128, p=1, j=64 gives g=129/256, with j equal to protected pivot 64.
+1152 exact open-window counts; all admissible test blocks exclude the protected prefix.
+Finite M=128 uses columns 65..74 in five consecutive pairs; determinants replay in verify_paper.py.

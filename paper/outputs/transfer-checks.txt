@@ -1,0 +1,12 @@
+Quintic J=z^4(1+z), D0=J(J+tau^4), C=z^4, E0=1.
+Exact divisions and rescaled identities at tau=1/8, 1/16, 1/32, 1/2^40.
+deg N0=21, deg D0=10, deg H<=9, deg B=11, deg S=13. Support (15,12), D=29 at tau=1/2^40 outside finitely many lambda.
+Model normalized endpoint values -1/4, 1/4. Model slope/area >= 19/24.
+tau=1/2^40: interval endpoint margins/area >= 255/1024; slope/area >= 4859/6144
+Coefficient products at lambda=1 modulo 101: 71 and 7. One common small lambda, then mu, by the quintic-fold proposition.
+Shared far factor J+tau^4 obstructs the target at any degree. Shared cancelled factor J passes a complete 17-mode basis.
+Certified lower bound on b-F(N)/N^2 from j=1..128 and at most 20 blocks:
+2030775530021236701395539551029486924929297352126621346575083856210219959054866195/59285549689505892056868344324448208820874232148807968788202283012051522375647232 > 137/4
+Qin-Sun n=9: degree cap 31, at most 82 ordinary slots.
+Qin-Sun n=27: degree cap 103, at most 730 ordinary slots.
+The slot count is an upper bound for the family. Mode coefficients are not assumed generic.

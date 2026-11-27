@@ -1,0 +1,19 @@
+Zenodo record: manuscript.pdf, 452637 bytes, MD5 cab50930dee9a3b858c266c83570a3cf
+Zenodo record: manuscript.tex, 89365 bytes, MD5 3c408db815a40e8abb40194fbff5d69c
+D <= 31, fill 30 to 33: 80 hyperbolic cycles by Proposition 4.1.
+zero seed, m=3: component terms 15+15, D=11, analytic selected count 4b(b-1)=80
+zero seed, m=4: component terms 18+18, D=13, analytic selected count 4b(b-1)=120
+D <= 31, fill 42 to 47: 168 hyperbolic cycles by Proposition 4.1.
+zero seed, m=5: component terms 21+21, D=15, analytic selected count 4b(b-1)=168
+zero seed, m=7: component terms 27+27, D=19, analytic selected count 4b(b-1)=288
+zero seed, m=10: component terms 36+36, D=25, analytic selected count 4b(b-1)=528
+D <= 31, fill 90 to 90: 840 hyperbolic cycles by Proposition 4.1.
+zero seed, m=13: component terms 45+45, D=31, analytic selected count 4b(b-1)=840
+cancellation probe tau=1: inherited slots [2, 1], output terms 33
+cancellation probe tau=1/7: inherited slots [2, 2], output terms 34
+dyadic algebra j=1: D=11, inherited slots [0, 0], component terms [15, 15], top exponents (0, 11) and (11, 0)
+dyadic algebra j=2: D=27, inherited slots [30, 30], component terms [69, 69], top exponents (2, 25) and (25, 2)
+dyadic algebra j=3: D=59, inherited slots [198, 198], component terms [285, 285], top exponents (6, 53) and (53, 6)
+Component gcd is one in the six zero-seed probes and the degree-27 probe.
+n=64 binary recurrence: 80, 1048, 7912. Source (25)-(26).
+Exact Q coefficient identities and occupied slots. Cycle counts use the analytic renewal theorem.

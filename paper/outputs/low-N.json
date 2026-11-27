@@ -1,0 +1,632 @@
+{
+  "low": [
+    {
+      "N": 1,
+      "published": [
+        [
+          0,
+          0,
+          "\\circ",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        0,
+        0,
+        "\\circ",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          0,
+          0,
+          "\\circ",
+          "+"
+        ]
+      ],
+      "capped_method": "zero field count",
+      "unrestricted_method": "zero field count"
+    },
+    {
+      "N": 2,
+      "published": [
+        [
+          0,
+          0,
+          "\\circ",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        0,
+        0,
+        "\\circ",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          0,
+          0,
+          "\\circ",
+          "+"
+        ]
+      ],
+      "capped_method": "zero field count",
+      "unrestricted_method": "zero field count"
+    },
+    {
+      "N": 3,
+      "published": [
+        [
+          0,
+          1,
+          "\\circ",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        0,
+        1,
+        "\\circ",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          0,
+          1,
+          "\\circ",
+          "+"
+        ]
+      ],
+      "capped_method": "zero field count",
+      "unrestricted_method": "zero field count"
+    },
+    {
+      "N": 4,
+      "published": [
+        [
+          12,
+          "S",
+          "O",
+          "?"
+        ],
+        [
+          4,
+          7,
+          "H",
+          "-"
+        ],
+        [
+          1,
+          3,
+          "H",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        1,
+        3,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          1,
+          3,
+          "H",
+          "+"
+        ],
+        [
+          2,
+          4,
+          "H",
+          "-"
+        ],
+        [
+          4,
+          7,
+          "H",
+          "-"
+        ],
+        [
+          8,
+          "S_L",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "perturbed linear center",
+      "unrestricted_method": "two-coordinate focus and four-quadrant power law"
+    },
+    {
+      "N": 5,
+      "published": [
+        [
+          12,
+          "S",
+          "O",
+          "?"
+        ],
+        [
+          8,
+          7,
+          "I",
+          "-"
+        ],
+        [
+          3,
+          3,
+          "I",
+          "+"
+        ],
+        [
+          2,
+          3,
+          "I",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        2,
+        3,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          4,
+          4,
+          "H",
+          "+"
+        ],
+        [
+          8,
+          7,
+          "H",
+          "-"
+        ],
+        [
+          8,
+          "S_L",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "one-axis focus",
+      "unrestricted_method": "two-coordinate focus and four-quadrant power law"
+    },
+    {
+      "N": 6,
+      "published": [
+        [
+          12,
+          "S",
+          "O",
+          "?"
+        ],
+        [
+          12,
+          9,
+          "I",
+          "-"
+        ],
+        [
+          3,
+          4,
+          "I",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [
+        [
+          4,
+          3,
+          "I",
+          "+"
+        ]
+      ],
+      "from_persistence": [],
+      "uniform": [
+        4,
+        5,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          6,
+          3,
+          "H",
+          "+"
+        ],
+        [
+          6,
+          4,
+          "H",
+          "+"
+        ],
+        [
+          12,
+          9,
+          "H",
+          "-"
+        ],
+        [
+          8,
+          "S_L",
+          "H",
+          "-"
+        ],
+        [
+          32,
+          "E_6^\\circ",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "two wells",
+      "unrestricted_method": "separated powers"
+    },
+    {
+      "N": 7,
+      "published": [
+        [
+          16,
+          11,
+          "I",
+          "-"
+        ],
+        [
+          4,
+          5,
+          "I",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [
+        [
+          5,
+          3,
+          "I",
+          "+"
+        ]
+      ],
+      "from_persistence": [],
+      "uniform": [
+        6,
+        5,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          10,
+          5,
+          "H",
+          "+"
+        ],
+        [
+          68,
+          "D_*^\\circ",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "two wells",
+      "unrestricted_method": "fixed vertical interpolant"
+    },
+    {
+      "N": 8,
+      "published": [
+        [
+          20,
+          13,
+          "I",
+          "-"
+        ],
+        [
+          5,
+          6,
+          "I",
+          "+"
+        ],
+        [
+          4,
+          2,
+          "H",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        9,
+        7,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          16,
+          7,
+          "H",
+          "+"
+        ],
+        [
+          108,
+          "D_*^\\circ",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "two wells",
+      "unrestricted_method": "fixed vertical interpolant"
+    },
+    {
+      "N": 9,
+      "published": [
+        [
+          24,
+          4,
+          "I",
+          "+"
+        ],
+        [
+          24,
+          "G_3",
+          "O",
+          "?"
+        ],
+        [
+          13,
+          3,
+          "O",
+          "+"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [],
+      "uniform": [
+        25,
+        8,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          25,
+          8,
+          "H",
+          "+"
+        ],
+        [
+          148,
+          "D_*^\\circ",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "stationary, reduced degree",
+      "unrestricted_method": "fixed vertical interpolant"
+    },
+    {
+      "N": 10,
+      "published": [
+        [
+          32,
+          "G_4",
+          "O",
+          "?"
+        ]
+      ],
+      "attributed_exact_N": [],
+      "from_persistence": [
+        [
+          24,
+          4,
+          "I",
+          "+"
+        ]
+      ],
+      "uniform": [
+        35,
+        8,
+        "H",
+        "+"
+      ],
+      "fold": "inapplicable",
+      "specialized": [
+        [
+          35,
+          8,
+          "H",
+          "+"
+        ],
+        [
+          192,
+          "E_{10}^\\circ",
+          "H",
+          "-"
+        ]
+      ],
+      "capped_method": "stationary, reduced degree",
+      "unrestricted_method": "separated powers"
+    }
+  ],
+  "quartic_intervals": {
+    "2": [
+      {
+        "E": "4",
+        "lo_milli": 580,
+        "hi_milli": 587,
+        "sign": 1
+      },
+      {
+        "E": "9",
+        "lo_milli": -1294,
+        "hi_milli": -1283,
+        "sign": -1
+      }
+    ],
+    "3": [
+      {
+        "E": "1.25",
+        "lo_milli": 1182,
+        "hi_milli": 1199,
+        "sign": 1
+      },
+      {
+        "E": "4",
+        "lo_milli": -9425,
+        "hi_milli": -9385,
+        "sign": -1
+      }
+    ],
+    "4": [
+      {
+        "E": "1.25",
+        "lo_milli": 1066,
+        "hi_milli": 1160,
+        "sign": 1
+      },
+      {
+        "E": "4",
+        "lo_milli": -42498,
+        "hi_milli": -42252,
+        "sign": -1
+      },
+      {
+        "E": "36",
+        "lo_milli": 371493,
+        "hi_milli": 373856,
+        "sign": 1
+      }
+    ]
+  },
+  "focus_coefficients": [
+    "9*b/(3*b - 1)",
+    "1/3"
+  ],
+  "focus_support_and_degree": {
+    "1": {
+      "none": [
+        2,
+        2,
+        3
+      ],
+      "x": [
+        2,
+        2,
+        4
+      ],
+      "both": [
+        2,
+        2,
+        7
+      ]
+    },
+    "2": {
+      "none": [
+        3,
+        2,
+        3
+      ],
+      "x": [
+        3,
+        2,
+        4
+      ],
+      "both": [
+        3,
+        2,
+        7
+      ]
+    },
+    "3": {
+      "none": [
+        4,
+        2,
+        4
+      ],
+      "x": [
+        4,
+        2,
+        4
+      ],
+      "both": [
+        4,
+        2,
+        9
+      ]
+    },
+    "4": {
+      "none": [
+        5,
+        2,
+        5
+      ],
+      "x": [
+        5,
+        2,
+        5
+      ],
+      "both": [
+        5,
+        2,
+        11
+      ]
+    },
+    "5": {
+      "none": [
+        6,
+        2,
+        6
+      ],
+      "x": [
+        6,
+        2,
+        6
+      ],
+      "both": [
+        6,
+        2,
+        13
+      ]
+    }
+  },
+  "fixed_degree_binary_digits": 9106819,
+  "fixed_degree_hex_sha256": "45bd93020c93a71a58f271ce1dad392ad6946c225306cca6c43e325657055b6e",
+  "separated_determinants": {
+    "2": "-1/4762800",
+    "3": "-4/35153326333125"
+  },
+  "bbjt": {
+    "small_changes": 5,
+    "large_changes": 2,
+    "cycles": 24
+  },
+  "songling_support_and_degree": [
+    5,
+    3,
+    2
+  ]
+}

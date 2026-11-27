@@ -1,0 +1,14 @@
+\subsection{The gain from shared wells}\label{sec:related-budgets}
+A simpler construction repeats one vertical potential on separate horizontal strips. At each doubling it copies existing crossings and creates new ones on outer ovals. This step is suggested by Han and Romanovski's Li\'enard construction \cite[Theorem~2.1]{HanRomanovski}. Proposition~\ref{prop:strip-product} proves the sign changes and the support count for our separate strips directly. Shared wells allow cancellation at the mergers as well. Holding their vertical potential fixed measures what the perturbation alone can achieve.
+
+\begin{table}[!htbp]\centering\small
+\caption{Coefficients in three lower bounds proved here. The diagonal is normalized by \(N^2\log_2N\) at \((m,\Delta)=(N,N-1)\), and saturation by \(\Delta^2\log_2\Delta\) at \(m=\lceil3\Delta/2\rceil\). Each coefficient is a guaranteed lower limit for hyperbolic cycles at exact term count.}\label{tab:mechanism-breakdown}
+\begin{tabular}{@{}lcc@{}}\toprule
+Construction & Diagonal & Saturation\\\midrule
+Separate strips (Proposition~\ref{prop:strip-product}) & \(1/4\) & \(1/4\)\\
+Shared wells, fixed potential (Proposition~\ref{prop:fixed-potential}) & \(1\) & \(1\)\\
+Shared wells, joint variation (Theorems~\ref{cor:linear-cap} and~\ref{thm:joint-main}) & \(1\) & \(2\)\\
+\bottomrule\end{tabular}
+\end{table}
+The diagonal coefficients for the two shared-well constructions agree. The proved losses from \(N^2\log_2N\) are \(O(N^2\log\log N)\) at fixed potential and \(O(N^2)\) under joint variation. At saturation both losses have order \(O(\Delta^2)\).
+\FloatBarrier

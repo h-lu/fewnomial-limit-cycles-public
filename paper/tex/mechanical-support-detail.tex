@@ -1,0 +1,48 @@
+\subsection{Term counts in mechanical renewal}\label{sup:mechanical-budget}
+Proposition~3.3 of the mechanical renewal preprint \cite[pp.~6--10]{LuMechanical} constructs \(H(x,y)=U(x)-V(y)\) with even potentials of degree \(2n\). For \(n\ge2\) and \(r=\lfloor\log_2 n\rfloor\), the integer count \(L(n)\) in the accompanying recurrence satisfies
+\[
+ L(n)\ \ge\ \tfrac12 n^2r^2+\tfrac16 n^2r-\tfrac{22}{3}n^2.
+\]
+The proposition constructs a single polynomial form \(\omega=A\,dx+B\,dy\). On disjoint regular annuli its \(L(n)\) selected simple period zeros yield hyperbolic cycles of one field \((H_y-\mu B,-H_x+\mu A)\) of degree at most \(2n-1\), for one sufficiently small \(\mu\) \cite[Proposition~3.3 and (3.7)--(3.10)]{LuMechanical}. Its formulas also control the ordinary support. The two-coordinate fold is \(\Phi(x,y)=(x^2-a,y^2-b)\). The \(dy\) coefficient of a pulled-back form is \(2yB\circ\Phi\), and the \(dx\) coefficient is \(2xA\circ\Phi\). The added vertical \(dy\) coefficient is a sum of \(2y(c_a x)^{2p+1}R_p(y^2-b)\). The horizontal \(dx\) coefficient has the exchanged variables. Together with \(H_y=-V'(y)\) and \(H_x=U'(x)\), these formulas give odd \(y\)-exponents in the first component and odd \(x\)-exponents in the second. The exponent in the other coordinate is subject to the total degree bound.
+
+For degree at most \(2n-1\), the exponent \(2j+1\) in one coordinate allows \(2(n-j)-1\) choices for the exponent in the other. Summing for \(0\le j<n\) gives \(n^2\) positions per component. Given \(N\), put \(n=\lfloor\sqrt{N/2}\rfloor\). For \(n\ge2\),
+\[
+ 2n^2\le N\le 2(n+1)^2-1\le 2n(2n+1).
+\]
+The rightmost expression counts all component positions of total degree at most \(2n-1\). For the field supplied by the proposition the selected cycles persist in an open coefficient neighborhood. First populate the two parity supports with small coefficient changes there. Rational choices are dense. The first component has a pure \(y\) term, so \(x\) does not divide it. Varying the coefficient of \(x\) in the second component excludes at most one value for each irreducible factor of the first. This gives a coprime rational pair with \(2n^2\) terms. For any fixed \(n\ge2\) one can now fill to every \(m\) with \(2n^2\le m\le(\Delta+1)(\Delta+2)\) whenever \(2n-1\le\Delta\), by the proof of Theorem~\othernumber{thm:joint-main}{5.1}. In the floor window above, the exact recurrence gives \(L(2)=0\) at \(8\le N\le17\) and \(L(3)=4\) at \(18\le N\le31\). For \(n\ge3\) the final auxiliary birth alone has \(\lfloor n^2/4\rfloor-1\ge1\) zeros before copying. The displayed coarse bound first becomes positive at \(r=4\), or \(N=512\). Since \(0\le N-2n^2\le4n+1\) and \(2r+1\le\log_2 N<2r+3\), substitution into the bound for \(L(n)\) gives \(L(\lfloor\sqrt{N/2}\rfloor)\ge\tfrac1{16}N(\log_2 N)^2-O(N\log N)\). The existence conclusion uses that proposition and the filling argument above. The arithmetic replay checks the recurrence and term ceilings.
+
+For a finite comparison with \(\mathcal E(N)\), count the births of that recurrence. At stage \(i\) its birth count \(K_i\) is \(i s_i^2\) less nonnegative integer losses, where \(s_i=\lfloor n/2^{r-i}\rfloor\). Counting the later copies gives
+\[
+ L(n)\le \sum_{i=1}^r4^{r-i}i s_i^2
+ \le n^2\,r(r+1)/2\le n^4/4 .
+\]
+Indeed \(r(r+1)/2\le4^{r-1}\) by induction from \(r=1\), and \(2^r\le n\).
+For \(n\ge2\) this upper estimate on the specified count is strictly below \((n^2-1)^2=\mathcal E(2n^2)\le\mathcal E(N)\) throughout its floor window. The elementary field uses its own degree budget.
+
+\paragraph{Mixed terms in the archived family.}
+For the displayed mechanical template one can count additional mixed terms at generic choices of the final birth coefficients. Write \(s=\lfloor n/2\rfloor\). The last birth on each axis uses the modes \(z^{2p+1}w^{2q}\,dw\) with \(0\le q<s\), \(0\le p\le n-2-2q\). Their number is
+\[
+ \sum_{q=0}^{s-1}(n-1-2q)=s(n-s)=\lfloor n^2/4\rfloor .
+\]
+Fix the shifts, nonzero amplitudes and inherited coefficients. In the vertical source, put \(Y=y^2\). For fixed \(p\), the new modes vary the coefficients of \(x^{2p+1}y^{4j+1}\) through the powers \((Y-b)^{2q}\), up to a common nonzero factor for that \(p\). The matrix \([Y^{2j}](Y-b)^{2q}\), with \(j,q\) in increasing order from \(0\) through \(\lfloor(n-2-p)/2\rfloor\), is upper triangular with diagonal one. The inherited auxiliary polynomial adds a fixed vector. The planar pullback and the Hamiltonian part of this component have even \(x\)-exponents. Thus each designated mixed coefficient is nonconstant affine in the fresh coefficients. The horizontal source gives the exchanged positions in the other component. Removing the finitely many coefficient hyperplanes leaves an open dense subset of the birth-coefficient space with at least \(2\lfloor n^2/4\rfloor\) occupied mixed component positions. This count concerns those generic last-birth choices. The transfer to exact \(N\) uses only the parity ceiling.
+
+\paragraph{Sparse finite specializations at degree cap 31.}
+In Proposition~3.3 of \cite{LuMechanical} take \(n=5\), so the successive half-degrees are \(1,2,5\). At the first global stage the auxiliary space for the current source has dimension one and requires zero simple zeros. Choose the zero current sources, hence \(\omega_1=0\) in (3.10) of that paper. The auxiliary forms for the future label \(t=2\) are chosen independently and retained. For each axis the level-zero birth for \(t=2\) has \(q=0,\ 0\le p\le2\), giving two selected simple zeros. They lift to four at the next auxiliary level. The fresh pairs from (3.5) there have \(q=0,\ 0\le p\le3\), or \(q=1,\ 0\le p\le1\). Their six periods give five new simple zeros. The two branches on each of two axes then give \(2\cdot2(4+5)=36\) simple zeros. The positive even padding in (3.9) preserves their regular collars. The reflection identities in (3.10) allow both axis amplitudes in one form and Lemma~2.3 of the preprint supplies one common small field parameter.
+
+The final pullback of \(\omega_1\) vanishes. In each physical component (3.7)--(3.8) give only mixed powers with both exponents odd and total degree at most eight. There are ten possibilities, from \(2i+1,2j+1\) with \(i+j\le3\). The Hamiltonian adds at most five pure odd powers through degree nine. Thus 30 positions suffice in total. Populate these positions with rational coefficients in the open persistence neighborhood. The first component has a pure \(y\) term, so \(x\) does not divide it. Vary the pure \(x\) coefficient of the second component there to avoid its finitely many common-factor values. Ordinary filling then yields, in particular, 36 hyperbolic cycles at exact \(m=33,\ \Delta=31\).
+
+For the empty seed the two-source count in Section~\ref{sup:renewal-support} is \(4b(b-1)\) at exactly \(6b\) terms and degree \(2b+1\), for integers \(b\ge5\). At a common cap of \(31\) the following choices all admit rational coprime filling by Remark~\othernumber{rem:exact-fill}{1.4} of the article.
+\[
+\begin{array}{c|ccc}
+ b & \text{terms before filling} & \text{exact }m & \text{hyperbolic cycles}\\ \hline
+ 5 & 30 & 33 & 80\\
+ 7 & 42 & 47 & 168\\
+ 15& 90 & 90 & 840
+\end{array}
+\]
+The respective degrees before filling are \(11,15,31\). At the same cap the stationary-turn choice \(n=16,d=15\) uses 33 terms and supplies 837 cycles throughout this range on filling.
+
+\paragraph{Independent budgets.}
+The sufficient term and degree conditions for the mechanical template are \(2n-1\le\Delta\) and \(2n^2\le m\le(\Delta+1)(\Delta+2)\). The largest \(n\) they admit is \(\min(\lfloor(\Delta+1)/2\rfloor,\lfloor\sqrt{m/2}\rfloor)\). Writing \(t=\min(\Delta,\sqrt{2m})\), one has \(n=t/2+O(1)\). The recurrence's leading expression becomes \(\tfrac18 t^2(\log_2t)^2+O(t^2\log t)\). For \(m\ge\lceil3\Delta/2\rceil\) this expression has smaller order than \(2\Delta^2\log_2\Delta\) when \(m=o(\Delta^2/\log_2\Delta)\), and larger order when \(m/(\Delta^2/\log_2\Delta)\to\infty\). If \(m\sim c\Delta^2/\log_2\Delta\) with fixed \(c>0\), its leading coefficient on this scale is \(c/4\). This leading-term comparison uses the full parity allowance for the recurrence. The minimum support of a realizing field remains undetermined.
+
+Qin and Sun's preprint uses \(n=3^r,\ r\ge2\), and gives \(4r^2n^2/9-(n-1)^2\) cycles at degree at most \(4n-5\) \cite[Theorem~1.1 and {\S\S}3.2, 6.3]{QinSun2026}. In the displayed perturbation the factors \(T_n'(x)T_n'(y)T_a(x)T_b(y)\), for positive odd \(a,b\le n-2\), are integrated from 0 to \(x\) in the first variable. The resulting mixed powers are \(x^{2i}y^{2j-1}\) with \(1\le i,j\le n-1\). The Hamiltonian adds \(n\) pure odd positions in each component. Thus \(n^2+1\le m\) and \(4n-5\le\Delta\) suffice. The second component depends only on \(x\), and the leading \(y^{2n-1}\) coefficient in the first is a nonzero constant. Rational approximation and filling preserve coprimality and the selected hyperbolic cycles. The largest admissible power of three gives order \(u^2\log^2u\) with \(u=\min(\Delta,\sqrt m)\). Replicating a seed also changes its support, which must be counted again for an exact-term comparison. The least support capable of sustaining squared-logarithmic degree growth remains open.

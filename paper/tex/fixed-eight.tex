@@ -1,0 +1,282 @@
+\section{The fixed eight-term interpolant}\label{ti:sec:fixed8}
+\begin{theorem}\label{ti:main}The rational field defined below has support \(\splitcount{4}{4}\) and at least \(108\) hyperbolic limit cycles. There are two exponential ranges with ten cycles each and a linear range with seven in each open quadrant. Its degree \(D_*\) is the maximum sum of its two collected exponents, attained in the \(j=3\) row of \(P\). If \(\Mclr{}\) denotes its clearing factor as below, \(D_*=1+\Mclr{}(3+\nu_3+\alpha_3)\).\end{theorem}
+Section~\ref{sup:primitive-fields} gives the full common factor of the six- through ten-term realizations and the actual degree after cancellation.
+
+\subsection{Two independent regular-energy data}
+For $D(w)=\sum_{j=0}^7 c_j w^j$, the area moments for the exponential and
+linear horizontal potentials and a quadratic vertical energy are
+\begin{align}
+ J[D](h)&=\sum_j\frac{2c_j}{2j+1}\int_0^h\frac{(h-s)^{j+1/2}}{1-s}\dd s
+                       &&(0<h<1),\notag\\
+ T[D](h)&=h^{3/2}\cL[D](h),&
+ \cL[D](h)&=\sum_j\frac{4c_j h^j}{(2j+1)(2j+3)}\quad(h>0).
+ \label{ti:mom}
+\end{align}
+Indeed the horizontal potentials on $x>0$ are $1-e^{-x}$ and $x$.
+Changing variables from $x$ to its potential value and integrating over the
+two vertical branches gives \eqref{ti:mom}. The positive factor $h^{3/2}$
+allows interpolation using polynomials alone on the linear range.
+
+Write $r=\sqrt{1-h}$ and $y_j=j+1/2$. Define
+$H_{ij}=\binom{y_j}{i}/[y_j(y_j-i)]$.
+For $j\ge i$, this is the $i$th derivative at $h=1$ of $J[w^j]$ divided
+by $i!$, by differentiation of the integral. The noninteger term in its
+expansion has order $r^{2j+1}$, as follows by dividing $s^{j+1/2}$
+by $s+r^2$ after substitution in \eqref{ti:mom}.
+For $l=2s$, define $B_l$ on the powers $w^s,\ldots,w^{2s}$ by
+$H_{0:s} B_l=(0,\ldots,0,1)^{\mathsf T}$ on these columns.
+For $l=2s+1$, set $[w^s]B_l=1$ and solve on $w^{s+1},\ldots,w^{2s+1}$
+so that the same rows vanish. Only $0\le l\le7$ are used.
+The indicated rational square systems are nonsingular by elimination, also
+by the endpoint determinant in Lemma~\ref{se:det}.
+
+\begin{lemma}\label{ti:kernel}
+Let $\cN$ consist of the real polynomials of degree at most seven satisfying
+$[w^0]D=[w^1]D=[w^2]D=0$ and $J[D](1-r^2)=O(r^6)$ as $r\downarrow0$.
+Then $\cN=\operatorname{span}(B_6,B_7)$. On this space the map
+\[
+ D\longmapsto (\cL[D](15/16),\cL[D](49/50))
+\]
+is invertible. Both evaluation points may also be varied independently in
+a neighborhood of this pair.
+\end{lemma}
+\begin{proof}
+With degrees zero through two absent, the first possible noninteger term
+has order $r^7$. Thus the remaining three conditions are exactly
+$H_{i,3:7}D=0$ for $i=0,1,2$. Their minor on columns $3,4,5$ equals
+$183616/1444021425$. The kernel has dimension two and contains the
+two indicated polynomials of different degrees.
+For $(h_1,h_2)=(15/16,49/50)$ in increasing order, substitution gives
+\[
+ \det (\cL[B_{j}](h_i))_{i=1,2;\,j=6,7}
+ =\frac{32428882679001115293}{2883708677590614016000000000}>0 .
+\]
+Continuity gives the assertion for nearby nodes.
+\end{proof}
+
+Consequently one can fix the first three density coefficients, the three
+integer upper-end data of the residual after subtracting those powers,
+and two regular linear-range values. These eight data determine a
+unique degree-at-most-seven density. This independence lets us assign
+the two zeros after constructing the endpoint oscillations.
+
+Put $q=1/16$ and define $D_5=\sum_{l=0}^5
+(-1)^{l+\lceil l/2\rceil}q^{(6-l)^2-1}B_l$. Choose $u_6,u_7$ by
+\begin{equation}
+ A=\frac{D_5+u_6B_6+u_7B_7}{32},\qquad
+ \cL[A](15/16)=\cL[A](49/50)=0.                                 \label{ti:choice}
+\end{equation}
+Lemma~\ref{ti:kernel} makes these exact rational specifications. Numerically
+$u_6\simeq-14.27534$ and $u_7\simeq89.34633$. All computations below
+use \eqref{ti:choice}. Write $c_j=[w^j]A$.
+
+\begin{lemma}\label{ti:signs}
+There are ten disjoint brackets in $0<h<1$ on which $J[A]$ changes sign,
+and seven disjoint brackets in $0<h<5/4$ on which $T[A]$ changes sign.
+On every bracket the absolute derivative exceeds $2^{-200}$.
+At either endpoint the absolute moment exceeds $2^{-710}$.
+\end{lemma}
+\begin{proof}
+The signs on each of the two following ordered mark lists alternate,
+starting positive. Both lists begin with
+$q^{18},q^{10},q^2,1/20$. Append
+\[
+\begin{array}{ll}
+ J:&1/2,\quad 1-2^{-j}\quad (j=10,30,45,62,75,100),\\
+ T:&3/4,\quad 19/20,\quad 1,\quad 5/4 .
+\end{array}
+\]
+In particular the normalized linear polynomial already has seven distinct
+positive roots by its signs and degree. To certify the full return we
+use one narrow bracket inside each consecutive pair. For every integer
+$n$ in Table~\ref{tab:focus-centers}, read in base 16, the bracket is
+$n2^{-576}\pm2^{-512}$. All lie above $2^{-90}$, and every exponential
+bracket has $1-h>2^{-112}$.
+
+Here are the rational enclosure details. For $h\le1/2$, the ratio
+$J[w^j]/T[w^j]$ has a positive series with initial term one and
+successive ratios $h(2i+2)/(2i+2j+5)$. After term 1024 the tail is
+at most $2^{-1024}$. At the upper brackets $v=1-h\le1/16$, and division gives
+\[
+ \frac{2j+1}{2}J[w^j](h)=
+ \sqrt h\sum_{i=0}^j\frac{(-v)^i h^{j-i}}{j-i+1/2}
+       +2(-1)^{j+1}v^{j+1/2}\arccos\sqrt v .
+\]
+Use $\sqrt v\arccos\sqrt v=(\pi/2)\sqrt v-v\sum_{i\ge0}
+\binom{2i}i v^i/[4^i(2i+1)]$. The tail of the series after term 256 is
+less than $2^{-1024}$. The alternating series for
+$8\arctan(1/5)-2\arctan(1/239)$ enclose $\pi/2$ after 240 terms.
+Outward rounding of positive terms on the $2^{-1024}$ grid and integer
+square roots give the stated endpoint margin for all 17 brackets.
+The linear expression only needs rational evaluation and one square root.
+The enclosure calculation checks all endpoints.
+
+For the second derivative use $\max|c_j|<48$. At the upper end the
+expression is $\sqrt{1-v}\,P(v)+\sqrt v\arccos\sqrt v\,Q(v)$.
+The coefficient norms of $P,Q$ and their first two derivatives are
+less than $2^{25}$. For $v\le1/2$ the first two derivatives of
+$\sqrt v\arccos\sqrt v$ are bounded in magnitude by $2/\sqrt v$ and
+$4/v^{3/2}$. For $h\le1/2$ the positive series divided by $T[w^j]$
+has derivatives bounded by 4 and 16. These estimates and \eqref{ti:mom}
+bound both second derivatives by $2^{220}$ on their brackets.
+The secant slope is larger than $2^{-710}/2^{-512}$ in magnitude.
+It differs from any derivative there by at most $2^{221}2^{-512}$.
+\end{proof}
+
+\input{tex/focus-centers}
+
+\subsection{The eight monomials and their parameters}
+Set
+\[
+ t=\delta=2^{-8192},\quad \tau=t^2,\quad \lambda=t^{16},\quad
+ \varepsilon=t^{1024},\quad b_i=\delta^i\ (1\le i\le3),\quad b_H=b_1+b_2+b_3 .
+\]
+Use the reference potential $K_*=-15/29$ and determinant-ratio slope
+$s_*=-76531/180$ from the row calculation below, and put
+$\kappa=c_6/(s_*c_7)$, $K=K_*+\kappa\tau$, $a=-(1+3K)$.
+The seven controls $X=(a_0,a_2,\sigma,b,\eta_0,\eta_2,\eta_3)^{\mathsf T}$
+are the value at $\tau$ of a vector polynomial of degree at most seven,
+specified below. Define
+\begin{align*}
+ C&=(1+2K-\lambda\sigma,-1,-3K+\lambda\sigma,K),&
+ \gamma&=(2+\lambda a_0,0,-3+\lambda a_2,1),\\
+ \nu&=(\lambda\eta_0,1,2+\lambda\eta_2,3+\lambda\eta_3),&
+ g_0&=at^2 b_3/2.
+\end{align*}
+Set $\alpha_j=\varepsilon\gamma_j/C_j$ and $\beta=\varepsilon\lambda b/g_0$.
+Let $\Mclr{}$ be twice the least common multiple of the reduced denominators of
+all $\alpha_j,\nu_j,b_i,\beta$. The collected polynomial is
+\begin{align}
+ P(x,y)&=\sum_{j=0}^3 C_j x^{1+\Mclr{}(1+\alpha_j)}y^{\Mclr{}(2+\nu_j)},\notag\\
+ Q(x,y)&=\tfrac12 at^2\bigl(-b_Hx^{2\Mclr{}}y^{1+\Mclr{}}
+ +b_1x^{\Mclr{}(1+b_1)}y^{1+\Mclr{}}\notag\\
+ &\hspace{24mm}{}+b_2x^{\Mclr{}(1+b_2)}y^{1+\Mclr{}}
+ +b_3x^{\Mclr}y^{1+\Mclr{}(1+\beta)}\bigr).                               \label{ti:poly}
+\end{align}
+In logarithmic coordinates $u=\Mclr{}\log|x|, v=\Mclr{}\log|y|$, with $L=e^v$, the
+field before the positive time change is
+\[
+ \dot u=\sum_j C_j e^{\alpha_j u} L^{1+\nu_j},\qquad
+ \dot v=\tfrac{at^2}{2}(-b_H e^u+b_1 e^{b_1u}+b_2 e^{b_2u})+g_0e^{\beta v}.
+\]
+Multiplication of the pullback by $\Mclr{}x^{\Mclr}y^{\Mclr}$ gives \eqref{ti:poly} in every
+open quadrant. The coefficient bounds below imply $1/2<a<1$,
+$1/40<|C_j|<4$, $|\nu_j-j|<1/4$ and $|\alpha_j|,|\beta|<1/4$.
+All exponents are nonnegative integers. The four $y$ powers in $P$ are
+different. The four $x$ powers in $Q$ are different since $1>b_1>b_2>0$.
+The coefficients have thus survived separate collection.
+
+For completeness we give a rational row formula for $X$. Put $z=L-1$,
+$F_0=az+Kz^3$, $g=(z^2-3)/(1+3K-Kz^2)$,
+$d=(2,0,-3,1)$ and $C^0=(1+2K,-1,-3K,K)$. Write $H_j(z)=\ev(L^j\log L)$,
+where $\ev$ takes the even part in $z$, and
+$\mathcal U f=(g(z)\int_0^z f(s)\dd s)'$. Define $M_i(K)$ as the row
+of $z^{2i}$ coefficients of
+\[
+ 1,\quad\ev L^2,\quad\mathcal U(\ev(L^2-1)),\quad\ev(1/L),\quad
+ d_jH_j+C^0_j\mathcal U H_j\quad(j=0,2,3).
+\]
+For $0\le i\le7$, set
+\[
+ G_i(K)=\sum_{j=0}^i\binom{-(2i+1)/2}{i-j}(K/(2a))^{i-j}M_j(K),
+ \qquad P_i(\tau)=(1+3K)^{i+1}G_i(K).
+\]
+The $P_i$ are row polynomials of degrees at most $i+1$. Determine $X$
+by coefficient comparison, with $S=(0,1,2,3,4,5,7)$, from
+\begin{equation}
+ P_i(\tau)X(\tau)=(1+3K)^{i+1}c_i\tau^{7-i}\pmod{\tau^8}
+ \qquad (i\in S).                                                    \label{ti:shape}
+\end{equation}
+The constant selected matrix is invertible. For the $M_i$, its unscaled
+order-seven minor on $S$ at $K_*$ is $20511149/833191988428800$.
+The minor on the first seven rows has a simple zero there.
+At $K_*$ the lower triangular transformation to $G_i$ preserves the
+derivative $s_*$ of the ratio of the minor on rows $0,\ldots,6$ to the minor on $S$.
+With the chosen $\kappa$, the omitted row $i=6$ of \eqref{ti:shape} holds modulo $\tau^2$.
+The residual calculation on p.~\pageref{ti:row-residuals} verifies this congruence directly.
+
+\subsection{From the brackets to hyperbolic cycles}
+At $\varepsilon=0$ the logarithmic system is Hamiltonian with
+$H=at^2W(u)/2+V(z)$, where
+\[
+ W(u)=b_H(e^u-1)+(1-e^{b_1u})+(1-e^{b_2u})-b_3u,\qquad
+ V(z)=\int_0^z\sum_j C_j(1+s)^{\nu_j}\dd s .
+\]
+On the annuli in use $Y=z\sqrt{2V/(az^2)}$ is increasing with $Y(0)=0$.
+The scaled energy is $E=2H/(at^2)=W+Z^2$, $Z=Y/t$. In
+$x_i=-b_i u>0$ the limiting horizontal potential is $i-1+1-e^{-x_i}$
+for $i=1,2$ and $2+x_i$ for $i=3$. Thus $h=E-(i-1)$ in \eqref{ti:mom}.
+The negative $x_i$ side tends to a confining wall.
+
+Write $M(E)$ for the first variation in $\varepsilon$ of the return
+displacement in $H$. Green's theorem on the clockwise oval gives the
+sublevel integral with density
+$D_\lambda(z)=\sum_j\gamma_jL^{\nu_j}+\lambda b/L$ in $\dd u\dd z$.
+In the variable $Y$ only its transported even part
+$S_\lambda(Y)=\ev_Y[D_\lambda(z(Y))z'(Y)]$ contributes.
+At $\lambda=0$ the density is $z^3-3z$ and $Y$ is odd.
+Differentiating at fixed $Y$ moves $z$ by $-\partial_\lambda V/F_0$.
+Differentiating the density and its Jacobian gives the rows $M_i$
+above, followed by the change from $z$ to $Y$ giving $G_i$.
+The matching in \eqref{ti:shape} therefore applies to the first
+variation of this even density.
+
+We apply the finite estimates of Section~\ref{fin:cert}
+at the same values of $t,\delta,\varepsilon$. We detail their hypotheses
+for the present density because the bracket centers and controls have
+changed. For $R_i=P_iX-(1+3K)^{i+1}c_i\tau^{7-i}$,
+exact rational multiplication and elimination give
+\[
+ |\kappa|<1,\qquad
+ \max_j\sum_l|[\tau^l]X_j|<535481988140936,\qquad
+ \max_i\sum_l|[\tau^l]R_i|<14030792279473 .
+\]
+Both integer bounds are below $2^{60}$. \phantomsection\label{ti:row-residuals}The first eight residual
+coefficients vanish on $S$, and the first two vanish in row 6.
+The rational solve checks these statements directly.
+On $0\le w\le32$ the coefficient sums bound both $|A(w)|,|A'(w)|$
+by $2^{48}$. All brackets satisfy the regular-energy restrictions of the
+finite estimates by Lemma~\ref{ti:signs}. These are the density-dependent
+hypotheses of the transfer.
+
+More explicitly, replacing the finite horizontal potential by its model
+costs less than $2^{-4000}$ in value and $2^{-770}$ in derivative of the
+normalized area integral. This follows by splitting off
+$|x_i|\le\sqrt\delta$ and using $|W-W_*|<512\delta$ on the remaining
+sublevel, with a further split at distance $2\delta^{1/4}$ from the
+turning energy for the derivative. The vertical estimate
+$|S_\lambda(tZ)/(\lambda t^{14})-A(Z^2)|<2^{230}t^2$ for $|Z|\le6$
+uses the row residual orders and the analytic inverse in $|Y|\le1/16$.
+Integration for $b_iM(E)/(\lambda t^{15})$ costs less than $2^{-15000}$
+in value and derivative.
+
+Finally let $\Pi$ be the actual one-turn return in $E$ on the positive
+horizontal ray of $(\operatorname{sgn}(u)\sqrt W,Z)$.
+On $2^{-95}\le E\le32$ the angular denominator stays positive and the
+energy equation is $dE/d\theta=\varepsilon\mathcal F(E,\theta,\varepsilon)$.
+The function and its derivatives of orders $E,EE,\varepsilon,E\varepsilon$
+are bounded by $N_0^{200}$, $N_0=1/t$, as in Section~\ref{fin:cert}.
+Those bounds use $|\gamma_j/C_j|<256$ and $|\lambda b/g_0|<1$,
+which follow from the displayed control bounds. Integrating this equation
+and its first variational equation for one turn gives
+\[
+ \left\|\frac{b_i a}{2t^{29}}\frac{\Pi(E)-E}{\varepsilon}
+       -\frac{b_i M(E)}{\lambda t^{15}}\right\|_{C^1}
+       \le256\varepsilon N_0^{429}<2^{-1000},
+\]
+where the norm is the maximum of the value and derivative suprema on
+each bracket. Combined with the preceding estimates this preserves
+the two endpoint signs and the strict derivative sign. Each bracket gives
+a simple return fixed point. Its multiplier is positive by the scalar
+variational equation and differs from one. The intervals are disjoint on
+one ray and the angle is strictly increasing, so distinct fixed points
+give distinct periodic orbits. The quadrant diffeomorphisms and their
+positive time factors preserve the return multipliers. This proves
+Theorem~\ref{ti:main}.
+
+The two equalities in \eqref{ti:choice} specify exact model energies. For
+the full polynomial the corresponding energies lie in the certified
+brackets translated by two. All strict estimates persist for sufficiently
+close pairs of interpolation nodes. Rational pairs in that neighborhood
+give a family of rational polynomial fields by the same construction.
+The pair in Lemma~\ref{ti:kernel} has the stated finite certificate.

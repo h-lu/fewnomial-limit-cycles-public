@@ -1,0 +1,248 @@
+\section{A fixed six-term field with 32 cycles}\label{six:fixed}
+The cleared and coprime representatives and their actual degrees are related in Section~\ref{sup:primitive-fields}.
+In Section~\ref{se:sec:separated} take \(p=2,\ k=1,\ d=5,\ \delta=t=2^{-4096},\ K=10^6,\ \lambda=t^{12},\ \epsilon=t^{100}\). In \eqref{se:density} use \(q=1/16\) and zero constant shift. In the collected field \eqref{se:poly}, \(b_1=B=\delta\) and all four vertical rows are retained. The common density and the single regular scale below give eight simple returns per quadrant. Thus \(E_6=\max\{i+j:[x^iy^j]P\ne0\ \text{or}\ [x^iy^j]Q\ne0\}\) for the field \eqref{se:poly} at these parameters. Its binary expansion has \input{tex/six-bits}\unskip\ digits. The six exponent pairs determine this integer exactly. The companion archive \cite{LuReplay} contains the complete integer and the bracket data.
+\subsection{The eight model brackets}
+Let \(A\) be the unshifted quintic just specified. Its coefficients have
+modulus below 32, and \(\sum |[w^j]A|3^j<2^{14}\).
+Use the centers \(a_j=N_j/2^{380}\) in Table~\ref{six:centers} and radius
+\(\sigma=2^{-330}\). Each bracket is contained in
+\((2^{-81},1-2^{-97})\). In increasing order, the signs of \(J[A]\) at
+the left endpoints alternate starting with plus. The right endpoints
+have opposite signs. All sixteen absolute values exceed \(2^{-465}\).
+
+To reproduce this comparison for \(h\le1/2\), write
+\[
+ J_j(h)=\frac{4h^{j+3/2}}{(2j+1)(2j+3)}
+ {}_2F_1(1,1;j+5/2;h).
+\]
+This follows by expanding \((1-s)^{-1}\) in \eqref{se:mom} and using the
+beta integral. Starting with one, the term ratio at index \(l\) is
+\(h(2l+2)/(2l+2j+5)\). Round each term outwards on the grid
+\(2^{-640}\mathbb Z\) through index 640 and add \([0,2^{-640}]\) for the
+tail. Bound each square root by the enclosing dyadic endpoints on the
+same grid, by integer squaring. For the upper brackets \(v=1-h<2^{-20}\).
+Combine \eqref{se:explicit} into
+\[
+ J[A](h)=\sqrt{1-v}\,P(v)+\sqrt v\,\arccos\sqrt v\,Q(v)
+\]
+with rational polynomials \(P,Q\) of degree at most five. In the identity
+\[
+ \sqrt v\arccos\sqrt v=\tfrac{\pi}{2}\sqrt v-
+       v\sum_{l\ge0}\frac{\binom{2l}{l}}{4^l(2l+1)}v^l,
+\]
+truncate the sum at 32 with the same grid and tail bound.
+Machin's formula \(\pi/2=8\arctan(1/5)-2\arctan(1/239)\), using
+160 alternating terms and the first omitted term, encloses the remaining
+constant. These operations give the stated strict inequalities.
+
+\begin{table}[ht]
+\centering\scriptsize
+\begin{tabular}{@{}ll@{}}\toprule
+\multicolumn{2}{c}{Hexadecimal numerator \(N_j\), most significant part on the left}\\ \midrule
+\texttt{0000000000000004fffffdeeb8a56c7560e9f748c8991d4} & \texttt{5306200a13f9a6fd064824218d0fbba805e052f39be7f77a}\\
+\texttt{0000000254f631822ceb3916f44886e1960d86c9d679a4f} & \texttt{957b15c83f0d02696092bbfe59554ecbd75a9a6654efa73d}\\
+\texttt{678aef2419e14dddd10f9792d94af7090d420c65a604f2d} & \texttt{c9f3adbb20fa0afe864507621d80c0fb6e3d93c89e54cfd1}\\
+\texttt{ffffff6132ab842bb50af286544f9158d20b3d8ee72cea0} & \texttt{9ba85bc64a44f5101043dab8f4aba93f05ee54827fff721b}\\
+\texttt{fffffffffb876590a5021c23c445ad8e3cd7712f7e12a7a} & \texttt{9f844ada5ff696864c277a009edaf72a1a9e76f6aee915b7}\\
+\texttt{ffffffffffffffcbb7cc09bc6cfea7fde8c3d6464a90aea} & \texttt{6036944009383c610585ddcced735556346669fb09670156}\\
+\texttt{ffffffffffffffffd3dc857a7a9d51689139de77054cb72} & \texttt{585b8eadcf395769ba6215cb3a2f23cc8c6ee563432772d7}\\
+\texttt{fffffffffffffffffffffff983a008ec5c452f18e381d54} & \texttt{9125a7fe770685caa7c746f7eaa55e237cebbd4e8f70fc30}\\
+\bottomrule
+\end{tabular}
+\caption{Concatenate each pair of strings and divide the resulting integer by
+\(2^{380}\). All eight brackets have rational endpoints.}\label{six:centers}
+\end{table}
+
+On the union of the brackets \(|J[A]''|<2^{180}\).
+For \(h\le1/2\), the center series without its prefactor has coefficients
+at most one, so its derivatives of orders \(l=0,1,2\) are bounded by
+\(l!2^{l+1}\). Differentiate the displayed prefactors using \(h>2^{-81}\)
+and the coefficient bound 32. This gives less than \(2^{65}\).
+For \(h\ge1/2\) the coefficient absolute sums of \(P,Q\) and their first
+two derivatives are below \(2^{20}\), by rational expansion.
+On \(2^{-97}<v\le1/2\), \(g(v)=\sqrt v\arccos\sqrt v\) has
+\(|g'|\le 2/\sqrt v,\ |g''|\le4/v^{3/2}\) by differentiation.
+These estimates give the stated bound. At some point of each bracket
+the secant slope has magnitude greater than \(2^{-465}/\sigma\).
+Its variation in the bracket is less than \(2\sigma\,2^{180}\), hence
+\begin{equation}
+ |J[A]'|>2^{-136}\quad\hbox{throughout each bracket}.              \label{six:margins}
+\end{equation}
+
+\subsection{Finite horizontal exponents}
+Use the single index \(i=1\), \(E=h\), \(b_i=B=\delta\), \(W_i(x)=W_\delta(-x/b_i)=\delta(e^{-x/\delta}-1)+1-e^{-x}\),
+\(W_*(x)=i-1+1-e^{-x}\) for \(x\ge0\).
+On \(\sqrt\delta\le x\le128\) we have
+\[
+ |W_i-W_*|<390\delta=:\eta,\qquad W_i',W_*'>2^{-193}.
+\]
+Indeed only the wall term differs from the model, by at most \(B=\delta\) on this interval. In the derivative only the wall term is negative.
+Its magnitude is at most
+\((B/b_i)e^{-\sqrt\delta/b_i}\le2e^{-1/\sqrt\delta}<2\delta\),
+whereas the \(i\)-th positive term is \(e^{-x}\ge e^{-128}>2^{-192}\).
+At \(x=128\) the potential exceeds \(E\), since \(e^{-128}+\eta<2^{-97}\).
+At \(x=-\sqrt\delta\) it exceeds 3 by
+\(W_\delta(u)\ge e^{\delta u}(\delta e^{(1-\delta)u}-3)-B\) for
+\(u=\sqrt\delta/b_i\ge1/\sqrt\delta\).
+Thus all the actual integrals are supported in
+\(-\sqrt\delta\le x\le128,\ |Z|\le\sqrt3\).
+
+Set \(\Phi(s)=2\int_0^{\sqrt{s_+}} A(Z^2)\dd Z\).
+It is Hölder continuous there with modulus \(2^{15}\sqrt{|\Delta s|}\).
+The interval \(|x|\le\sqrt\delta\) and the value error \(\eta\) on the
+rest give
+\[
+ |b_i{\cal I}_{\delta,A}(E)-J[A](h)|<2^{30}\sqrt\delta<2^{-2000}.
+\]
+For its energy derivative the slice is \(A(s)/\sqrt s\) for \(s>0\)
+and zero for \(s<0\), with \(s=E-W\). The turning points are simple, so
+the inverse-square-root singularities are integrable.
+On \(0\le x\le\sqrt\delta\) the gap exceeds \(h/2\) in both models.
+On \(-\sqrt\delta\le x<0\), where \(W_i<E/2\), use \(E-W_i>E/2\).
+On the remaining part of this interval with \(W_i\ge E/2\), convexity
+of \(W_\delta\) for \(u\ge0\) gives \(|W_i'|\ge W_i/|x|\ge
+E/(2\sqrt\delta)\). Substitution by \(W_i\) shows that the sum of all
+these boundary contributions is less than \(2^{105}\sqrt\delta\).
+
+On the main interval put \(\tau=2^{-1024}>\eta\).
+Where \(|E-W_*|\le2\tau\), substitution by each increasing potential
+bounds the sum of the two singular integrals by
+\(2^{212}\sqrt\tau\), using \(0<E-W\le3\tau\) on their contributing
+parts and the derivative bound \(2^{-193}\). Where \(E-W_*>2\tau\),
+both arguments exceed \(\tau\) and
+\(|(A(s)/\sqrt s)'|\le2^{20}\tau^{-3/2}\) up to \(s=3\).
+The rest contributes zero. Thus on each bracket
+\begin{equation}
+ |b_i{\cal I}'_{\delta,A}(E)-J[A]'(h)|
+ <2^{105}\sqrt\delta+2^{212}\sqrt\tau+128\cdot2^{20}\eta\tau^{-3/2}
+ <2^{-298}.                                                        \label{six:deltaestimate}
+\end{equation}
+The same substitutions bound the full integral of
+\(\mathbf1_{W_i<E}/\sqrt{E-W_i}\) by \(2^{210}\).
+
+\subsection{Finite vertical scale}
+For \(p=2\), the matrix~\eqref{se:vertical} is
+\[
+\begin{pmatrix}
+ 1&1&0&0&0&0\\
+ 0&1&3/2&5/2&-3&2\\
+ 0&0&-1/12&1/4&5/3&-7/6\\
+ 0&0&-1/60&1/60&0&-1/5\\
+ 0&0&-1/168&1/280&0&-11/140\\
+ 0&0&-1/360&1/840&0&-13/315
+\end{pmatrix}.
+\]
+Its determinant is \(-1/4762800\) and its inverse maximum row sum is
+\(91804/5\).
+All six controls in \eqref{se:controls} have magnitude below \(6\cdot10^5\),
+and the base weights are \(2,-3,1\). Here \(\lambda=t^{12}\).
+On \(|Z|\le2\) the error in \eqref{se:transport} is less than
+\(2^{110}t^2\). To verify it, temporarily replace \(\lambda\) by a
+complex variable \(\zeta\) of modulus at most \(r_0=10^{-12}\), with
+the controls fixed. On \(|z|\le1/2\), \(|\log L|<1\),
+\(|L^{q_j}|<4,\ |L^\rho|<2,\ \sum_{j\ge1}|C_j|<5\cdot10^{-6}\).
+Bounding the derivatives of the powers on this disk gives
+\(|(L^{q_j}-L^\rho)/z|<50\). Hence \(|V'/z-1|<1/32\), and integrating
+and taking the square root gives \(|Y/z-1|<1/32\).
+Consequently \(|Y_z-1|<1/10\) and comparison with \(z-Y\) on
+\(|z|=1/2\) gives an analytic inverse for \(|Y|\le1/4\).
+There the even transported density has modulus less than 100 since
+\(|z'|<2\) and \((|\gamma_0|,|\gamma_1|,|\gamma_2|)\le(3,4,1)\).
+Cauchy's bound on the nonlinear remainder is \(200(\lambda/r_0)^2\),
+and the Taylor tail of its coefficient of \(\zeta\) at \(Y=tZ\) is at
+most \(200(8t)^{12}/r_0\). Division in \eqref{se:transport} proves the
+claim. Integrating the error and its boundary values, using the slice
+derivative formula and the last bound in the preceding subsection,
+gives value and derivative errors at most \(2^{320}t^2<2^{-2000}\)
+for \(b_i M/(\lambda t^{11})\) relative to \(b_i{\cal I}_{\delta,A}\).
+
+\subsection{The full return at the specified perturbation}
+The following uniform complex neighborhood estimates control the
+higher orders of the return. They apply at every real \(E_0=i-1+h\)
+in the eight brackets. In the horizontal coordinate
+\(w=\operatorname{sgn}(u)\sqrt{W_\delta(u)}\) write \(u=u(w)\).
+For real \(|w|\le\sqrt{E_0}\) we have
+\(-128/b_1<u<8192\). The left bound follows from the single exponential estimate at 128, and the right bound from
+\(W_\delta(8192)>3\). In particular \(|u|<2^{12300}\).
+We show that around each such real \(w_0\) its inverse extends to
+\begin{equation}
+          |w-w_0|<2^{-97000},\qquad |u(w)|<2^{12301}.               \label{six:inverse}
+\end{equation}
+
+Write \(W_\delta(u)=u^2 H_1(u)\), where
+\(H_1(u)=\int_0^1(1-s)W_\delta''(su)\dd s\). Along the real segment
+from 0 to \(u_0=u(w_0)\) we have \(B e^u<5\) by \eqref{se:W},
+\(W_\delta(u)\le3\) and \(u<8192\). On its unit complex neighborhood
+\(|W_\delta''|,|W_\delta'''|<32\). Hence \(|H_1|,|H_1'|<32\)
+on the unit disk around \(u_0\). For real \(|u|\le1\),
+\(W_\delta''>B/4\). For \(|u_0|\ge1\),
+\(W_\delta(u_0)\ge B/8\) by monotonicity. It follows in both cases that
+\(H_1(u_0)>2^{-28700}\). On \(|u-u_0|\le2^{-29000}\) the real-positive
+square-root branch continues and \(|u\sqrt{H_1(u)}|<2^{12305}\).
+On the disk of half that radius its second derivative has modulus
+less than \(2^{70400}\) by Cauchy's estimate.
+
+The real \(w'(u_0)\) exceeds \(2^{-12500}\). For \(|u_0|\le1\) use
+\(W_\delta''>B/4\) and \(w'=W_\delta'/(2u\sqrt{H_1})\) with the
+continuous value at zero. For \(u_0\ge1\) use convexity and
+\(W_\delta'(1)>B/4\). For \(u_0\le-1\), one negative term alone gives
+\[
+ |W_\delta'(u_0)|\ge b_1 e^{-128}(1-e^{-(1-b_1)})>2^{-12482}.
+\]
+Divide by \(2\sqrt{W_\delta(u_0)}<4\). On \(|u-u_0|\le2^{-84000}\)
+the variation of \(w'\) is less than a quarter of \(w'(u_0)\).
+Comparison with its linear part on the boundary gives a unique analytic
+inverse on the disk in \eqref{six:inverse}. The local inverses agree along
+the real interval.
+
+After an increasing change of time, the \((u,Z)\) field is
+\(\dot u=-2Z+A_\varepsilon,\ \dot Z=W_\delta'(u)\), with
+\[
+ A_\varepsilon=\frac{2}{t L Y_z}
+          \big(\dot u_{\rm original}-(\dot u_{\rm original})|_{\varepsilon=0}\big).
+\]
+Thus in \(w=\sqrt E\cos\theta,\ Z=\sqrt E\sin\theta\) the angular
+equation for a turn is exactly
+\begin{equation}
+              \frac{dE}{d\theta}=\frac{2wA_\varepsilon}{2-ZA_\varepsilon/E}.
+                                                                        \label{six:angle}
+\end{equation}
+The factor \(w'(u)>0\) cancels. Put \(R=2^{-100000}\) and
+\(r_\varepsilon=2^{-117000}\).
+For \(|E-E_0|\le4R\) and real \(\theta\), the principal square root
+varies by at most \(2^{42}|E-E_0|\), by \(E_0>2^{-81}\).
+Hence \eqref{six:inverse} applies and \(|Z|,|w|<2\).
+For \(|\varepsilon|\le r_\varepsilon\) all exponential arguments
+\(\varepsilon\gamma_j u/C_j\) have modulus less than \(1/2\), since
+\(|C_0|>1/2,\ |C_{1,2}|>\lambda\).
+The vertical estimates give \(|1/(LY_z)|<4\) and both types of vertical
+powers in the perturbation have modulus below 8. Applying
+\(|e^\xi-1|\le2|\xi|\) termwise gives
+\(|A_\varepsilon|<2^{16415}|\varepsilon|\) for nonzero \(\varepsilon\).
+The denominator in \eqref{six:angle} has modulus greater than one and
+\(|dE/d\theta|\le2^{16420}|\varepsilon|\). A solution starting within
+\(2R\) of \(E_0\) changes by less than \(R\) during a full turn, since
+\(8\cdot2^{16420} r_\varepsilon<R\).
+Its displacement \(\Delta\) is therefore holomorphic in the initial
+\(E\) and in \(\varepsilon\) there, with \(|\Delta|<R\).
+
+The linear coefficient of \(\Delta\) is \(2M/t^2\). For the stated
+\(\varepsilon=t^{100}<r_\varepsilon/2\), Cauchy's estimates in the two
+variables bound the value and \(E\)-derivative of
+\(\Delta-2\varepsilon M/t^2\) at \(E_0\) by
+\(2(\varepsilon/r_\varepsilon)^2\). In the normalized displacement
+\(b_i\Delta/(2\varepsilon\lambda t^9)\) the resulting errors are less than
+\[
+            \frac{2\varepsilon}{t^{21}r_\varepsilon^2}<2^{-1000}.
+\]
+Together with \eqref{six:margins}, \eqref{six:deltaestimate} and the value
+bounds, this preserves opposite endpoint signs and a strict derivative
+sign on all eight real intervals. The angular speed is positive there.
+Every interval therefore gives a simple fixed point of the actual
+one-turn map, with positive multiplier different from one.
+The compact, disjoint radial brackets on the section distinguish
+the cycles, and uniqueness for the scalar angular equation orders
+the corresponding closed graphs. Here \(\rho,\ q_j-N_j,\alpha_j\)
+all have modulus below \(1/4\) for the specified parameters.
+The support check in \eqref{se:poly} applies exactly. The four quadrants
+give 32 hyperbolic cycles at the stated parameters.

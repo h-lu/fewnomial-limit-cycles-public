@@ -1,0 +1,163 @@
+\section{Fixed fields at seven and nine terms}\label{cv:fixed79}
+\begin{theorem}\label{cv:nine}Both specializations have the degree \(D_*\) of the eight-term field. The field with support \(\splitcount{4}{3}\) has at least \(68\) hyperbolic limit cycles, and the one with support \(\splitcount{4}{5}\) has at least \(148\).\end{theorem}
+Section~\ref{sup:primitive-fields} gives the full common factor of the six- through ten-term realizations and the actual degree after cancellation.
+
+Write $t=2^{-8192}$, $\lambda=t^{16}$ and $\varepsilon=t^{1024}$. Use the interpolated polynomial \(A(w)=\sum_{j=0}^7c_jw^j\) of \eqref{ti:choice} and the phase coordinate of Section~\ref{ti:sec:fixed8}. Write \(K_*=-15/29,\ s_*=-76531/180\) and \(K(\tau)=K_*+c_6\tau/(s_*c_7)\). For \(i\in I=(0,1,2,3,4,5,7)\) put \(b_i^*(\tau)=(1+3K(\tau))^{i+1}c_i\tau^{7-i}\). Let \(\mathcal P(\tau)\) have the seven rows \(P_i(\tau)\) of \eqref{ti:shape}, in that order. The control vector is the polynomial representative of
+\[
+ X(\tau)=\mathcal P(\tau)^{-1}(b_i^*(\tau))_{i\in I}\pmod{\tau^8},
+ \qquad \deg X\le7 .
+\]
+The inverse exists in \(\Q[\tau]/(\tau^8)\) since \(\det\mathcal P(0)\ne0\). Set \(K=K(t^2)\), \(a=-(1+3K)\). With the seven controls $(a_0,a_2,\sigma,b,\eta_0,\eta_2,\eta_3)$ evaluated at $t^2$, put
+\[
+\begin{split}
+ C&=(1+2K-\lambda\sigma,-1,-3K+\lambda\sigma,K),\\
+ \gamma&=(2+\lambda a_0,0,-3+\lambda a_2,1),\qquad
+ \nu=(\lambda\eta_0,1,2+\lambda\eta_2,3+\lambda\eta_3).
+\end{split}
+\]
+Set
+\[
+ \delta=2^{-6144},\qquad b_i=\delta^i\ (1\le i\le4),\qquad
+ B=\sum_{i=1}^4 b_i,\quad g=at^2/2,\quad g_0=gb_4 .
+\]
+The identity $b_4=t^3$ keeps $g_0$ and hence \emph{all} the tilts
+$\alpha_j=\varepsilon\gamma_j/C_j$ and $\beta=\varepsilon\lambda b/g_0$
+equal to the fixed eight-term values. Use the same $\Mclr{}$ as that field,
+twice the LCM of the denominators of its tilts, vertical powers and
+horizontal rates $t,t^2,t^3$. Each new rate has denominator dividing that
+of $t^3$. The two collected components are
+\begin{align}
+ P(x,y)&=\sum_{j=0}^3 C_j x^{1+\Mclr{}(1+\alpha_j)}y^{\Mclr{}(2+\nu_j)}, \notag\\
+ Q(x,y)&=-gB x^{2\Mclr{}}y^{1+\Mclr{}}
+        +g\sum_{i=1}^3 b_i x^{\Mclr{}(1+b_i)}y^{1+\Mclr{}}
+        +g_0 x^{\Mclr} y^{1+\Mclr{}(1+\beta)} .                                \label{cv:field}
+\end{align}
+All scaled fractional powers are even integers. The certificate of Section~\ref{ti:sec:fixed8}
+gives $1/2<a<1$, $1/40<|C_j|<4$, $|\nu_j-j|<1/4$, and
+$|\alpha_j|,|\beta|<1/4$. The four distinct $y$ powers separate the first
+component. The five distinct $x$ powers indexed by $1,b_1,b_2,b_3,0$
+separate the second. The expanded field stores every
+exponent pair and coefficient.
+
+\paragraph{Energy brackets.}
+Use $u=\Mclr{}\log|x|$, $v=\Mclr{}\log|y|$, $L=e^v$, $z=L-1$. Before the positive
+time change in each quadrant the equations are
+\[
+ \dot u=\sum_{j=0}^3 C_j e^{\alpha_j u}L^{1+\nu_j},\qquad
+ \dot v=g\left(-Be^u+\sum_{i=1}^3b_i e^{b_i u}\right)+g_0e^{\beta v}.
+\]
+Multiplying the pullback by $\Mclr{}x^{\Mclr}y^{\Mclr}$ gives \eqref{cv:field}. At zero
+perturbation the Hamiltonian is $H=gW(u)+V(z)$, where
+\[
+ W=B(e^u-1)+\sum_{i=1}^3(1-e^{b_i u})-b_4u,\qquad
+ V(0)=0,\quad V'(z)=\sum_j C_j L^{\nu_j}.
+\]
+The function $W'$ has the sign of $u$ away from zero. On the local
+vertical branches use $Y=z\sqrt{2V/(az^2)}$, $Z=Y/t$ and $E=H/g=W+Z^2$.
+At fixed horizontal scale $s=-b_i u$ the model potential for $s>0$
+is $W_*=i-1+1-e^{-s}$ for $i=1,2,3$ and $W_*=3+s$ for $i=4$. Write
+$h=E-(i-1)$ and $A(w)=\sum c_j w^j$. The associated area moments are
+\[
+ J(h)=\sum_{j=0}^7\frac{2c_j}{2j+1}\int_0^h
+       \frac{(h-s)^{j+1/2}}{1-s}\dd s,\qquad
+ T(h)=\sum_{j=0}^7\frac{4c_j h^{j+3/2}}{(2j+1)(2j+3)} .
+\]
+Use the ten exponential and seven linear intervals of
+Lemma~\ref{ti:signs}, with numerators J01--J10 and T01--T07 in Table~\ref{tab:focus-centers} and common radius $2^{-512}$. Opposite endpoint signs have absolute
+margin $2^{-710}$ and the slopes have magnitude greater than $2^{-200}$.
+Translate the ten brackets by $0,1,2$ and the seven by $3$. On these
+intervals $h>2^{-90}$, in the exponential ones $1-h>2^{-112}$, and all
+$E<6$. We check the effects of the new horizontal rates at their stated
+values.
+
+\paragraph{Finite first displacement.}
+Let $W_i(s)=W(-s/b_i)$, $s_0=\sqrt\delta$, $\eta=512\delta$,
+$\rho=\delta^{1/4}$. On $s_0\le s\le128$,
+$|W_i-W_*|<\eta$ and $W'_i,W'_* >2^{-193}$. Each previous exponential
+is at most $e^{-1/\sqrt\delta}$, the sum of all slower exponential
+errors is at most $128\delta/(1-\delta)$, the linear error is at most
+$128\delta$ and the wall costs at most $2\delta$. The only negative
+derivative there, from the wall, has size at most
+$2e^{-1/\sqrt\delta}$, and the active derivative is at least $e^{-128}$.
+At $s=128$ the model gap beyond every used turning point exceeds $\eta$.
+At $s=-s_0$, $u\ge1/\sqrt\delta$ and $W\ge\delta e^u-4e^{\delta u}-B>32$.
+Thus sublevel widths in $s$ are contained in $[-s_0,128]$.
+
+For clarity these estimates give the following errors after horizontal
+normalization. For $\Phi(y)=2\int_0^{\sqrt{y_+}} A(Z^2)\dd Z$ the
+bounds $|A|,|A'|<2^{48}$ on $[0,32]$ give modulus of continuity
+$2^{49}\sqrt{|\Delta y|}$ and $|\Phi|<2^{52}$. Integrating
+$\Phi(E-W_i)$, the initial strip and the remaining potential error give
+value error $<2^{64}\sqrt\delta<2^{-3000}$. For the energy derivative
+the positive slice is $A(y)/\sqrt y$. On $0\le s\le s_0$ the gap exceeds
+$h/2$ since $W_i\le i-1+2s_0$. On $-s_0\le s\le0$ either the gap
+exceeds $E/2$ or convexity on $u\ge0$ implies $|W_i'|\ge E/(2s_0)$.
+Substitution in the inverse-square-root slice bounds this strip as in
+Section~\ref{fin:cert}. Split the remainder at $|E-W_*|\le2\rho$,
+using the two derivative lower bounds there and the Lipschitz bound
+$2^{50}\rho^{-3/2}$ away from it. The derivative error is at most
+\[
+ 2^{105}s_0+2^{246}\sqrt{\rho}+128\,2^{50}\eta\rho^{-3/2}<2^{-520}.
+\]
+The same substitutions give $\int_{W_i<E}(E-W_i)^{-1/2}\dd s<2^{200}$.
+
+Let $M(E)$ be the first variation in $\varepsilon$ of the return displacement
+in $H$. Green's theorem gives the same density as for the fixed eight-term field in Section~\ref{ti:sec:fixed8},
+$D_\lambda(z)=\sum_j\gamma_j L^{\nu_j}+\lambda b/L$ in $\dd u\,\dd z$. Its transported even part $S_\lambda(tZ)$
+divided by $\lambda t^{14}$ differs from $A(Z^2)$ by less than
+$2^{230}t^2$ for $|Z|\le6$ by \eqref{fin:verticalerror}
+with the controls of Section~\ref{ti:sec:fixed8}.
+The vertical solve and $g_0$ are identical, and the last horizontal
+width and inverse-square-root bounds apply. Thus this vertical error
+in the value and derivative of $b_i M(E)/(\lambda t^{15})$ is below
+$2^{-15000}$.
+
+\paragraph{The nonlinear return.}
+Here are the input bounds for applying the energy-angle estimate
+in Section~\ref{fin:cert} at the fixed $\varepsilon$.
+Write $N_0=1/t$, $w=\operatorname{sgn}(u)\sqrt W$. On $W\le32$,
+$|u|<N_0^4$. On the negative side $W\ge b_4|u|-B$. On the positive
+side $W''\ge\delta e^u/2$, so $e^u\le128/\delta$. The first four
+derivatives of $W$ have absolute value below $2^{12}$ on the whole
+sublevel. For $|u|\le1$ write $W=u^2 A_0$ by Taylor's integral
+formula. There $\delta/8<A_0<4\delta$, $|A_0^{(j)}|<6\delta$ for
+$1\le j\le3$ and $W'/u>\delta/4$. For $|u|\ge1$ we have
+$W\ge\delta/8$ and $|W'|>b_4/2$, using the linear component of the
+force on the negative side. Differentiating $w$ in these two regions
+gives $w_u>N_0^{-4}$ and $|w_{uu}|,|w_{uuu}|<N_0^4$. Inverse
+differentiation gives $|u_w|\le N_0^4$, $|u_{ww}|<N_0^{16}$,
+$|u_{www}|<N_0^{29}$. For the last inequality use
+$u_{www}=3w_{uu}^2/w_u^5-w_{uuu}/w_u^4$.
+
+All subsequent derivative estimates in the cited energy-angle proof
+use only these bounds, the vertical analytic inverse,
+$|\gamma_j/C_j|<256$ and $|\lambda b/g_0|<1$. In particular, after
+dividing by the positive unperturbed angular speed the perturbing
+horizontal term involves the same four $C_j$, and the sole perturbing
+vertical term is still $g_0(e^{\varepsilon\lambda bv/g_0}-1)$.
+The scalar equation $dE/d\theta=\varepsilon\mathcal F$ on
+$2^{-95}\le E\le32$ therefore has the same bound $N_0^{200}$ for
+$\mathcal F$ and its $E,EE,\varepsilon,E\varepsilon$ derivatives.
+The angular denominator stays positive. Integrating for one turn and
+using the scalar first variational equation bounds the difference between
+$(\Pi-E)/\varepsilon$ and $2M(E)/(at^2)$ by
+$256\varepsilon N_0^{400}$ in $C^1$ on the brackets. After multiplying
+by $b_i a/(2t^{29})$ the error is below $256\varepsilon N_0^{429}<2^{-1000}$.
+Together the three finite errors preserve both signs and the derivative
+on each bracket. Each contains a fixed point with positive multiplier
+different from one. The monotone angle and disjoint energy brackets
+distinguish 37 one-turn orbits in one log chart. The four quadrant
+diffeomorphisms and positive time changes preserve their multipliers.
+This proves the nine-term assertion of Theorem~\ref{cv:nine}.
+
+\paragraph{Seven terms.}
+Keep the same four monomials of $P$, the same $\Mclr{}$, and set
+\[
+ Q_7=-g(b_1+b_4)x^{2\Mclr{}}y^{1+\Mclr{}}
+       +gb_1 x^{\Mclr{}(1+b_1)}y^{1+\Mclr{}}+g_0x^{\Mclr} y^{1+\Mclr{}(1+\beta)}.
+\]
+Its three different $x$ exponents and nonzero coefficients give exact support $\splitcount{4}{3}$. The potential is now
+\[
+ W^{(7)}=(b_1+b_4)(e^u-1)+(1-e^{b_1u})-b_4u.
+\]
+The first scale has model $1-e^{-s}$ and the last has model $1+s$. The ten exponential brackets have offset zero and the seven linear brackets have offset one. The ratio of consecutive rates is now $b_4/b_1=\delta^3\le\delta$. In the horizontal approximation all earlier exponentials are still at most $e^{-1/\sqrt\delta}$ and the slow linear error in the first interval decreases to $128\delta^3$. The wall coefficient still lies between $\delta$ and $2\delta$. On $u\ge0$ we have $(W^{(7)})''=(b_1+b_4)e^u-b_1^2 e^{b_1u}\ge\delta e^u/2$. At $u\le-1$, the linear force gives $|(W^{(7)})'|\ge b_4(1-e^{-1})$. The local Taylor and global inverse bounds therefore hold with the same constants. The vertical functions, $g_0$, $\varepsilon$ and all exponent tilts are identical. Both endpoint signs and the strict slope consequently survive on all 17 brackets at the specified parameters, giving $4(10+7)=68$ hyperbolic cycles as asserted.

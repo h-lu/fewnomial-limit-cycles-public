@@ -1,0 +1,4 @@
+Six fixed terms, one exponential range in each of four quadrants: 32 hyperbolic cycles.
+8 brackets, endpoint margin >2^-465; slope >2^-136. Finite transfer checks passed.
+Actual degree: 524615 binary digits. Hexadecimal-text SHA-256: e36cda9e1334197537b647c1c2420e679cd646e9465351022364fa22368613b3
+Canonical binary field SHA-256: 0a7882af5006900b2b29a88c0d60243c05f025a66e9984e7cd66a854b568869a

@@ -1,0 +1,28 @@
+\subsection{Removing the common factors of the unrestricted fields}\label{sup:primitive-fields}
+For a cleared field \((P,Q)\) let \(e\) be its actual degree and let \(a,b\) be the minimum \(x\)- and \(y\)-exponents across \emph{both} components. Define
+\[
+ e^\circ=e-a-b,\qquad
+ e^+=e-2\lfloor a/2\rfloor-2\lfloor b/2\rfloor .
+\]
+Translating every exponent pair by \((-a,-b)\) preserves each coefficient and the two support sizes. The second formula removes the largest coordinate monomial positive in every open quadrant. The first removes the full coordinate monomial. The following checks show that this gives coprime components over \(\mathbb C\).
+
+For the fixed fields in Sections~\ref{six:fixed}--\ref{cv:fixed79}, every pair of distinct exponents in \(P\) satisfies \(|\Delta y|>|\Delta x|\); every pair in \(Q\) satisfies \(|\Delta y|<|\Delta x|\). Here \(\Delta x,\Delta y\) are differences of integer exponents. These strict integer comparisons are made on all pairs in the four prescribed fields. For Laurent polynomials the Newton polygon of a product is the Minkowski sum of its factors' polygons: in any direction the product of the two nonzero face polynomials is nonzero. A positive-dimensional summand has an edge direction inherited by each sum (for a segment, use its normal). A common nonmonomial factor would therefore give a shared edge direction. The two strict inequalities exclude it. After the common coordinate powers are removed, the polynomial gcd is one.
+
+\begin{center}\small
+\begin{tabular}{@{}rcrrc@{}}\toprule
+\(N\)&support&bits of \(e\)&bits of \(e^\circ\)&\(3(a+b)-e\)\\\midrule
+6&\(\splitcount{4}{2}\)&524,615&524,614&positive\\
+7&\(\splitcount{4}{3}\)&9,106,819&9,106,819&negative\\
+8&\(\splitcount{4}{4}\)&9,106,819&9,106,819&negative\\
+9&\(\splitcount{4}{5}\)&9,106,819&9,106,819&negative\\\bottomrule
+\end{tabular}
+\end{center}
+For these four fields \(a,b\) are odd, \(e^+=e^\circ+2\), and the remaining gcd after even cancellation is \(xy\). Exactly \(333333\,e\le10^6(a+b)<333334\,e\). The three interpolation fields have identical \(a,b,e\). The companion archive \cite{LuReplay} contains the complete integers and an exponent-by-exponent reconstruction.
+
+For the ten-term field use the five-by-five support in \eqref{se:poly} with \(p=3,k=4\). Write \(M=\Mclr\) for its clearing integer. At the admissibly small scales in that proof the five \(y\)-powers in \(P\) are distinct; each coefficient in \(x\) is one nonzero monomial. In the Laurent ring \(Q\) is a univariate polynomial in \(x\) times a unit. A nonzero \(x\)-root cannot annul \(P\) identically in \(y\). Hence the full gcd is again \(x^a y^b\), where
+\[
+ a=1+M\bigl(1+\min(0,\alpha_0,\alpha_1,\alpha_2,\alpha_3)\bigr),\qquad b=1+M.
+\]
+Indeed each \(Mb_i\) is a positive even integer, so every \(x\)-exponent in \(Q\) exceeds the untilted \(1+M\) in \(P\). All \(y\)-exponents in \(P\) exceed \(1+M\) for the small scales selected in Section~\ref{se:sec:separated}. Both minima are odd. The degree \(E_{10}^{\circ}=E_{10}-a-b\) depends on the chosen parameters. Since \(q_3\to5\), we may take \(q_3>5-1/8,\ |\alpha_j|<1/8\). Then \(E_{10}\ge 1+(31/4)M>3(a+b)\) for \(M>16\). This comparison uses the existence family without assigning it a numerical degree.
+
+The same univariate-in-\(x\) argument applies to the open six-term specialization \(p=2,k=1\) of \eqref{se:poly}, using the minimum only through \(\alpha_2\). Section~\ref{cl:sec:center-lift} gives the factors for the separate center family. All the counted periodic orbits lie on compact subsets of the open quadrants. A positive time change there preserves the oriented first-return map. The full quotient also preserves its multiplier on \(xy>0\); on \(xy<0\) it reverses time and replaces the return map by its inverse. A hyperbolic multiplier stays different from one in both cases. The cleared archives thus specify coprime representatives with the same term counts and cycle counts, while retaining the original orientation data for the cleared fields.

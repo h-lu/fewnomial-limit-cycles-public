@@ -1,0 +1,2 @@
+Odd Hermite jets at k=1..5, parity, degree, gcd and term ceilings for 45 polynomial pullbacks.
+Rotated-family determinant G^2 and both sign counts checked; hyperbolicity follows from the return-map proof.

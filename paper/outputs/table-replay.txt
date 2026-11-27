@@ -1,0 +1,41 @@
+N  r  p  d  X  degree  exhaustive-fold  max(E,S,F)
+48 1 24 12 12 47 168 1935
+49 1 24 13 12 47 168 2025
+64 1 24 12 28 55 392 3599
+128 1 32 32 64 127 2048 15375
+256 1 64 64 128 255 10240 63503
+257 1 64 65 128 255 10496 64009
+512 2 128 128 256 511 86016 258063
+1024 3 256 256 512 1023 532480 1040399
+4096 5 1024 1024 2048 4095 14712832 16744463
+8192 6 2048 2048 4096 8191 71368704 71368704
+32768 8 8192 8192 16384 32767 1543766016 1543766016
+65536 9 16384 16384 32768 65535 7547387904 7547387904
+524288 12 131072 131072 262144 524287 817966874624 817966874624
+1048576 13 262144 262144 524288 1048575 3718523125760 3718523125760
+N=32: separate strips 160 at depth 1, b=6, k=16; linear restoring force 870 from degree 15 and 15 strips.
+N=48: separate strips 624 at depth 2, b=4, k=24; linear restoring force 2622 from degree 23 and 23 strips.
+N=49: separate strips 624 at depth 2, b=4, k=24; linear restoring force 2760 from degree 24 and 23 strips.
+N=64: separate strips 1344 at depth 2, b=6, k=32; linear restoring force 5270 from degree 31 and 31 strips.
+N=128: separate strips 8320 at depth 3, b=6, k=64; linear restoring force 24822 from degree 63 and 63 strips.
+N=256: separate strips 45312 at depth 4, b=6, k=128; linear restoring force 106934 from degree 127 and 127 strips.
+N=257: separate strips 45312 at depth 4, b=6, k=128; linear restoring force 107696 from degree 128 and 127 strips.
+N=512: separate strips 229888 at depth 5, b=6, k=256; linear restoring force 443190 from degree 255 and 255 strips.
+N=1024: separate strips 1115136 at depth 6, b=6, k=512; linear restoring force 1803830 from degree 511 and 511 strips.
+N=4096: separate strips 25169920 at depth 7, b=14, k=2048; linear restoring force 29235254 from degree 2047 and 2047 strips.
+N=8192: separate strips 115351552 at depth 8, b=14, k=4096; linear restoring force 117190710 from degree 4095 and 4095 strips.
+N=32768: separate strips 2315288576 at depth 10, b=14, k=16384; linear restoring force 1878048822 from degree 16383 and 16383 strips.
+N=65536: separate strips 10200612864 at depth 11, b=14, k=32768; linear restoring force 7514193974 from degree 32767 and 32767 strips.
+N=524288: separate strips 833224179712 at depth 14, b=14, k=262144; linear restoring force 481020346422 from degree 262143 and 262143 strips.
+N=1048576: separate strips 3590593708032 at depth 14, b=30, k=524288; linear restoring force 1924113367094 from degree 524287 and 524287 strips.
+N=1024: allowing k=449 gives 1150338 by the same strip recurrence.
+N=8192: allowing k=3841 gives 116036610 by the same strip recurrence.
+N=9..1024: exhaustive original GS choices and feasible reduced stationary splits match both integer formulas.
+N=32: reduced-degree existence 783 at D=30; the fixed S4 field has D=31.
+U3.1 p=2 k=1: support (4, 2), lower bound 32
+U3.1 p=3 k=4: support (5, 5), lower bound 192
+S3.1 n=128 d=127: filled positions (2, 2), support (4, 257), degree 255, lower bound 64005
+S3.1 n=130 d=129: filled positions (0, 0), support (2, 259), degree 259, lower bound 66045
+B1.1 M=128 d=7: support (4, 257), degree 255, F_*=58128, lower bound 59240
+Tables 3 and U1: seven article counts and degrees, published capped bounds, four additional capped fields in both tables and three attributed GS double lifts checked.
+Detailed U1 entries include the three power-law lifts, both six-term focus lifts, and distinct GS/BBJT witnesses.

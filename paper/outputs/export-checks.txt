@@ -1,0 +1,6 @@
+outputs/six-field.hex.gz: (4, 2), actual degree 524615 bits, canonical SHA-256 0a7882af5006900b2b29a88c0d60243c05f025a66e9984e7cd66a854b568869a
+outputs/seven-field.hex.gz: (4, 3), actual degree 9106819 bits, canonical SHA-256 9d37efdd151086913cbab28de9beaf45b03965520d03f3615dd4135df451da60
+research/tail_interpolation/field.hex.gz: (4, 4), actual degree 9106819 bits, canonical SHA-256 01fb565a9b281cd37b0e97a6218c4a120894bc65f1164f5f7fc275b7663d3b83
+research/cross_visibility/field.hex.gz: (4, 5), actual degree 9106819 bits, canonical SHA-256 56371e8a3da6793d1426aca2dd18121a48e430566afe58d18dde4ef381f84c8e
+27 model brackets (14 positive, 13 negative). Weakest left, right and slope bounds: 95315/524288, -209715/1048576, -1048575/1048576
+30 auxiliary integral enclosures. Largest exported relative error bound 11/34359738368.

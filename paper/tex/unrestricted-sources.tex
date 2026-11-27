@@ -1,0 +1,28 @@
+\section{Fields with small ordinary support}\label{un:inventory}
+We count ordinary monomials separately in each component after collecting powers in fixed Cartesian coordinates. Write \(\splitcount{a}{b}\) for the two component counts and \(D\) for the largest total degree. The single-budget question allows \(D\) to grow when exponents are cleared. Gasull and Santana give \(12,12,12,16,20,24,32\) isolated cycles at four through ten monomials \cite[Theorem~2]{GasullSantana2024}. The detailed entries below retain the degree, the type of cycle and the parameter dependence of each witness.
+
+\begin{table}[htbp]\centering\small
+\caption{Small-support fields. Each entry gives (cycle count, actual degree, return type, status under \(D\le N-1\)). The last column gives coprime representatives. A star marks a simple-return realization of a previously counted two-coordinate lift.}\label{tab:small-detail}
+\begin{tabular}{@{}rlll@{}}\toprule
+\(N\)&Literature&Uniform rule&Specialized and refined fields\\\midrule
+\inputrows{tex/low-rows.tex}
+\bottomrule\end{tabular}
+
+\smallskip
+\begin{minipage}{.98\linewidth}\footnotesize
+Return types are \(I\) (isolated), \(O\) (odd multiplicity or a sign crossing), \(H\) (hyperbolic), and \(\circ\) (no cycles possible).
+The symbols \(+,-,?\) mean within the cap, above it, and undetermined. The degree \(S\) depends on the exponents in Gasull and Santana's power-law clearing. In their Proposition~1 with \(r=2\) and \(n=3,4\), \(G_n=2m_n+1\) depends on the last localization exponent \(m_n\) (degree-capped supplement, \S\othernumber{sup:sources}{S1}).
+The four-term Hopf example of Gasull and Santana is marked \(f\): their (3) gives the field and the four cycles; \S\othernumber{sup:focus}{S2.1} of the degree-capped supplement verifies simple returns in that family. An \(I\) for a published focus truncation records the cycle type stated in its source. Superscripts \(a,p\) indicate a term count attributed in a later source and a deduction by persistence, respectively. A degree \(e^\circ\) is taken after division by the common monomial factor.
+\end{minipage}
+\end{table}
+In Table~\ref{tab:small-detail} the last column starts with the specialized construction that fits the linear cap. There \(S_L=50L+1\) is the coprime power-law degree derived below. For the large fields, Section~\ref{sup:primitive-fields} gives the coprime degree \(e^\circ=e-a-b\) from the cleared degree \(e\) and the least exponents \(a,b\) in the two components. Table~\othernumber{tab:small}{3} of the main article gives its seven general bounds under the linear degree cap. The same table gives the four additional capped comparisons established in the degree-capped supplement. The fixed degree \(E_6\) is computed in Section~\ref{six:fixed}. Theorems~\ref{ti:main} and~\ref{cv:nine} identify the common fixed degree \(D_*\). For \(E_{10}\), take \((p,k)=(3,4)\) in Theorem~\ref{se:main} and evaluate the exponents of \eqref{se:poly} at the selected scales.
+
+\paragraph{Power laws and reflected copies.}
+In logarithmic coordinates \(s,t\), the two components in Boros and Hofbauer's example are \(1-e^{(-8-\nu)s+(35-\delta)t}\) and \(e^{10s+20t}-e^{-20s+28t}\) \cite[\S7, (22)--(24), pp.~3814--3815]{BorosHofbauer2019}. On the trace-zero line \(\nu=0\), the first focal value is \(-c\delta+O(\delta^2)\), \(c>0\), and the second tends to \(d>0\). In a finite Hopf normal form the displacement divided by \(r^3\), at \(r=\sqrt{\delta}\,z\) and after division by \(\delta\), tends in \(C^1\) on compact positive \(z\)-intervals to \(-c+dz^2\), up to a positive normalization. This gives one simple cycle for small \(\delta>0\). At fixed \(\delta\), the trace crosses zero with derivative one in \(\nu\); the nondegenerate supercritical Hopf bifurcation gives a second simple cycle for small \(\nu>0\). The repelling outer local cycle and inward motion at large amplitude give a separate odd crossing by permanence. Both small parameters may be chosen rational inside these strict conditions.
+
+Choose an even common multiple \(L\) of the denominators with \(L\delta,L\nu\) even. On each open quadrant put \(s=L\log|u|,\ t=L\log|v|\) and multiply the pullback by the positive factor \(Lu^{20L}\). The primitive polynomial is
+\[
+ P=u^{20L+1}-u^{(12-\nu)L+1}v^{(35-\delta)L},\qquad
+ Q=u^{30L}v^{20L+1}-v^{28L+1}.
+\]
+Its two binomial exponent differences have determinant \(L^2(986-8\nu-30\delta)\ne0\). Their zero sets in the algebraic torus intersect in only finitely many points (eliminate a variable by the two integer relations). No coordinate divides both components. Thus \(N=4\), \(D=S_L=50L+1\), and the field is coprime. Its four sheets give twelve isolated cycles including eight hyperbolic ones. To reach \(N=5,6\), add, for example, small coefficients of \(1,u\) in succession to \(P\). Each factor of \(Q\) excludes at most one value at each step. All eight hyperbolic cycles and the other four strict sign brackets persist at that same degree. The maxima of the exponents in the clearing in Gasull and Santana's (19)--(20) define a different, unspecified degree \(S\) \cite{GasullSantana2024}.

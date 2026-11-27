@@ -1,0 +1,58 @@
+\section{Two-sided returns across an odd stationary turn}\label{sec:stationary}
+In Proposition~\paperlink{main}{theorem.6.1}{prop:stationary-budget}{6.1} of the article, subtracting a multiple of \(V'\) from the density reduces the degree of the drive while preserving its oval integrals. For the fixed field in Section~\ref{app:783-proof} we use the density before this substitution. We give its coefficients and the moment expansion used to certify its returns.
+
+\begin{theorem}[Two-sided returns across an odd stationary turn]\label{thm:stationary-turn}
+For every pair of integers $n\ge 2$ and $d\ge 4$, there exists a polynomial vector field $X=(P,Q)\in\Q[x,y]^2$ with coprime components, exact component supports $\splitcount{2}{n+d}$ and actual degree $D(X)=\max(2n-1,2d+1)$ having at least
+\begin{equation}\label{eq:stationary-count}
+  (2n-1)(2d-3)
+\end{equation}
+pairwise distinct, simultaneously coexisting hyperbolic limit cycles.
+\end{theorem}
+
+Fix integers $n\ge 2$ and $d\ge 4$, set $r:=2d-1$ (odd) and $a:=\sqrt{r/(r+2)}$, and consider
+\begin{gather}
+  P(x,y) = V'(y), \qquad Q(x,y) = -U'(x) + A\lambda F(y), \notag\\
+  V(y) = y^r(y^2-1), \qquad U(x) = A^2 T_n(x)^2,\label{eq:st-field}
+\end{gather}
+where $F(y)=\int_0^y G(t)\dd t$ for an even polynomial $G\in\Q[y]$. Note that $P(x,y)=(r+2)y^{r+1}-ry^{r-1}$ has exactly two ordinary monomials, while $U'(x)=A^2(T_{2n}(x)/2)'$ occupies all $n$ odd powers $x,x^3,\dots,x^{2n-1}$. Near each of the $2n-1$ interior extrema $x_i=\cos(i\pi/(2n))$ ($1\le i\le 2n-1$, with $\delta_i=+1$ at minima and $\delta_i=-1$ at maxima), put $y=\delta_i Y$ and
+\begin{gather}
+  x = x_i(X) := \cos\left(\frac{i\pi}{2n} - \frac{\arcsin(X/A)}{n}\right), \notag\\
+  g_i(X) := A x_i'(X) \xrightarrow[A\to\infty]{C^\infty_{\mathrm{loc}}} c_i := \frac{\sin(i\pi/(2n))}{n} > 0.\label{eq:st-chart}
+\end{gather}
+Because $V$ and $F$ are odd, multiplying time derivatives by $x_i'(X)>0$ transforms~\eqref{eq:st-field} on both minimum and maximum strips into $X'=V'(Y)$, $Y'=-2X+\lambda g_i(X)F(Y)$ with unperturbed Hamiltonian $h=X^2+V(Y)$. Since $V(a)<0<V(-a)$ and $V(y)=-y^r(1-y^2)$ has an odd-order stationary inflection at $y=0$ ($h=0$), for small $h\ne 0$ the bounded oval around $(0,a)$ has turning points $\ell(h)\in(-a,a)$ ($\ell(h)\to 0$ as $h\to 0$) and $u(h)>a$ ($u(h)\to 1$), and its constant-weight first energy displacement per clockwise turn is $2c_i I[G](h)$, where
+\begin{equation}\label{eq:st-integral}
+  I[G](h) := \int_{\ell(h)}^{u(h)} G(y)\sqrt{h-V(y)}\dd y.
+\end{equation}
+
+\begin{lemma}[Two-sided Beta expansion across an odd stationary turn]\label{lem:st-expansion}
+For $j\ge 0$, set $I_j:=I[y^{2j}]$, $w:=|h|^{1/(2r)}$, $\alpha_j:=(2j+1)/r$, $\nu_j:=\alpha_j+1/2$, and $e_j:=2r\nu_j=r+4j+2$. For small $w>0$, $I_j(\pm w^{2r})$ is the sum of a common real-analytic series in signed energy $h=\pm w^{2r}$ (whose constant and linear coefficients are $S_{0j}=\frac{1}{2}\Bta(j+\frac{1}{2}+\frac{r}{4},\frac{3}{2})$ and $S_{1j}=\frac{1}{4}\Bta(j+\frac{1}{2}-\frac{r}{4},\frac{1}{2})$) and a convergent fractional series in $w^{e_j+4k}$ ($k\ge 0$) whose coefficient of $w^{e_j}$ is
+\begin{equation}\label{eq:st-Cpm}
+  C_j^+ = b_j\bigl(1+\sec(\pi\alpha_j)\bigr) \; (h>0), \quad
+  C_j^- = -b_j\tan(\pi\alpha_j) \; (h<0), \quad
+  b_j := \frac{1}{r}\,\Bta\bigl(\alpha_j,\tfrac{3}{2}\bigr).
+\end{equation}
+In particular, for every $j$ with $0<\alpha_j<1$ (i.e.\ $0\le j\le d-2$), $\alpha_j\ne 1/2$ because $r$ is odd, and $C_j^+ C_j^- < 0$. At $j=d-1$ both coefficients vanish, and the first nonzero fractional power on each side is $w^{e_{d-1}+4}$.
+\end{lemma}
+
+\begin{proof}
+Apply the upper-end subtraction in the proof of Lemma~\paperlink{main}{theorem.6.2}{lem:stationary-moments}{6.2} of the main article to any fixed \(j\ge0\). In the coordinate \(z=y(1-y^2)^{1/r}\), each term \(z^{2i}\) in \(y^{2j}\,dy/dz\), \(i\ge j\), contributes the common upper-end primitive
+\begin{equation}\label{eq:st-upper-series}
+ \sum_{m\ge0}\binom{1/2}{m}\frac{h^m z_0^{2i+1+r(1/2-m)}}{2i+1+r(1/2-m)} .
+\end{equation}
+The half-integer denominators have absolute value at least \(1/2\) for every \(i\). The beta evaluations and normal convergence argument of that proof apply to every tail \(i\ge j\), giving \eqref{eq:st-Cpm}. For \(0<\alpha_j<1\), \(C_j^-/C_j^+=-\tan(\pi\alpha_j/2)<0\).
+
+For \(j=d-1\) we have \(\alpha_{d-1}=1\). At both turning points \(h-V=0\), so integration of \(\frac{\mathrm d}{\mathrm dy}(h-V)^{3/2}\) gives
+\[
+ 0=\int_{\ell(h)}^{u(h)} V'(y)\sqrt{h-V(y)}\dd y=(r+2)I_d(h)-rI_{d-1}(h).
+\]
+Since \(1<\alpha_d=1+2/r<3/2\), both \(C_d^+\) and \(C_d^-\) in \eqref{eq:st-Cpm} are nonzero. The first fractional power of \(I_{d-1}\) is therefore the one of \(I_d\), with \(e_d=e_{d-1}+4\).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:stationary-turn}]
+We use the density of Proposition~\othernumber{prop:stationary-budget}{6.1} of the main article \emph{before} replacing its highest power. To specify also the fixed field of Section~\ref{app:783-proof}, put \(b=d-2,\ R_{ij}=S_{ij}/S_{ib}\), and let \(L(s,t)\) be the unique combination of \(y^{2b},y^{2d}\) whose normalized constant and linear coefficients are \(s,t\). The control columns are independent by Lemma~\othernumber{lem:stationary-moments}{6.2}. The densities \(L(1,0),L(0,1)\) and \(y^{2j}+L(-R_{0j},-R_{1j})\) for \(0\le j<b\) have respective leading orders \(0,2r,e_j\). Their coefficient pairs are \((S_{0b},S_{0b})\), \((S_{1b},-S_{1b})\), and \((C_j^+,C_j^-)\). Order the densities \(D_i\) by increasing exponents \(\tilde e_i\), denote their coefficients by \(c_{i,\pm}\), and set
+\begin{equation}\label{eq:st-choice}
+ G(y)=\sum_{i=0}^{d-1}\sigma_i q^{(B-\tilde e_i)^2}D_i(y),
+ \qquad B>\tilde e_{d-1},\quad \sigma_i=(-1)^i\sgn(c_{i,+}).
+\end{equation}
+The adjacent-scale argument in the proof of that proposition gives \(d-1\) positive and \(d-2\) negative simple brackets for the limiting integral of this very \(G\). Each \(j<b\) occurs in one basis column. Both control powers have a nonzero coefficient of \(q^{B^2}\) from \(L(1,0)=(y^{2d}-R_{1d}y^{2b})/(R_{0d}-R_{1d})\). Thus all \(d\) powers occur for small rational \(q>0\). Equation~\eqref{eq:st-chart} gives \(C^1\) convergence of the weighted moments to \(c_i\) times these moments on the regular brackets. One large integer \(A\) and one small rational \(\lambda>0\) work on all \(2n-1\) strips. The drive now has degree \(2d+1\). The highest \(x\)-coefficient is constant and nonzero and \(P\) depends only on \(y\), giving coprimality and the asserted resources.
+\end{proof}

@@ -1,0 +1,89 @@
+\section{Stationary turns, separate strips and finite budgets}\label{sec:comparison}
+
+We call an odd-order stationary point of \(V\) a stationary turn: \(V'\) vanishes there while \(V\) passes monotonically through its stationary value. Ovals at energies just below and just above that value probe opposite sides of the turn and induce opposite signs in the leading singular terms of their area integrals. This nearly doubles the number of simple zeros per strip relative to a quadratic well. Moreover, taking \(V\) and \(F\) odd allows the reflection \(y\mapsto -y\) to reproduce the same integral at both the minima and the maxima of the horizontal potential \(U\), which doubles the number of usable strips. Together these effects raise the leading quadratic coefficient from \(1/4\) in Proposition~\ref{thm:allocation} to \(1\).
+
+\begin{proposition}[Finite quadratic bound at a stationary turn]\label{prop:stationary-budget}
+For odd \(N\ge9\) there is a polynomial field of the form \eqref{eq:separable-template} with exactly \(N\) terms, actual degree \(N-1\) and at least \(\mathcal S(N)=(N-4)^2\) simultaneous hyperbolic limit cycles. For even \(N\ge10\) the corresponding degree and count are \(N-2\) and \(\mathcal S(N)=(N-4)^2-1\). In both cases the coefficients are rational and the components are coprime.
+\end{proposition}
+
+Fix \(d\ge4\), put \(r=2d-1\), and take \(V(y)=y^r(y^2-1)\).
+For small \(h\ne0\), the oval of \(X^2+V(y)=h\) about the minimum
+\(y=\sqrt{r/(r+2)}\) has turning points \(\ell(h)\to0\) and \(u(h)\to1\).
+For a density \(G\), write
+\[
+ I[G](h)=\int_{\ell(h)}^{u(h)}G(y)\sqrt{h-V(y)}\,dy,\qquad
+ I_j=I[y^{2j}],\qquad w=|h|^{1/(2r)} .
+\]
+We first determine which leading terms of this integral can change sign across the stationary turn.
+
+\begin{lemma}[Moments on the two sides of the turn]\label{lem:stationary-moments}
+Put \(b=d-2\), \(\alpha_j=(2j+1)/r\), \(e_j=r+4j+2\) and
+\(J=\{0,\ldots,b,d\}\). For \(j\in J\), \(I_j(\pm w^{2r})\) is the sum of a common analytic function of signed \(h\) and a convergent series in the powers \(w^{e_j+4k}\), \(k\ge0\).
+If \(S_{0j},S_{1j}\) denote the constant and linear coefficients of the analytic part and \(C_j^\pm\) the coefficients of \(w^{e_j}\), then
+\[
+ C_j^+C_j^-<0\quad (0\le j\le b),\qquad
+ 0< S_{1d}/S_{1b}<S_{0d}/S_{0b}.
+\]
+All the ratios \(S_{ij}/S_{ib}\), \(i=0,1\), \(j\in J\), are rational.
+\end{lemma}
+
+\begin{proof}
+Near the left turn use \(z=y(1-y^2)^{1/r}\), with analytic odd inverse \(\psi\).
+Then \(V=-z^r\) and \(\psi(z)^{2j}\psi'(z)=z^{2j}(1+O(z^2))\) is an even power series. Cut at a fixed \(z_0>0\) inside its disk of convergence. The remaining integral up to \(u(h)\) is analytic in \(h\), using \(V\) as a coordinate near its simple right turn. For a power \(z^{2i}\) in the left integral, set \(\alpha=(2i+1)/r,\ \nu=\alpha+1/2\). Its upper-end primitive is
+\[
+ \sum_{m\ge0}\binom{1/2}{m}
+ \frac{h^m z_0^{2i+1+r(1/2-m)}}{2i+1+r(1/2-m)} .
+\]
+The denominators have absolute value at least \(1/2\). The residual term is a constant times \(|h|^\nu\) by scaling. For \(h>0\), the negative segment contributes \(\Bta(\alpha,3/2)/r\) to this constant. Substituting \(t=z^r/|h|\) on the positive segment gives the additional constant \(\Bta(\alpha,-\nu)/r\). For \(h<0\) the substitution \(t=|h|/z^r\) gives \(\Bta(-\nu,3/2)/r\). These beta evaluations follow by subtracting the displayed upper-end series from the incomplete integrals and continuing the Euler integrals from \(0<\Re\alpha<1,\ -1<\Re\beta<-\Re\alpha\) in the two exponents to \(\beta=1/2\) and the indicated \(\alpha\). Euler's reflection formula gives, with \(b_j=\Bta(\alpha_j,3/2)/r\),
+\[
+ C_j^+=b_j(1+\sec\pi\alpha_j),\qquad C_j^-=-b_j\tan\pi\alpha_j .
+\]
+For \(0\le j\le b\), \(0<\alpha_j<1\). Since \(r\) is odd, \(\alpha_j=(2j+1)/r\ne1/2\), so both trigonometric factors are finite and \(C_j^-/C_j^+=-\tan(\pi\alpha_j/2)<0\).
+At fixed odd \(r\) the cosines in the denominators range over finitely many nonzero values as \(i\) varies. The beta factors \(\Bta(\alpha,3/2)/r\le1/(2i+1)\) are bounded. These bounds and the convergent series for \(\psi^{2j}\psi'\) give normal convergence on smaller disks in \(w\), also after differentiation there.
+
+Putting \(t=y^2\) at \(h=0\) gives
+\[
+ S_{0j}=\tfrac12\Bta(j+\tfrac12+\tfrac r4,\tfrac32),\qquad
+ S_{1j}=\tfrac14\Bta(j+\tfrac12-\tfrac r4,\tfrac12).
+\]
+For the second formula one may first differentiate on the positive interval from the \(h<0\) side when \(2j-r/2>-1\). The same upper-end subtraction continues the analytic coefficient in the exponent \(2j\) to the remaining indices; since \(r\) is odd, \(j+\tfrac12-\tfrac r4\notin\Z_{\le0}\), so the Beta formula has no poles at integer \(j\ge0\). Both beta recurrences have rational, nonzero factors between consecutive integer indices. For \(K_j=S_{1j}/S_{0j}\) they give
+\[
+ \frac{K_{j+1}}{K_j}
+ =\frac{(j+1/2-r/4)(j+2+r/4)}
+        {(j+1/2+r/4)(j+1-r/4)} .
+\]
+At \(j=b,b+1\) all factors are positive. Numerator minus denominator is
+\((2j+1-r)/2\), equal to \(-1\) and \(0\), respectively. Thus \(0<K_d<K_b\), proving the second inequality.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:stationary-budget}]
+Write \(R_{ij}=S_{ij}/S_{ib}\). By the lemma the two columns \(y^{2b},y^{2d}\) prescribe both normalized analytic coefficients. Let \(L(s,t)\) be their unique rational combination giving \((s,t)\) for rational \(s,t\).
+Use \(L(1,0),L(0,1)\) and \(y^{2j}+L(-R_{0j},-R_{1j})\), \(0\le j<b\).
+Their respective leading powers in \(w\) are \(0,2r,e_j\): the control powers satisfy \(e_d>e_b=3r-4>2r\), and \(e_j<\min(e_b,4r)\) for \(j<b\). These leading orders are distinct. The constant has positive coefficient on both sides. All other pairs of leading coefficients have opposite signs, by the linear term in signed \(h\) or by Lemma~\ref{lem:stationary-moments}.
+
+To separate the scales we use quadratic weights. The leading orders form the set \(\{0,2r\}\cup\{r+4j+2:0\le j<b\}\). Each \(r+4j+2\) is odd, so it differs from \(2r\). Order the densities as \(D_i\) by increasing leading order \(a_i\), with coefficients \(c_i^\pm\). Choose an integer \(B>a_{d-1}\) and let
+\[
+ G=\sum_{i=0}^{d-1}\sigma_i q^{(B-a_i)^2}D_i,\qquad
+ \sigma_i=(-1)^i\sgn(c_i^+).
+\]
+Each power below \(2b\) occurs in just one \(D_i\).
+The coefficient of \(q^{B^2}\) in \(G\) is \(L(1,0)=(y^{2d}-R_{1d}y^{2b})/(R_{0d}-R_{1d})\). Thus \([y^{2b}]G\) and \([y^{2d}]G\) are polynomials in \(q\) of degree \(B^2\). Each has only finitely many roots, so both are nonzero for all sufficiently small positive rational \(q\).
+For consecutive orders put \(w=q^{2B-a_i-a_{i+1}}t\).
+After division by \(q^{(B-a_i)^2} w^{a_i}\) the moment tends in \(C^1\) on compact positive \(t\)-intervals to
+\(\sigma_i c_i^\pm+\sigma_{i+1}c_{i+1}^\pm t^{a_{i+1}-a_i}\).
+Every other index \(k\) carries the extra positive exponent \((a_k-a_i)(a_k-a_{i+1})\) of \(q\).
+Opposite signs in this binomial give a simple positive root. On the positive side all \(d-1\) pairs alternate. On the negative side the sign reverses for every index except the first, giving \(d-2\) alternating pairs. The scales are distinct, so one rational \(q>0\) gives \(2d-3\) disjoint compact simple-zero brackets away from \(h=0\).
+
+Let \(c=[y^{2d}]G\). The density \(\widetilde G=G-cV'/(r+2)\) exchanges \(cy^{2d}\) for \(cr y^{2d-2}/(r+2)\) at a vacant power. It has the same moment, since the primitive \(-2(h-V)^{3/2}/3\) of \(V'\sqrt{h-V}\) vanishes at both turns. Set \(F(y)=\int_0^y\widetilde G(s)\,ds\), \(U(x)=A^2T_n(x)^2\), \(n\ge2\), and take the field \((V',-U'+A\lambda F)\).
+
+The extrema of the horizontal potential index both types of strip. At the \(i\)-th interior extremum of \(T_{2n}\), \(1\le i<2n\), use the increasing chart
+\(x=x_i(X)=\cos(i\pi/(2n)-\arcsin(X/A)/n)\) and put \(y=Y\) at minima, \(y=-Y\) at maxima. Here \(U=X^2\) or \(A^2-X^2\), respectively. Since \(V,F\) are odd, the positive time factor \(x_i'(X)\) gives \(X'=V'(Y),\ Y'=-2X+\lambda g_i(X)F(Y)\) in both charts, where \(g_i=A x_i'\to c_i=\sin(i\pi/(2n))/n>0\) in \(C^1\) on compact sets. The first energy displacement is the integral of \(g_i(X)\widetilde G(Y)\) over the oval disk, by Green's formula. On the regular brackets it converges in \(C^1(h)\) to \(2c_i I[G](h)\) by smooth variation of the boundary. One large integer \(A\) therefore retains all brackets on disjoint strips. On their compact collars the displacement divided by \(\lambda\) tends in \(C^1(h)\) to this first variation. One small rational \(\lambda>0\) realizes a hyperbolic cycle in every bracket.
+
+There are two terms in \(V'\), all \(n\) odd powers through \(x^{2n-1}\) in \(U'\), and \(d\) odd powers through \(y^{2d-1}\) in \(F\). The highest \(x\)-coefficient in the second component is a nonzero constant, so the components are coprime. The actual degree is \(\max(2d,2n-1)\). With \(N=n+d+2\) the count is
+\[
+ (2n-1)(2d-3)=(N-4)^2-(n-d+1)^2.
+\]
+The admissible choice \(n=\lfloor(N-2)/2\rfloor,\ d=N-2-n\) minimizes the subtracted square and gives the stated degrees.
+\end{proof}
+
+For \(n=d=15\), this gives \(29(14+13)=783\) hyperbolic cycles with 32 terms at degree 30. Keeping the original density \(G\) gives the same count at degree 31 (Theorem~\paperlink{low-N-supplement}{theorem.3.1}{thm:stationary-turn}{S3.1}). Proposition~\paperlink{low-N-supplement}{theorem.4.1}{prop:783-witness}{S4.1} of the supplement specifies all coefficients and the return intervals at that degree \cite{LuElectronic}.

@@ -1,0 +1,7 @@
+10 exponential and 7 linear brackets, endpoint margin > 2^-710 and |slope| > 2^-200.
+At the specified field parameters the signs and slopes survive on 10 + 10 + 7 brackets.
+Two disjoint ranges give 10 + 7 simple returns per quadrant at exactly seven terms.
+Four disjoint ranges give 10 + 10 + 10 + 7 simple returns per quadrant at the specified rates.
+Collected (4, 4), exponent bits 9106817 9106819 binary SHA-256 01fb565a9b281cd37b0e97a6218c4a120894bc65f1164f5f7fc275b7663d3b83
+Nine collected rows with exponent lengths 9106817..9106819 bits. Binary fingerprint 56371e8a3da6793d1426aca2dd18121a48e430566afe58d18dde4ef381f84c8e
+Seven collected rows. Binary fingerprint 9d37efdd151086913cbab28de9beaf45b03965520d03f3615dd4135df451da60

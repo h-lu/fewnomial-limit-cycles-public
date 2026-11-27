@@ -1,0 +1,11 @@
+Four recomputed columns at all 19,998 degrees 3..20000: SHA-256 da6cff395555f1fae4d35d5bd70d2188e5eafd673fdff207f03c3b9ef8628f4f.
+17 bundled integer rows matched. The four-column projection is an arithmetic check.
+8..20000 exact terms: the direct floor-choice mechanical count is below the elementary count.
+48..20000 exact terms: first strict folded improvement over elementary at 512, over stationary at 8192; both inequalities persist through the scanned endpoint.
+N=48, cap 47, same fold allocation: fixed potential 24, joint variation 168 (degree 47).
+Other fields under that budget: elementary 529, replicated degree-12 seed 704, stationary turn 1935.
+Huzak--De Maesschalck Thm 1.1 gives 16 at bidegree (12,12). At k=22, t=2, pure-power filling to 48 terms is available within degree 43.
+At b=2^128 distinct early and capped indices give sum(1/q_j) >= 5391/256 > 21. The retained normalized loss bound is 1503/32.
+At m asymptotic to c*Delta^2/log_2(Delta), the substituted recurrence and folded lower expression have coefficients c/4 and 2. They agree for c=8.
+Caps 2..2048: both odd supports and the positive even support reach exact degree and exactly ceil(3*cap/2) component positions, for both parities.
+Fixed-potential stage budgets, physical degrees, and all per-stage odd lengths checked on five exact diagonal log/log boundaries and all saturated caps 1024..4096.

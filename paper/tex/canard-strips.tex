@@ -1,0 +1,49 @@
+\subsection{Replication of an isolated-cycle seed}\label{sec:seed-replication}
+A generalized Li\'enard field \(X=(y-F(x),G(x))\) of degree at most \(n\) can be replicated at a calculable term cost. We first choose a common parameter giving enough hyperbolic cycles and then determine the support of the pullback.
+\begin{proposition}[Replication of a finite seed]\label{prop:seed-strips}
+Suppose \(X\) as above has \(K\ge1\) distinct selected isolated limit cycles.
+For every integer \(k\ge1\) and every even integer \(t\ge2\), there exists a rational polynomial field with coprime components and pure univariate terms having at least \(tkK\) simultaneous hyperbolic limit cycles. Its term count and degree are at most
+\[
+ k+t(n+1),\qquad \max\{2k-1,t(n+1)-1\},
+\]
+respectively.
+\end{proposition}
+
+\begin{proof}
+Consider \(X_a=(y-F(x)-aG(x),G(x))\). On a selected orbit of period \(T\) at \(a=0\), take an analytic transversal with coordinate \(s=0\) at the orbit and let \(d(s,a)\) be the return displacement. Its parameter derivative at \((0,0)\) is nonzero. Indeed, with the starting point fixed, the parameter variation \(w\) of the flow satisfies
+\[
+ \frac{\mathrm d}{\mathrm dt}\det(X,w)
+   =(\operatorname{div}X)\det(X,w)+\det(X,\partial_aX_a|_0),
+ \qquad \det(X,\partial_aX_a|_0)=G(x)^2 .
+\]
+The initial determinant is zero. The last term is positive somewhere on the orbit, since \(G(x)=\dot y\) cannot vanish identically on a nonconstant periodic orbit. Integration with the positive integrating factor gives a nonzero final determinant. The derivative of the hitting time adds a vector parallel to \(X\), and conversion to the transverse coordinate divides by a nonzero determinant.
+
+The analytic zero set of \(d\) is therefore a graph \(a=A(s)\). Its order at zero is the finite multiplicity of \(d(s,0)\), since \(d(s,a)=(a-A(s))u(s,a)\) with \(u(0,0)\ne0\). After shrinking the section, \(A'(s)\ne0\) off zero. An odd-order graph meets each sufficiently small signed level once. An even-order graph meets levels of one sign twice and levels of the other sign zero times. At each intersection \(d_s=-uA'\ne0\), so the corresponding cycle is hyperbolic. Choose disjoint collars for the \(K\) cycles and one common bound on \(|a|\). If \(o\) cycles have odd order and \(e_+,e_-\) even-order cycles open to the positive and negative sides, the larger of the two local counts is
+\[
+ o+2\max(e_+,e_-)=K+|e_+-e_-|\ge K .
+\]
+Fix the favorable sign and choose \(K\) simple cycles of that one field. Rational approximation of \(F+aG\) and \(G\) within degree \(n\) preserves all of them. Write \(F,G\) for these rational polynomials.
+
+Choose \(k\) distinct rational nodes \(b_j\) symmetric about zero. Hermite interpolation gives a unique polynomial \(\eta\) of degree at most \(2k-1\) with \(\eta(b_j)=0,\ \eta'(b_j)=1\) at every node. The data and uniqueness give rational coefficients and \(\eta(v)=-\eta(-v)\). Thus \(\eta\) has at most \(k\) monomials. Put \(H_R(v)=R\eta(v/R)\). In \(v=Rb_j+s\) one has \(H_R(Rb_j+s)=s+O(R^{-1})\) in \(C^1\) on each fixed compact \(s\)-interval. Consequently \((H_R(v)-F(x),G(x))\) converges in each translated chart to the hyperbolic seed. Take one sufficiently large integer \(R\) for the \(kK\) compact collars, with disjoint strips for different nodes.
+
+Next take an integer \(C>0\) with the \(x\)-projections of these collars in \((-C,C)\). Put \(\phi(u)=CT_t(u)\), where \(T_t(\cos\theta)=\cos(t\theta)\). Each of the \(t\) monotone branches in \((-1,1)\) has a smooth inverse over the selected projections. The field
+\begin{equation}\label{eq:seed-fold-field}
+ Y=\bigl(H_R(v)-F(\phi(u)),\,\phi'(u)G(\phi(u))\bigr)
+\end{equation}
+satisfies \(D(\phi,\mathrm{id})Y=\phi'(u)(H_R(v)-F(\phi(u)),G(\phi(u)))\). On each branch its forward return is conjugate to the old return or to its inverse according to the sign of \(\phi'\). A positive multiplier different from one and its reciprocal are both hyperbolic. The \(tkK\) lifted cycles lie in distinct collars of this single field.
+
+Since \(t\) is even, \(F(\phi)\) uses at most \(tn/2+1\) even powers of \(u\), including the constant, and \(\phi'G(\phi)\) uses at most \(t(n+1)/2\) odd powers. Adding \(k\) gives at most \(k+tn+t/2+1\le k+t(n+1)\), including \(t=2\). The two component degrees give the stated maximum. The second component is a nonzero polynomial in \(u\), and the highest \(v\)-coefficient in the first is a nonzero constant, so the pair is coprime.
+
+For a cap \(\Delta\) and \(k+t(n+1)\le m\le(\Delta+1)(\Delta+2)\) with both degrees within the cap, Remark~\othernumber{rem:exact-fill}{1.4} of the main article gives exact \(m\) and rational coprime components. For every \(m\le3\Delta+2\) one may fill within pure-power and constant positions. These include \(v,\ldots,v^\Delta\) in the first component and \(1,u,\ldots,u^\Delta\) in both, giving \(3\Delta+2\) positions that include the original support. Adding small rational coefficients there preserves the displayed coprimality argument.
+
+\end{proof}
+
+For a published finite seed, Huzak and De Maesschalck give \(2\lfloor(n-2)/2\rfloor+\lfloor m/2\rfloor\) hyperbolic cycles for a field \((y-F(x),G(x))\) with \(\deg F=n\ge6,\ \deg G=m\ge2\) \cite[Theorem~1.1, p.~2]{HuzakDeMaesschalck2014}. Taking both degrees equal to \(12\) gives \(K=16\). With \(k=22,\ t=2\), Proposition~\ref{prop:seed-strips} gives \(2\cdot22\cdot16=704\) cycles using at most \(22+2(12+1)=48\) terms and degree at most \(\max(43,25)=43\). Filling vacant pure powers through degree \(43\) gives exactly \(48\) terms while preserving the cycles and coprimality. Thus this count applies under the diagonal cap \(47\).
+
+\paragraph{A conditional comparison with linear restoring force.}
+Assume the seed theorem of the unrefereed preprint \cite[Theorem~1.1]{LuClassical}. For each \(n\ge14\) it asserts that, with \(G(x)=-x\), an open set of degree-\(n\) primitives \(F\) gives at least \(K=\lceil(7n-48)/2\rceil\) simultaneous hyperbolic cycles. Choose a rational seed in that open set and an integer \(C\) whose open interval \((-C,C)\) contains the horizontal projections of the selected collars. A vertical translation replaces \(F\) by \(F-F(-C)\). Choosing \(R\) large in the Hermite construction keeps the translated copies inside the same horizontal range. For \(\phi(u)=C(2u^2-1)\), the first component of \eqref{eq:seed-fold-field} then occupies at most \(k\) odd \(v\)-powers and \(n\) positive even \(u\)-powers. The second is \(-\phi'\phi\), with just \(u,u^3\). Small rational changes fill these \(k+n+2\) positions, preserve the \(2kK\) cycles, and give degree \(\max(2k-1,2n,3)\). The leading \(v\)-coefficient is a nonzero constant, ensuring coprimality. With this seed the count under the diagonal cap is
+\[
+ n=\lfloor(N-1)/2\rfloor,\qquad k=N-n-2,\qquad
+ \mathcal C(N)=2k\left\lceil(7n-48)/2\right\rceil\quad(n\ge14).
+\]
+On the grid \(N=2^j,\ 6\le j\le20\), the folded count \(\mathcal F(N)\) of the article, equation~(\paperlink{main}{equation.4.7}{eq:finite-main}{4.7}), first exceeds this quadratic count at \(2^{16}\). There \(\mathcal F(N)=7{,}547{,}387{,}904\) and \(\mathcal C(N)=7{,}514{,}193{,}974\).

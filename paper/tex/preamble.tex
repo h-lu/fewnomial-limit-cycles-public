@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage{iftex}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm,top=23mm,bottom=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\setlength{\emergencystretch}{1.5em}
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\pos}[1]{[#1]_+}
+\newcommand{\Bta}{\mathrm{B}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\ord}{ord}
+\newcommand{\Hhyp}{H_{\mathrm{hyp}}}
+\newcommand{\PP}{\mathcal{P}}
+% Print the companion's number on paper. The PDF checker matches #1 to its LaTeX label.
+\newcommand{\othernumber}[2]{#2}
+% Sibling PDF, PDF destination, source label, printed number.
+\newcommand{\paperlink}[4]{\href{#1.pdf\##2}{#4}}
+
+
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=15\fi
+\newcommand{\disk}{\mathbb D}
+\newcommand{\ev}{\operatorname{ev}}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\F}{\mathcal F}
+\setlist{topsep=4pt}
+\makeatletter\let\inputrows\@@input\makeatother
+
+\newcommand{\splitcount}[2]{\left(#1,#2\right)_{\mathrm{terms}}}
+\newcommand{\Mclr}{M_{\mathrm{clr}}}

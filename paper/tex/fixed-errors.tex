@@ -1,0 +1,158 @@
+\section{Finite error bounds for the interpolant}\label{fin:cert}
+Write \(b_H=\sum_{i=1}^3 b_i\), \(B=b_H\), \(L=1+z\), and let \(D_\lambda(z)=\sum\gamma_j L^{\nu_j}+\lambda b/L\) denote the untransported density.
+\subsection{Transfer to the finite horizontal rates}
+In \(x=-b_i u\), write \(W_i=W(-x/b_i)\) and use \(W_*\) for its limiting
+expression on \(x\ge0\). Set \(s_0=\sqrt\delta\), \(\eta=512\delta\).
+For \(s_0\le x\le128\) in all three ranges,
+\[
+ |W_i-W_*|<\eta,\qquad W_i',W_*'>2^{-193}.
+\]
+Each earlier exponential is at most \(e^{-1/\sqrt\delta}<\delta\), and each
+later exponential differs from one by at most \(128\delta\). The linear-term
+error is at most \(128\delta\) on the exponential ranges and is zero on the
+linear range. The wall has value error at most \(B<2\delta\), and its negative
+derivative has magnitude at most \((B/b_i)e^{-s_0/b_i}\le2e^{-1/\sqrt\delta}\).
+The increasing active derivative is at least \(e^{-128}\) or equals one.
+At \(x=128\) the potential exceeds every energy of its respective range
+used in the brackets. At \(x=-s_0\), \(u\ge1/\sqrt\delta\) and
+\(W(u)\ge\delta e^u-3e^{\delta u}-B>32\). Monotonicity on either side
+bounds all actual sublevels by \(-s_0\le x\le128\).
+
+Write \(\Phi(y)=2\int_0^{\sqrt{y_+}}A(Z^2)\dd Z\). On the relevant arguments
+\(y_+\le32\), the bounds \(|A|,|A'|<2^{48}\) on \([0,32]\) give
+\(|\Phi|<2^{52}\) and modulus of continuity \(2^{49}\sqrt{|\Delta y|}\).
+For \(I_i=\int\Phi(E-W_i(x))\dd x\) the value error against its model is
+less than \(2^{64}\sqrt\delta<2^{-4000}\), using the strip \(|x|\le s_0\)
+and then the potential error on the rest.
+
+For the energy derivative, the slice is \(A(y)/\sqrt y\) for \(y>0\) and zero
+for \(y<0\). The turning points are simple. On \(0\le x\le s_0\) both
+potential gaps exceed \(h/2\), since \(W_i(x)\le i-1+2s_0\). On
+\(-s_0\le x<0\), either the gap exceeds \(E/2\) or convexity of \(W\) for
+\(u\ge0\) gives \(|W_i'|\ge W_i/|x|\ge E/(2s_0)\). Integrating the
+inverse square root by substitution bounds the combined derivative contributions
+from this strip by \(2^{105}s_0\). On the main interval put
+\(\zeta_0=\delta^{1/4}=2^{-2048}\). Where \(|E-W_*|\le2\zeta_0\), use the two
+lower derivative bounds to integrate the singular slices for both potentials.
+The result is at most \(2^{246}\sqrt{\zeta_0}\). Where \(E-W_*>2\zeta_0\),
+the derivative of \(A(y)/\sqrt y\) on the intervening arguments is bounded
+by \(2^{50}\zeta_0^{-3/2}\). On the remaining part both slices vanish.
+Thus the horizontal derivative error is below
+\[
+ 2^{105}\sqrt\delta+2^{246}\sqrt{\zeta_0}+128\,2^{50}\eta\zeta_0^{-3/2}
+ <2^{-770}.
+\]
+The same substitutions bound \(\int_{W_i<E}(E-W_i)^{-1/2}\dd x<2^{200}\).
+
+\subsection{Vertical realization at the finite scale}
+The row residuals, their two integer norm bounds and the lower bound on the selected minor are computed in the preceding section. In particular the controls, for each coordinate, and the residual coefficient norms are below \(2^{60}\). At the stated \(t\), \(1/2<a<1\), \(1/40<|C_j|<4\), \(|\gamma_j/C_j|<256\), and \(|\lambda b/g_0|<1\).
+
+With these \(K,X\) fixed, temporarily replace \(\lambda\) in \(F,D_\lambda\)
+by a complex \(\zeta\), \(|\zeta|\le2^{-100}\). On \(|z|\le1/8\) one has
+\(|\log L|<1/2\). The powers at exponent \(j+\zeta\eta_j\) and their
+first derivatives in \(z\) have magnitudes below 8 and 64. The changes
+in each amplitude and exponent are at most \(2^{-40}\).
+The derivative in the exponent of \(\nu L^{\nu-1}\) is
+\(L^{\nu-1}(1+\nu\log L)\), bounded by 24 on the segment in question.
+Hence \(|(F_\zeta-F_0)'|<2^{-28}\) there and \(F_\zeta(0)=0\). Using
+\(|K/a|<2\) yields \(|F_\zeta/(az)-1|<1/16\). Integration and the
+principal square root give \(|Y/z-1|<1/16\), and \(Y_z=F_\zeta/(aY)\)
+gives \(|Y_z-1|<1/4\). Comparison on \(|z|=1/8\) gives an analytic inverse
+for \(|Y|\le1/16\) with \(|z'(Y)|<2\). The even transported density
+\(S_\zeta(Y)=\ev_Y[D_\zeta(z(Y))z'(Y)]\) has modulus below 128 there
+(use \(|L|\le9/8\), \(|\nu_j-j|\le2^{-40}\) in the formula for the transported density). Its constant
+term in \(\zeta\) is zero. Cauchy's bound gives a nonlinear remainder
+below \(2^{209}\lambda^2\) and bounds the coefficient of \(\zeta\) by
+\(2^{108}\). The Taylor tail of this coefficient after \(Y^{14}\) is below
+\(2^{110}(16|Y|)^{16}\) for \(|Y|\le1/32\).
+
+After division by \((1+3K)^{i+1}\), the row residuals have magnitude at
+most \(2^{68}\tau^8\) on \(S\) and \(2^{68}\tau^2\) in row 6.
+At \(Y=tZ\), \(|Z|\le6\), the row-6 error acquires the factor \(t^{12}\).
+The seven other errors and the analytic tails, after normalization, give
+\begin{equation}
+ \left|S_\lambda(tZ)/(\lambda t^{14})-A(Z^2)\right|<2^{230}t^2.
+ \label{fin:verticalerror}
+\end{equation}
+The value error upon integrating is bounded by this times \(129\cdot12\).
+For the energy derivative use the boundary slice and the previous bound
+\(2^{200}\). Both errors are below \(2^{-15000}\). If \(M(E)\) denotes the
+first variation of the displacement in \(H\), the corresponding normalized
+quantity is \(b_iM(E)/(\lambda t^{15})\), including the vertical Jacobian
+\(\dd Y=t\dd Z\) and the horizontal change \(x=-b_i u\).
+
+\subsection{Full return map}
+For explicit derivative bounds put \(N_0=1/t=2^{8192}\) and
+\(w=\operatorname{sgn}(u)\sqrt{W(u)}\). On \(W\le32\) one has
+\begin{equation}
+ |u|<N_0^4,\quad w_u>N_0^{-4},\quad
+ |u_w|\le N_0^4,\quad |u_{ww}|<N_0^{16},\quad |u_{www}|<N_0^{29}.         \label{fin:inverse}
+\end{equation}
+For \(u\le0\) use \(W\ge b_3|u|-B\). For \(u\ge0\),
+\(W''\ge e^u/(2N_0)\) and hence \(W\ge(e^u-1-u)/(2N_0)\). On the latter
+sublevel \(e^u\le128N_0\). The first four derivatives of \(W\) on the whole
+sublevel have magnitudes below \(2^{12}\). For \(|u|\le1\) write
+\(W=u^2 A_0(u)\), \(A_0=\int_0^1(1-s)W''(su)\dd s\). There
+\(1/(8N_0)<A_0<4/N_0\), \(|A_0^{(j)}|<6/N_0\) for \(1\le j\le3\), and
+\(W'(u)/u>1/(4N_0)\) by integration of \(W''\). These give
+\(w_u>N_0^{-4}\), \(|w_{uu}|,|w_{uuu}|<N_0^4\) from \(w=u\sqrt{A_0}\).
+For \(|u|\ge1\), one has \(W\ge1/(8N_0)\), and \(|W'|>1/(2N_0^3)\) by
+the expression for \(W\). Differentiating the square root gives the same bounds. Inverse
+differentiation now gives \eqref{fin:inverse}.
+
+Divide the real field in \((w,Z)\) by the positive speed
+\(at w_uY_v\). Its equations become \(w'=Z+\varepsilon U\),
+\(Z'=-w+\varepsilon V_1\), where \(v=v(Y)=\log(1+z(Y))\) and
+\begin{align*}
+ U&=\frac{v'(Y)}{at}\sum_j C_j L^{1+\nu_j}
+                    D_\varepsilon(\gamma_j u/C_j),\\
+ V_1&=\frac{g_0 u_w}{at^2}D_\varepsilon(\lambda b v/g_0),\qquad
+ D_\varepsilon(s)=s\int_0^1e^{r\varepsilon s}\dd r .
+\end{align*}
+The bounds on the inverse vertical disk give \(|v|<1/4\) and derivatives
+through order three below \(2^{24}\) on \(|Y|\le1/64\), by Cauchy's estimate.
+In \(w=\sqrt E\cos\theta, Z=-\sqrt E\sin\theta\), the displacement equation is
+\begin{equation}
+ \frac{dE}{d\theta}=\varepsilon\F(E,\theta,\varepsilon),\qquad
+ \F=\frac{2(wU+ZV_1)}{1+\varepsilon(ZU-wV_1)/E}.                    \label{fin:radial}
+\end{equation}
+For \(2^{-95}\le E\le32\), real \(\theta\) and \(|\varepsilon|\le N_0^{-512}\),
+\(\F,\F_E,\F_{EE},\F_\varepsilon,\F_{E\varepsilon}\) all have magnitude
+below \(N_0^{200}\). We detail the size estimates. The first two \(E\) derivatives
+of \(w,Z\) have magnitudes below \(2^{150}<N_0\), and those of \(Y=tZ\)
+are below one. By \eqref{fin:inverse}, \(|u_E|<N_0^5\), \(|u_{EE}|<N_0^{19}\),
+and \(u_w\) with two \(E\) derivatives is bounded by \(N_0^{32}\).
+Each argument \(s\) of \(D_\varepsilon\), together with its first two
+\(E\) derivatives, is below \(N_0^{20}\) in magnitude. For the argument in
+\(V_1\) the bound is \(N_0\). Differentiating the displayed integral, using
+\(|\varepsilon|N_0^{20}<1\), bounds \(D_\varepsilon\) and its derivatives of
+orders \(E,EE,\varepsilon,E\varepsilon\) by \(N_0^{65}\) for the first
+argument and by \(N_0^4\) for the second. The remaining vertical factors and
+their first two \(E\) derivatives are below \(N_0\) individually.
+Thus \(U,V_1\) with these derivatives have magnitudes below \(N_0^{72}\).
+The numerator of \(\F\) and \((ZU-wV_1)/E\) with these derivatives are below
+\(N_0^{76}\), using \(|(1/E)^{(j)}|<N_0\) for \(0\le j\le2\).
+The angular denominator lies between \(1/2\) and \(3/2\). In the quotient
+derivatives, terms with three factors of size \(N_0^{76}\) contain a factor
+\(\varepsilon\). This gives the asserted \(N_0^{200}\) bound.
+
+At \(\varepsilon=N_0^{-1024}\), a solution starting in any bracket stays
+within \(7\varepsilon N_0^{200}\) of its initial energy up to angle \(2\pi\).
+This lies inside the larger energy interval above by continuation.
+Its derivative in the initial energy differs from 1 by at most
+\(14\varepsilon N_0^{200}\), from the scalar variational equation for
+\eqref{fin:radial}. Integrating \(\F\) along the solution, and differentiating
+once in the initial energy, shows that the displacement divided by
+\(\varepsilon\) differs from \(\int_0^{2\pi}\F(E,\theta,0)\dd\theta\) by
+less than \(256\varepsilon N_0^{400}\) in value and derivative. For instance
+the change of \(\F_E\) along the path is at most
+\(N_0^{200}(7\varepsilon N_0^{200}+\varepsilon)\), and the variational factor
+contributes at most \(14\varepsilon N_0^{400}\).
+The first-order integral equals \(2M(E)/(at^2)\) since the return coordinate
+is \(E=2H/(at^2)\). Multiplying the normalized displacement by the positive
+\(b_i a/(2t^{29})\) therefore compares it directly with the appropriate
+model in \eqref{ti:mom}. The resulting full-return error relative to the
+finite first variation is at most \(256\varepsilon N_0^{429}<2^{-1000}\).
+Together with \eqref{fin:verticalerror} and the horizontal estimates this
+preserves the endpoint signs and the nonzero derivative on every bracket.
+The angular variational equation gives a positive return multiplier.

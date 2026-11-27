@@ -1,0 +1,44 @@
+\subsection{The separate-strip comparison}
+
+We first give an integral construction within \eqref{eq:separable-template}. The doubling step of Han and Romanovski \cite[Definition~2.1 and Theorem~2.1]{HanRomanovski} suggests recording sign changes on new outer ovals at each generation. Here every strip uses the same vertical polynomials. An additional even fold at the last stage improves the term count on the diagonal.
+
+\begin{proposition}[Doubling on separate horizontal strips]\label{prop:strip-product}
+At exact \(N\) terms and degree at most \(N-1\), separate-strip doubling gives at least \((1/4-o(1))N^2\log_2N\) simultaneous hyperbolic cycles. At exact \(\lceil3\Delta/2\rceil\) terms and degree at most \(\Delta\) it gives at least \((1/4-o(1))\Delta^2\log_2\Delta\). Both statements hold for polynomial vector fields with rational coefficients and coprime components for all sufficiently large integer budgets.
+\end{proposition}
+
+\begin{proof}
+On the regular ovals of \(X^2/2+V_i(y)\), record disjoint compact energy brackets with opposite endpoint signs of \(\oint F_i(y)\,dX\). Start with \(V_0=y^2,\ F_0=0\), no brackets, and a degree allowance \(s_0=b\ge4\). Write \(s_i=2^i b\). Choose a rational \(a\) below the \(y\)-projections of all recorded collars, avoiding the finitely many zeros of the nonconstant derivatives of \(V_i\), and put \(\phi(y)=y^2+a\). Each collar of the old potential has two inverse images for \(V_{i+1}=V_i\circ\phi\). On each sheet the inherited one-form \((F_i\circ\phi)\,dX\) has the old integrals up to orientation. On an outer oval surrounding both sheets its integral vanishes by reflection in \(y=0\).
+
+For \(j=0,\ldots,s_i-1\), the odd perturbation \(y^{2j+1}\) gives, up to a common sign, the moment \((2j+1)\iint y^{2j}\,dX\,dy\). If \(v=\deg V_{i+1}\), this is asymptotic to a positive constant times \(E^{1/2+(2j+1)/v}\), because scaling \(X=E^{1/2}\xi,\ y=E^{1/v}\eta\) makes the bounded rescaled disks converge off their boundaries to the disk for the leading homogeneous terms. Start with a positive coefficient for \(y\) and one regular energy above all copied collars. For each successive power choose a rational coefficient of opposite sign small enough to preserve the signs at the earlier energies, then choose a larger energy where that power dominates. A common small multiple of this odd perturbation preserves the copied signs, and the outer sample energies give \(s_i-1\) more brackets, which can be shortened to be pairwise disjoint. Both polynomials have rational coefficients. Composition doubles the potential degree, so \(\deg V_{i+1}=2^{i+2}\). The highest new odd power is \(2s_i-1\), whereas the inherited perturbation is even and has degree at most \(2s_i-2\). Thus \(\deg F_{i+1}=s_{i+1}-1\), starting from \(F_0=0\). The bracket count therefore satisfies
+\[
+ c_0=0,\qquad c_{i+1}=2c_i+s_i-1,\qquad c_p=\tfrac12p s_p-2^p+1 .
+\]
+On each terminal bracket a further perturbation \(\tau y\) adds \(\tau\) times the positive area with a common orientation. Since the ratio of the original integral to this signed area is analytic on a neighborhood of the bracket and nonconstant by its endpoint signs, one small rational \(\tau\) avoids all finitely many critical values while preserving every crossing. Subtracting the constant term of \(F_p\) leaves every integral unchanged.
+
+Write \(s=s_p=2^p b\) (\(p\ge1\)), and fix an integer \(\Lambda\ge4\).
+\begin{itemize}[nosep]
+ \item \emph{Saturated budget \((m,\Delta)=(\lceil3\Delta/2\rceil,\Delta)\).} Replicate \((V_p,F_p)\) across the \(k=\lfloor(\Delta+1)/2\rfloor\) minima of \(U=A^2T_k^2/2\) via \(X=AT_k(x)\). Near each simple zero of \(T_k\), \(A|dx/dX|\) tends smoothly on compact \(X\)-intervals to a positive constant, so the normalized integrals converge in \(C^1(E)\) on the regular collars. One large integer \(A\) and one small positive rational parameter \(\mu\) in Lemma~\ref{lem:hyperbolic-return} produce \(kc_p\) hyperbolic cycles. Since \([y^{2j}]V_p=V_{p-1}^{(j)}(a)/j!\) at the last shift, \(V_p'\) occupies \(2^p\) odd powers through degree \(2^{p+1}-1\), \(F_p\) occupies at most \(s-1\) positive powers through degree \(s-1\), and \(U'\) occupies \(k\) odd powers through degree \(2k-1\) (note \(2^{p+1}-1<s-1\) as \(b\ge4\)). Taking
+ \[
+  B=\left\lfloor\frac{\Lambda\Delta}{\Lambda+1}\right\rfloor,\qquad
+  p=\lfloor\log_2(B/\Lambda)\rfloor,\qquad b=\lfloor B/2^p\rfloor
+ \]
+ gives \(p\ge1\), \(\Lambda\le b<2\Lambda\), and \(0\le B-s<2^p\le B/\Lambda\) for all sufficiently large \(\Delta\). Here \(2k-1\le\Delta\), \(s-1<\Delta\), and \(2^p+s-1+k\le(1+1/\Lambda)s-1+k\le\Delta-1+k=m-1\). Because \(c_p=\tfrac12 s\log_2 s-O_{\Lambda}(s)\) and \(s>(1-1/\Lambda)B=\frac{\Lambda-1}{\Lambda+1}\Delta+O(1)\), the ratio \(kc_p/(\Delta^2\log_2\Delta)\) has lower limit at least \((\Lambda-1)/(4(\Lambda+1))\).
+
+ \item \emph{Diagonal budget \((m,\Delta)=(N,N-1)\).} Before replicating in \(x\), perform one terminal even fold without adding outer terms: writing \(w\) for the vertical coordinate of \((V_p,F_p)\), choose a rational \(a_p\) strictly below the \(w\)-projections of all \(c_p\) selected collars (avoiding the finitely many zeros of nonconstant derivatives of \(V_p\)), and set
+ \[
+  \widetilde V(y):=V_p(y^2+a_p),\qquad \widetilde F(y):=F_p(y^2+a_p)-F_p(a_p).
+ \]
+ On each inverse branch \(y=\pm\sqrt{w-a_p}\) (\(y>0\) and \(y<0\)), the map \((X,y)\mapsto(X,y^2+a_p)\) pulls back \(X^2/2+V_p(w)\) to \(X^2/2+\widetilde V(y)\) and \(\dd F_p(w)\) to \(\dd\widetilde F(y)\), so the area integral on each branch equals \(\pm\iint F_p'(w)\,\dd X\,\dd w\) and the \(c_p\) simple-zero brackets lift to \(2c_p\) disjoint collars on one strip. Replicating across the \(k=\lfloor N/2\rfloor\) minima of \(U=A^2T_k^2/2\) as above yields \(2kc_p\) simultaneous hyperbolic cycles. Now \(\widetilde V'\) uses \(2^{p+1}\) odd powers through degree \(2^{p+2}-1\), \(\widetilde F\) uses at most \(s-1\) positive even powers through degree \(2s-2\), and \(U'\) uses \(k\) odd powers through degree \(2k-1\). Put
+ \[
+  B=\left\lfloor\frac{\Lambda\lceil N/2\rceil}{\Lambda+2}\right\rfloor,\qquad
+  p=\lfloor\log_2(B/\Lambda)\rfloor,\qquad b=\lfloor B/2^p\rfloor .
+ \]
+ For all sufficiently large \(N\), \(p\ge1\), \(\Lambda\le b<2\Lambda\), and \(2^{p+1}\le 2s/\Lambda\). Thus \(2^{p+2}-1\le 4s/\Lambda-1<2s-2\), while \(2s-2\le 2B-2\le\frac{\Lambda}{\Lambda+2}(N+1)-2<N-1\), so the degree is at most \(N-1\), and the pre-filling term count satisfies
+ \[
+  2^{p+1}+s-1+k\le(1+2/\Lambda)s-1+k\le \lceil N/2\rceil-1+\lfloor N/2\rfloor=N-1<N .
+ \]
+ Here \(s>(1-1/\Lambda)B=\frac{\Lambda-1}{2(\Lambda+2)}N+O(1)\), so \(2kc_p/(N^2\log_2 N)\) has lower limit at least \((\Lambda-1)/(4(\Lambda+2))\).
+\end{itemize}
+
+In both cases the positive pure \(y\)-powers through degree \(\Delta\) in both components and the \(k\) horizontal powers provide \(2\Delta+k\ge m\) positions. Filling vacancies with sufficiently small rational coefficients preserves all selected cycles; the first component remains univariate in \(y\) while the leading \(x\)-coefficient of the second is a nonzero constant, so the components stay coprime. Taking \(\Lambda\) arbitrarily large yields both stated lower bounds.
+\end{proof}

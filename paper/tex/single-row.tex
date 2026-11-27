@@ -1,0 +1,140 @@
+\section{Interleaved return powers on a single-row binary saddle tree}\label{sec:interleaved}
+We use the saddle expansions and the whole-disk division of the accompanying article. Write \(n_{\rm w}\) for the number of horizontal wells, \(m\) for the total number of component monomials and \(\splitcount{a}{b}\) for their counts in the two components.
+
+\begin{theorem}[Interleaved saddle return powers on a single-row binary tree]\label{thm:single-row-interleaved}
+Let $M=2^d$ ($d\ge 5$), $h=d-2$, $n_{\rm w}=2^h=M/4$, and $F_*:=4F_{d-2}(M,M)=M(4M-8d+9)-12(M-2d+2)$. Whenever $(d-2,M,M,1)$ satisfies the formation minor test of Section~\ref{subsec:schur-right-inv}---which holds for all sufficiently large $d$ by Lemma~\ref{lem:wronskian-scaling} and holds explicitly at $M=128$ ($d=7$)---there exists a polynomial vector field $X=(P,Q)\in\Q[x,y]^2$ with coprime components in the single-row binary-tree family~\eqref{eq:1row-physical} with exact component supports $\splitcount{4}{2M+1}$ ($m=2M+5$) and actual degree $D(X)=2M-1$ possessing at least
+\begin{equation}\label{eq:1row-interleaved-count}
+  F_* + 9M - 40
+\end{equation}
+simultaneous hyperbolic limit cycles. At $M=128$, i.e., exact supports $\splitcount{4}{257}$ and $D=255$,~\eqref{eq:1row-interleaved-count} yields $59{,}240$ hyperbolic limit cycles (compared with $58{,}128$ from fractional packets alone, $58{,}496$ from unreserved value retargeting and far bridges).
+\end{theorem}
+The single row follows ovals through successive saddle mergers. At \(M=128\) interval arithmetic certifies precisely the five limiting \(2\times2\) determinants of Section~\ref{subsec:schur-right-inv}. Their nonvanishing allows simultaneous control of the constant and linear terms at the mergers. The tree widths and perturbation amplitudes are chosen by the existence proof. At the same component split and degree the stationary construction of Corollary~\ref{cor:64005} gives the larger count \(64{,}005\).
+
+\subsection{Universal fractional offsets on a binary horizontal tree}
+
+Define a nested binary horizontal tree of depth $h\ge 1$ ($n_{\rm w}:=2^h$ wells) inductively by $f_0(x):=x$ and
+\begin{equation}\label{eq:binary-tree}
+  f_i(x) := f_{i-1}\left(\frac{x^2-1}{\epsilon_i}\right), \qquad W_i(x) := f_i(x)^2, \qquad H_i := W_i(0) \qquad (1\le i\le h),
+\end{equation}
+with rational widths $\epsilon_1,\dots,\epsilon_h>0$ chosen successively small so that $H_i>H_{i-1}+8$ ($H_0:=0$). Because $f_i$ is even of degree $2^i$, choosing $\epsilon_i$ small gives $2^i$ simple real roots of $f_i$ and $2^i-1$ interlacing simple real critical points whose squared critical values are $H_1,\dots,H_h$, with the $n_{\rm w}/2^i$ mergers of height $H_i$ lying on pairwise disjoint sublevel components of $W_h$. For $s\ge1$ choose a rational polynomial $Q_{\mathrm{ext}}$ of degree $s$ with $s$ simple real roots and $Q_{\mathrm{ext}}(-x)=(-1)^sQ_{\mathrm{ext}}(x)$, for instance $T_s$. Then $W_h\circ Q_{\mathrm{ext}}$ is even. Set $U(x):=W_h(Q_{\mathrm{ext}}(x)/\delta)$ for small rational $\delta>0$, giving $X:=s n_{\rm w}$ wells.
+
+Fix an even integer $\alpha>2$, $L\ge 1$, $S(y)=\sum_{j=0}^{L-1}a_j y^{2j+1}$, $g_j=(2j+1)/(2\alpha)$, $\nu_j=g_j+1/2$, $k_j=\lfloor\nu_j\rfloor$, and $b=\lfloor(L-1)/\alpha+1/2\rfloor$. At formation depth $i\in\{1,\dots,h\}$, set $A_i(x):=W_i(x)/H_i$ and $\beta_i:=(-A_i''(0)/2)^{-1/2}$. Because $W_{i-1}$ is even, $W_i(\sqrt{2})=W_{i-1}(1/\epsilon_i)=W_{i-1}(-1/\epsilon_i)=W_i(0)=H_i$, so $A_i(0)=A_i(\sqrt{2})=1$ identically and $\{x>0:A_i(x)<1\}=(0,\sqrt{2})$ for all small $\epsilon_i>0$; moreover $1-A_i(x)$ is divisible in $\Q[x]$ by $x^2(2-x^2)$, and as $\epsilon_i\downarrow 0$ with earlier widths frozen ($q:=2^{i-1}$), $A_i(x)\to(x^2-1)^{2q}$ in $C^\infty([0,2])$ and $\beta_i\to(2q)^{-1/2}$. Define the normalized formation Taylor functionals
+\begin{equation}\label{eq:historical-T}
+  T_{i\ell}(a) := \sum_{j:\,\nu_j>\ell} a_j H_i^{\nu_j-\ell}\,\frac{\binom{g_j}{\ell}}{\beta_i}
+  \int_0^{\sqrt{2}} \bigl(1-A_i(x)\bigr)^{g_j-\ell}\dd x \qquad (1\le i\le h,\; 0\le\ell\le b),
+\end{equation}
+and write $\mathcal{K}:=\bigcap_{i=1}^h\bigcap_{\ell=0}^b \ker T_{i\ell}\subset\R^L$.
+
+\begin{lemma}[Closed-interval saddle offset limit and copy inheritance]\label{lem:physical-offset}
+There exist universal constants $U_{j,-},U_{j,+}\ne 0$ depending only on $(j,\alpha)$, with $\sgn U_{j,-}=(-1)^{k_j+1}$ and $\sgn U_{j,+}=\sgn(g_j-k_j)$, such that at formation $i$ (with $\epsilon_1,\dots,\epsilon_{i-1}$ frozen), let $\mathcal{M}_{i,-}^{\mathrm{norm}}(H_i-v;a)$ denote $\frac{\sqrt{H_i}}{2\beta_i}\iint_{\Omega_{\mathrm{lobe}}(H_i-v)} S'(y)\dd x\dd y$ on either incoming lobe at $x=0$ and let $\mathcal{M}_{i,+}^{\mathrm{norm}}(H_i+v;a)$ denote $\frac{\sqrt{H_i}}{4\beta_i}\iint_{\Omega_{\mathrm{out}}(H_i+v)} S'(y)\dd x\dd y$ on the symmetric outgoing oval; then
+\begin{equation}\label{eq:closed-offset-approx}
+  \sup_{\|a\|\le 1}\,\sup_{0\le v\le 1}
+  \left|\mathcal{M}_{i,\pm}^{\mathrm{norm}}(H_i\pm v;a) - \sum_{\ell=0}^b T_{i\ell}(a)(\pm v)^\ell - \sum_{j=0}^{L-1} a_j U_{j,\pm} v^{\nu_j}\right|
+  \xrightarrow[\epsilon_i\downarrow 0]{} 0,
+\end{equation}
+while at each center birth ($E=v$) the limiting normalized profile is $\sum_{j=0}^{L-1}a_j\Bta(\tfrac{1}{2},g_j+1)v^{\nu_j}$. Furthermore, with $\epsilon_1,\dots,\epsilon_{i'-1}$ frozen ($i'>i$), under the fold $x\mapsto(x^2-1)/\epsilon_{i'}$ (respectively exterior copy $Q_{\mathrm{ext}}(x)/\delta$), multiplying each descendant branch moment by $(\epsilon_{i'}/2)^{-1}$ (respectively $(\delta/|Q_{\mathrm{ext}}'(r)|)^{-1}$) converges uniformly on $E\in[0,H_{i'-1}+1]$ and $\|a\|\le 1$ to the corresponding moment on $W_{i'-1}$ (respectively $W_h$), including at the saddle endpoint $v=0$ on each incoming lobe.
+\end{lemma}
+
+\begin{proof}
+Put $\Phi_j(s):=\int_{x>0}(s-A_i(x))_+^{g_j}\dd x$, so both $\mathcal{M}_{i,-}^{\mathrm{norm}}(H_i-v;a)$ and $\mathcal{M}_{i,+}^{\mathrm{norm}}(H_i+v;a)$ (by $x\mapsto -x$ symmetry of $W_i$) equal $\sum_{j=0}^{L-1} a_j \beta_i^{-1} H_i^{\nu_j}\Phi_j(1\pm v/H_i)$. Since $A_i(x)\to(x^2-1)^{2q}$ in $C^\infty([0,2])$ as $\epsilon_i\downarrow 0$, near $x=0$ the coordinate $w=\sgn(x)\sqrt{1-A_i(x)}$ has inverse Jacobian $\beta_i+O(w^2)$ with derivatives bounded uniformly in $\epsilon_i$, near $x=\sqrt{2}$ the outer turning point has $A_i'\to 4q\sqrt{2}>0$, and on every compact subinterval of $(0,\sqrt{2})$ (including near $x=1$) $1-A_i(x)$ stays uniformly bounded away from zero. Repeating the $(k_j+1)$-fold $t$-differentiation of Lemma~\othernumber{lem:saddle-singular}{2.1}(b) at $s=1\pm t$ ($t=v/H_i\le 1/H_i\to 0$) with these uniform bounds yields
+\[
+  U_{j,-} = \frac{(-1)^{k_j+1}(\tfrac{1}{2})_{\overline{k_j+1}}}{2(\nu_j)_{\underline{k_j+1}}}\,\Bta\bigl(g_j+1,k_j+\tfrac{1}{2}-g_j\bigr), \qquad
+  U_{j,+} = \frac{(g_j)_{\underline{k_j+1}}}{2(\nu_j)_{\underline{k_j+1}}}\,\Bta\bigl(\tfrac{1}{2},k_j+\tfrac{1}{2}-g_j\bigr),
+\]
+and uniform remainder $\bigl|\Phi_j(1\pm t)-\sum_{\ell=0}^{k_j}\binom{g_j}{\ell}(\int_0^{\sqrt{2}}(1-A_i)^{g_j-\ell}\dd x)(\pm t)^\ell - \beta_i U_{j,\pm} t^{\nu_j}\bigr|\le C_j t^{k_j+1}$ for small $t\ge 0$. Multiplying by $\beta_i^{-1}H_i^{\nu_j}$ leaves error $O(H_i^{\nu_j-k_j-1}v^{k_j+1})\to 0$ uniformly on $0\le v\le 1$ since $\nu_j<k_j+1$, and equality at $v=0$ holds directly by~\eqref{eq:historical-T}. Finally, with $\epsilon_1,\dots,\epsilon_{i'-1}$ frozen, $\{W_{i'-1}(u)\le H_{i'-1}+1\}$ lies inside a fixed bounded interval $|u|\le R_{i'-1}$, on which $(E-W_{i'-1}(u))_+^{g_j}$ is uniformly bounded ($g_j>0$) and $(2/\epsilon_{i'})|\dd x/\dd u|=(1+\epsilon_{i'}u)^{-1/2}\to 1$ uniformly as $\epsilon_{i'}\downarrow 0$ (and similarly $(\delta/|Q_{\mathrm{ext}}'(r)|)^{-1}|\dd x/\dd u|\to 1$ as $\delta\downarrow 0$).
+\end{proof}
+
+\subsection{Norm-vanishing right inverse and interleaved gap crossings}\label{subsec:schur-right-inv}
+
+For an integer $1\le p\le b$, set $j_\ell^+:=\alpha(\ell-\tfrac{1}{2})$ and $j_\ell^-:=j_\ell^+-1$ ($1\le\ell\le p$). Define
+\begin{equation}\label{eq:C-matrix}
+  C_\ell^q(g) := \binom{g}{\ell}\int_0^{\sqrt{2}}\bigl[1-(x^2-1)^{2q}\bigr]^{g-\ell}\dd x \qquad (0\le\ell\le p,\; q\in\N).
+\end{equation}
+We say that $(h,\alpha,L,p)$ satisfies the \emph{formation minor test} if there exist $h$ blocks $D_1,\dots,D_h\subset\{0,\dots,L-1\}$ of $p+1$ indices each such that $j_p^+<\min D_1$, $\max D_i<\min D_{i+1}$, every $j\in\bigcup_{i=1}^h D_i$ satisfies $p<\nu_j<p+1$, and for each $i\in\{1,\dots,h\}$ ($q=2^{i-1}$) the $(p+1)\times(p+1)$ matrix $[C_\ell^q(g_j)]_{0\le\ell\le p,\,j\in D_i}$ is nonsingular.
+
+\begin{lemma}[Schur-complement right inverse on formation rows]\label{lem:schur-lift}
+Under the formation minor test, along a diagonal sequence of rational widths $(\epsilon_{1,n},\dots,\epsilon_{h,n})$ chosen successively at each trial $n\ge 1$ so that all formation and descendant tolerances in Lemma~\ref{lem:physical-offset} are $<1/(2hn)$, the stacked rows $(T_{i\ell})_{1\le i\le h,\,0\le\ell\le p}$ admit a right inverse $\mathcal{R}_n$ supported on $\bigcup_{i=1}^h D_i$ with $\|\mathcal{R}_n\|\to 0$ as $n\to\infty$, whose image annihilates $T_{i\ell}$ for all $\ell>p$. Moreover, every Grassmannian limit $V=\lim_{m\to\infty}\mathcal{K}_{n_m}$ of constant-dimension subspaces $\mathcal{K}_{n_m}$ contains the unit coordinate vectors $e_0,e_1,\dots,e_{j_p^+}$.
+\end{lemma}
+
+\begin{proof}
+At depth $i$ with $\epsilon_1,\dots,\epsilon_{i-1}$ frozen, factor $1-A_i(x)=x^2(2-x^2)P_{i,\epsilon_i}(x)$, where $P_{i,\epsilon_i}(x)\to\sum_{t=0}^{q-1}(x^2-1)^{2t}\ge 1$ uniformly on $[0,\sqrt{2}]$. Because $g_j-\ell>-1/2$ for $j\in D_i$ and $\ell\le p$, dominated convergence gives
+\[
+  D^{(i)} := [T_{i\ell}(e_j)]_{0\le\ell\le p,\,j\in D_i}
+  = \operatorname{diag}(H_i^{-\ell})\,C^{(i)}\,\operatorname{diag}(H_i^{\nu_j}), \quad
+  C^{(i)} \xrightarrow[\epsilon_i\downarrow 0]{} \sqrt{2q}\,[C_\ell^q(g_j)]_{0\le\ell\le p,\,j\in D_i}.
+\]
+By nonsingularity of the limit and $\min_{j\in D_i}\nu_j>p\ge\ell$, $\|(D^{(i)})^{-1}\|\to 0$ as $H_i\to\infty$. On any column $j'\in\{0,\dots,j_p^+\}\cup D_1\cup\cdots\cup D_{i-1}$, we have $\nu_{j'}<\min_{j\in D_i}\nu_j$, and since $T_{i\ell}(e_{j'})=0$ whenever $\nu_{j'}\le\ell$ while $T_{i\ell}(e_{j'})=O(H_i^{\nu_{j'}-\ell})$ for $\ell<\nu_{j'}$, every entry $j\in D_i$ of $(D^{(i)})^{-1}T_{i,\le p}(e_{j'})$ is $O(H_i^{\nu_{j'}-\nu_j})\to 0$. Hence for the block matrix $\begin{psmallmatrix} M & U \\ V & D^{(i)}\end{psmallmatrix}$ on $D_1\cup\cdots\cup D_i$ (with $M,U$ fixed by $\epsilon_1,\dots,\epsilon_{i-1}$), $M-U(D^{(i)})^{-1}V\to M$ and $U(D^{(i)})^{-1}\to 0$, so the block inverse converges to $\begin{psmallmatrix} M^{-1} & 0 \\ 0 & 0 \end{psmallmatrix}$, and for each $0\le j'\le j_p^+$ the solution $w_{j'}$ on $D_1\cup\cdots\cup D_i$ to $\begin{psmallmatrix} M & U \\ V & D^{(i)}\end{psmallmatrix}w_{j'}=T_{\le p}(e_{j'})$ converges to the $(i-1)$-depth solution padded by zeros. At each copy the previous normalization constants are fixed. Require the absolute copy error, after multiplication by each of those finitely many constants, to be at most $1/(2hn)$. Choose the next width to meet these inequalities as well. Choosing $\epsilon_{i,n}$ successively at trial $n$ so each step adds norm $<1/(hn)$ gives $\|\mathcal{R}_n\|<1/n$ and $\|w_{j',n}\|<1/n$. Because $\nu_j<p+1$ on $\{0,\dots,j_p^+\}\cup\bigcup_{i=1}^h D_i$, every row $T_{i\ell}$ with $\ell>p$ vanishes identically on both $e_{j'}$ and $\operatorname{im}\mathcal{R}_n$; hence $e_{j'}-w_{j',n}\in\mathcal{K}_n$ converges to $e_{j'}$ for $0\le j'\le j_p^+$.
+\end{proof}
+
+Put $c=\lfloor 2(L-1)/\alpha\rfloor$, $J=L-h(b+1)-1$, and for $J\ge 0$ write
+\begin{equation}\label{eq:Fh-native}
+  F_h(L,\alpha) := n_{\rm w}J + (n_{\rm w}-1)\bigl(2\pos{J-b}+\pos{J-c}\bigr).
+\end{equation}
+
+\begin{theorem}[Interleaved gap crossings on a binary saddle tree]\label{thm:gap-brackets}
+Suppose $J\ge 0$ and $(h,\alpha,L,p)$ satisfies the formation minor test ($1\le p\le b$). Then a single rational odd primitive $S\in\Q[y]$ of degree at most $2L-1$ produces at least
+\begin{equation}\label{eq:gap-native-total}
+  F_h(L,\alpha) + (6p+2)(n_{\rm w}-1)
+\end{equation}
+pairwise disjoint compact simple-zero brackets near the $4n_{\rm w}-3$ one-sided finite critical-level ends of $W_h(x)+y^{2\alpha}$, and if $L\le\alpha$ it simultaneously produces $n_{\rm w}-2$ additional disjoint brackets on the compound non-root annuli connecting depth-$i$ outgoing branches to depth-$(i+1)$ incoming branches ($1\le i\le h-1$). Multiplying by $s$ exterior copies via $U(x)=W_h(Q_{\mathrm{ext}}(x)/\delta)$ multiplies the total bracket count by $s$.
+\end{theorem}
+
+\begin{proof}
+Pass to a subsequence on which $\dim\mathcal{K}_{n_m}=k\ge J+1$ is constant and $\mathcal{K}_{n_m}\to V$ in the Grassmannian. By Lemma~\ref{lem:schur-lift}, choose a row-echelon basis $v^{(0)},\dots,v^{(k-1)}$ of $V$ with unit pivots at $0\le n_0<\cdots<n_{k-1}$ whose first $j_p^++1$ basis vectors have $n_t=t$ ($0\le t\le j_p^+$). Fix $A_0>L$, let $\eta\in(0,1)$, set $v_{\lim}(\eta):=\sum_{t=0}^{k-1}(-1)^t\eta^{(A_0-n_t)^2}v^{(t)}$, and evaluate at the marks $v(z):=\eta^{2\alpha(A_0-z)}\in(0,1)$. As in Lemma~\othernumber{lem:endpoint-cluster}{2.2}, at $z=n_t$ ($0\le t<k$) the limiting fractional profiles of Lemma~\ref{lem:physical-offset} yield at least $F_h(L,\alpha)$ strict sign changes on $(0,1)$. Moreover, when $L\le\alpha$, the highest pivot $n_{k-1}\le\alpha-1$ satisfies $g_{n_{k-1}}\in(0,1)\setminus\{\frac{1}{2}\}$; whether $g_{n_{k-1}}<\frac{1}{2}$ ($k_{n_{k-1}}=0$, outgoing sign $+1$, incoming sign $-1$) or $\frac{1}{2}<g_{n_{k-1}}<1$ ($k_{n_{k-1}}=1$, outgoing sign $-1$, incoming sign $+1$), the outgoing mark at $E_-=H_i+v(n_{k-1})$ and parent incoming mark at $E_+=H_{i+1}-v(n_{k-1})$ on each of the $n_{\rm w}-2$ non-root compound annuli ($H_i+1<H_{i+1}-1$) have strictly opposite signs under positive slice rescaling, yielding $n_{\rm w}-2$ disjoint bridge brackets $[E_-,E_+]$.
+
+For each $\ell\in\{1,\dots,p\}$, put $u_\ell:=j_\ell^+-1/2\in\Z+\frac{1}{2}$, so $\nu_0+u_\ell/\alpha=\ell$. Since $j_\ell^-=j_\ell^+-1\le j_p^+$, $j_\ell^-$ and $j_\ell^+$ are consecutive unit pivots with weights $s_\ell:=(-1)^{j_\ell^-}$ and $-s_\ell$, while $\nu_{j_\ell^-}=\ell-\frac{1}{2\alpha}$ ($k_{j_\ell^-}=\ell-1$, $g_{j_\ell^-}-(\ell-1)=\frac{1}{2}-\frac{1}{2\alpha}>0$) and $\nu_{j_\ell^+}=\ell+\frac{1}{2\alpha}$ ($k_{j_\ell^+}=\ell$, $g_{j_\ell^+}-\ell=-\frac{1}{2}+\frac{1}{2\alpha}<0$ since $\alpha>2$). Multiplying by $\pm s_\ell$, the marks $v(j_\ell^-)$ and $v(j_\ell^+)$ have the same sign $(-1)^\ell s_\ell$ on both incoming branches and the same sign $+s_\ell$ on the outgoing branch. Impose at every depth $1\le i\le h$ the targets
+\[
+  T_{i\ell} = -s_\ell \eta^{(A_0-u_\ell)^2} \quad (1\le\ell\le p), \qquad T_{i\ell} = 0 \quad (\ell>p),
+\]
+and first take $T_{i0}=0$. Then $T_{i\ell}(\pm v(z))^\ell$ has $\eta$-exponent $2\alpha(A_0-z)\nu_0+A_0^2-z^2+(u_\ell-z)^2$, identical in form to pivot $n_t$ with $u_\ell$ in place of $n_t$, and sign $-s_\ell$ on $+v$ and $-(-1)^\ell s_\ell$ on $-v$, strictly opposing both endpoint marks on all three branches. Because $|w-u_\ell|\ge\frac{1}{2}$ for all $w\in\{n_0,\dots,n_{k-1}\}\cup\{u_{\ell'}:\ell'\ne\ell\}$, at $z=u_\ell\pm\frac{1}{8}$ we have $(w-z)^2-(u_\ell-z)^2\ge\frac{1}{8}>0$, while at $z=n_t$ we have $(u_\ell-n_t)^2\ge\frac{1}{4}>0$. Fixing one small $\eta\in(0,1)$ makes all pivot and gap marks strict simultaneously (including $z=n_{k-1}$), inserting $6p(n_{\rm w}-1)$ disjoint brackets $[v(j_\ell^-),v(u_\ell-1/8)]$ and $[v(u_\ell+1/8),v(j_\ell^+)]$.
+
+Let $\delta_*>0$ be the minimum modulus across all fixed positive marks (positive by finiteness), let $\sigma_{i0}\in\{\pm 1\}$ be the incoming mark sign at $v(0)$, and set $T_{i0}:=-\frac{1}{4}\delta_*\sigma_{i0}\ne 0$ ($1\le i\le h$), preserving all positive mark signs with margin $\ge\frac{3}{4}\delta_*$. On trial $n_m$, put $a^{(m)}:=P_{\mathcal{K}_{n_m}}(v_{\lim}(\eta))+\mathcal{R}_{n_m}T_{\mathrm{target}}$. Since $a^{(m)}\to v_{\lim}(\eta)$ and $T_{i\ell}(a^{(m)})=T_{i\ell,\mathrm{target}}$ ($0\le\ell\le b$), choosing one sufficiently large $m$ keeps every positive mark on $W_h$ within $\frac{1}{4}\delta_*$ of its limit and keeps the critical-level integral at $v=0$ on each of the $2(n_{\rm w}-1)$ descendant incoming lobes within $\frac{1}{8}\delta_*$ of $T_{i0}$. Continuity as $E\uparrow H_i$ on the now-fixed polynomial $W_h$ yields $v_{\mathrm{term}}\in(0,v(0))$ giving one closer incoming bracket $[H_i-v(0),H_i-v_{\mathrm{term}}]$ per incoming lobe ($2(n_{\rm w}-1)$ in total). Narrow exterior copying ($s>1$), rational approximation, and a small linear shift $\tau y$ as in Lemma~\othernumber{lem:endpoint-cluster}{2.2} make all zeros simple on pairwise disjoint compact regular brackets.
+\end{proof}
+
+\subsection{Wronskian scaling and proof of Theorem~\ref{thm:single-row-interleaved}}
+
+\begin{lemma}[Existence of universal minor windows]\label{lem:wronskian-scaling}
+For every integer $p\ge 1$, there exists an open subinterval $I_p\subset(p-\frac{1}{2},p)$ of positive length $w_p>0$ on which every choice of $p+1$ distinct nodes $g^{(0)}<\cdots<g^{(p)}$ in $I_p$ yields a nonsingular matrix $[C_\ell^q(g^{(m)})]_{0\le\ell,m\le p}$ simultaneously for every dyadic $q=1,2,4,\dots$. Consequently, $(h,\alpha,L,p)$ satisfies the formation minor test whenever $L\ge\alpha p$ and $\alpha w_p > h(p+1)+3$.
+\end{lemma}
+
+\begin{proof}
+Put $B_1(x):=x^2(2-x^2)=1-(x^2-1)^2$ and $B_q(x):=1-(x^2-1)^{2q}$ on $(0,\sqrt{2})$, so $0<B_1(x)\le B_q(x)\le 1$ on $(0,\sqrt{2})$ and $I_q(g):=\int_0^{\sqrt{2}} B_q(x)^g\dd x$ is real-analytic on $g>p-\frac{1}{2}$. For fixed $q$, Laplace concentration near $x=1$ gives $I_q(g)\sim\frac{1}{2q}\Gamma(\frac{1}{2q})g^{-1/(2q)}$ as $g\to+\infty$, whence $I_q(g-\ell)/I_q(g)\to 1$ and $C_\ell^q(g)/I_q(g)\sim g^\ell/\ell!$ ($0\le\ell\le p$). Distinct polynomial growth rates imply linear independence of $\{C_0^q,\dots,C_t^q\}$ for every $0\le t\le p$, so their Wronskian $W_t^q(g)$ is real-analytic and not identically zero on $(p-\frac{1}{2},p)$.
+
+Now fix any compact interval $[g_{\min},g_{\max}]\subset(p-\frac{1}{2},p)$ and let $q\to\infty$ through powers of two. Pointwise on $(0,\sqrt{2})$, $B_q(x)\to 1$ almost everywhere and $|\ln B_q(x)|\le|\ln B_1(x)|$, while for every $g\in[g_{\min},g_{\max}]$ and $0\le\ell\le p$ one has $B_q(x)^{g-\ell}\le 1$ if $g-\ell\ge 0$ and $B_q(x)^{g-\ell}\le B_1(x)^{g-\ell}\le B_1(x)^{g_{\min}-\ell}$ if $g-\ell<0$. Thus for every derivative order $j\ge 0$,
+\[
+  \bigl|\ln B_q(x)\bigr|^j B_q(x)^{g-\ell}
+  \le \bigl|\ln B_1(x)\bigr|^j B_1(x)^{\min(0,\,g_{\min}-\ell)},
+\]
+which is integrable on $(0,\sqrt{2})$ because $\min(0,g_{\min}-\ell)\ge g_{\min}-p>-\frac{1}{2}$ (giving exponent $>-1$ at both $x=0$, where $B_1(x)\asymp x^2$, and $x=\sqrt{2}$, where $B_1(x)\asymp\sqrt{2}-x$). Dominated convergence therefore implies $I_q(g-\ell)\to\sqrt{2}$ in $C^p([g_{\min},g_{\max}])$, so $C_\ell^q(g)\to\sqrt{2}\binom{g}{\ell}$ in $C^p$. Since $\binom{g}{0},\dots,\binom{g}{t}$ have constant nonzero Wronskians, on a closed subinterval $J_0\subset(p-\frac{1}{2},p)$ all $W_t^q$ ($0\le t\le p$) are nonvanishing for all $q\ge q_0$. Avoiding the finitely many zeros of $W_0^q,\dots,W_p^q$ for $q<q_0$ yields an open interval $I_p\subset J_0$ of length $w_p>0$ on which $W_t^q(g)\ne 0$ for all $0\le t\le p$ and all dyadic $q\ge 1$. Successive division and Rolle's theorem bound the zeros in $I_p$ of any nontrivial combination of $C_0^q,\dots,C_p^q$ by $p$, proving nonsingularity at any $p+1$ distinct nodes in $I_p$.
+
+Write $I_p=(a,b)$. The indices with $g_j=(j+1/2)/\alpha\in I_p$ are consecutive. Their number is
+\[
+ \left\lceil\alpha b-\tfrac12\right\rceil
+ -\left\lfloor\alpha a-\tfrac12\right\rfloor-1\ \ge\ \alpha w_p-1 .
+\]
+Here $\alpha$ is even. From $p-1/2<g_j<p$ we obtain
+$j\ge j_p^+=\alpha(p-1/2)$ and $j\le\alpha p-1\le L-1$.
+Discard $j=j_p^+$ if present, reserving the entire prefix $0,\ldots,j_p^+$ for the pivot construction. At least $\alpha w_p-2>h(p+1)$ nodes remain. Their exponents satisfy $p<\nu_j=g_j+1/2<p+1/2$. Take the first $h(p+1)$ in increasing order and split them into successive blocks of $p+1$. The preceding Wronskian argument gives the required minor at each depth.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:single-row-interleaved}]
+Take $U(x)=W_h(T_4(x)/\delta)$ ($X=4n_{\rm w}=M$) and consider the single-row system
+\begin{gather}
+  V_\lambda(y) = y^{2\alpha} + \kappa y^4 + \lambda\tau y^3 + \lambda^2 y^2, \qquad
+  F_\lambda(y) = y^2 + \lambda S(y), \notag\\
+  \dot{x} = V_\lambda'(y), \qquad \dot{y} = -U'(x) + \mu F_\lambda(y).\label{eq:1row-physical}
+\end{gather}
+At $\lambda=0$, $F_0(y)=y^2$ has zero disk moment by $y\mapsto -y$ reflection, and since $V_0'(y)=2y^3(\alpha y^{2\alpha-4}+2\kappa)$ and $F_0'(y)=2y$, the divergence-theorem calculation of Lemma~\othernumber{lem:whole-disk-division}{3.2} gives $\left.\partial_\lambda\right|_0\iint_{\Omega_\lambda(E)}F_\lambda'(y)\dd x\dd y = \iint_{\Omega_0(E)}\partial_y(S(y)-\frac{\tau y}{\alpha y^{2\alpha-4}+2\kappa})\dd x\dd y$ in $C^1(E)$. Choosing rational $\kappa>0$ small enough to preserve all compact simple-zero brackets of $S$ on $U(x)+y^{2\alpha}+\kappa y^4$, then rational $\tau>0$ much smaller than $\kappa$ (with $9\tau^2<32\kappa$), then rational $\lambda>0$ small, and finally rational $\mu>0$ small transfers every bracket to a hyperbolic limit cycle (Lemma~\othernumber{lem:hyperbolic-return}{1.2}). Since $\alpha=M\ge 32$ gives $2\alpha-1\ge 63>3$, $\supp P=\{(0,2\alpha-1),(0,3),(0,2),(0,1)\}$ ($4$ terms), while Lemma~\othernumber{lem:horizontal-glue}{2.3}(b) gives $|\supp Q|=X+1+L=2M+1$, $D(X)=2M-1$, and $\gcd(P,Q)=1$. Choose all $L$ odd coefficients of $S$ nonzero by a final rational perturbation inside the open set of strict regular brackets. The highest $x$ coefficient in $Q$ is constant.
+
+For $L=\alpha=M=2^d$ ($d\ge 5$), $h=d-2$, $n_{\rm w}=M/4$, $s=4$, and $p=1$ ($j_1^+=M/2$), Lemma~\ref{lem:wronskian-scaling} verifies the formation minor test whenever $M w_1>2(d-2)+3$ (hence for all sufficiently large $d$). At $M=128$ ($d=7,h=5,j_1^+=64$), outward-rounded ball integration of~\eqref{eq:C-matrix} on $D_1=\{65,66\}$, $D_2=\{67,68\}$, $D_3=\{69,70\}$, $D_4=\{71,72\}$, $D_5=\{73,74\}$ ($q=1,2,4,8,16$) encloses their $2\times 2$ determinants strictly inside $(-5.59,-5.58)$, $(-1.06,-1.05)$, $(-0.354,-0.353)$, $(-0.142,-0.141)$, and $(-0.060,-0.059)$, respectively. Theorem~\ref{thm:gap-brackets} therefore yields $4\{F_{d-2}(M,M)+8(n_{\rm w}-1)+(n_{\rm w}-2)\}=F_*+9M-40$ simultaneous hyperbolic limit cycles, equal to $59{,}240$ at $M=128$ (whereas optimizing unreserved single-row prefixes $1\le l\le M$ and depths $1\le h'\le d$ gives maximum $F_*+3M-16=58{,}496$ at $h'=d-2,l=M$).
+\end{proof}
+
+\clearpage
+\section{Stationary turns at 261 terms}\label{sec:tree-stationary}
+\begin{corollary}[Stationary turns at the component counts of Theorem~\ref{thm:single-row-interleaved}]\label{cor:64005}
+There is a rational polynomial vector field with coprime components, exact component counts \(\splitcount{4}{257}\), actual degree \(255\) and at least \(64{,}005\) simultaneous hyperbolic limit cycles.
+\end{corollary}
+\begin{proof}
+At \(n=128,\ d=127\), Theorem~\paperlink{low-N-supplement}{theorem.3.1}{thm:stationary-turn}{S3.1} of the degree-capped supplement gives \(255\cdot251=64{,}005\) cycles with component counts \(\splitcount{2}{255}\) and degree 255. The first component contains \(y^{252},y^{254}\). The second contains the odd \(x\)-powers through \(x^{255}\) and the powers \(y^{2j+1}\) for \(j\in\{0,\ldots,125,127\}\). Add small nonzero rational multiples of \(1,y\) to the first component and of \(1,x^2\) to the second. These four positions are vacant and the cycles persist by hyperbolicity. The first component depends only on \(y\), and the leading \(x\)-coefficient of the second remains a nonzero constant, so the components are coprime.
+\end{proof}
+For comparison at the same total of 261 terms, \(n=130,\ d=129\) in the same theorem gives \(259\cdot255=66{,}045\) cycles at component counts \(\splitcount{2}{259}\) and degree 259.

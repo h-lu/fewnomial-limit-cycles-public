@@ -1,0 +1,8 @@
+N	center	exponent_variations	moving_potential	paired_saddle	flat_minimum	separated	reciprocal	mixed_reciprocal	chebyshev_grid	mixed_linear_cap	regular_bands	interpolation_witness
+4	4	--	--	--	--	--	--	--	--	--	--	--
+5	8	8	--	--	--	--	--	--	--	--	--	--
+6	12	16	24	--	--	32	24	32	2	--	--	--
+7	16	24	36	--	--	64	48	64	4	--	--	68
+8	24	32	48	80	32	96	72	96	6	4	--	108
+9	32	48	72	132	64	144	96	128	8	6	--	148
+10	40	64	96	168	112	192	120	168	10	12	--	--

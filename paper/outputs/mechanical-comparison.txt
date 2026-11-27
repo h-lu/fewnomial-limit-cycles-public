@@ -1,0 +1,15 @@
+Rational two-coordinate fold, even Hamiltonian and both axis sources: physical component parities verified.
+n=5, half-degrees 1,2,5: zero first global form, 9 auxiliary zeros per branch, 36 global.
+Per component at most 5 pure and 10 mixed slots, degree <= 9. Filling to 33 at cap 31 is feasible.
+n=4: exact N from 32 through 49, degree cap 7, integer recurrence value 20.
+n=8: exact N from 128 through 161, degree cap 15, integer recurrence value 244.
+n=16: exact N from 512 through 577, degree cap 31, integer recurrence value 1940.
+n=32: exact N from 2048 through 2177, degree cap 63, integer recurrence value 12756.
+All n=2..256: parity slots, floor windows, full capacity, birth recurrence and finite lower inequality passed.
+n=2: 1 independent translated birth rows per axis, 2 generic mixed component positions.
+n=3: 2 independent translated birth rows per axis, 4 generic mixed component positions.
+n=7: 12 independent translated birth rows per axis, 24 generic mixed component positions.
+n=8: 16 independent translated birth rows per axis, 32 generic mixed component positions.
+n=17: 72 independent translated birth rows per axis, 144 generic mixed component positions.
+n=24: 144 independent translated birth rows per axis, 288 generic mixed component positions.
+Parity-budget substitution gives coefficient 1/16 in the integer recurrence. Section S1.2 proves the term transfer from the common hyperbolic realization of Lu, Proposition 3.3.

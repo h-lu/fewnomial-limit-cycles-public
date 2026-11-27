@@ -1,0 +1,29 @@
+\subsection{Ordinary support along a two-source renewal chain}\label{sup:renewal-support}
+Start with \(X=(A,B)\) of degree at most \(m\ge3\) carrying \(L\) selected hyperbolic cycles, and set \(b=m+2\). Choose \(p(t)=\prod_{i=1}^b(t-a_i)\) with distinct \(a_i\in(-1/2,1/2)\) and put \(\lambda=p(-1)/p'(-1)<0\). The two prescribed edge traces come from the polynomial field
+\[
+ S_b(x,y)=\bigl(p(y)+\lambda[p'(x)-p'(-1)],\quad
+                 p(x)+\lambda[p'(y)-p'(-1)]\bigr).
+\]
+Set \(Z=S_b+\tau^{-1}(1+x)(1+y)X(x/\tau,y/\tau)\) and \(\Phi(u,v)=(2u^2-1,2v^2-1)\) \cite[Lemma~2.1, Proposition~2.2 and (21)--(26)]{LuRenewal}. For \(w=(x,y)/\tau\), the actual field of the transplant is \(\tau^{-2}\widehat Z(w)\), where \(\widehat Z(w)=\tau Z(\tau w)\to X(w)\) on compact sets in \(C^1\). The positive constant factor preserves the return map. The fold sends \(Y=(4vZ_1\circ\Phi,4uZ_2\circ\Phi)\) to \(16uv\,Z\circ\Phi\) under \(D\Phi\). Two quadrants preserve time orientation and two reverse it. Each simple root \(a\) of \(p\) satisfies the center condition \(\lambda p'(a)^2<0\) on each edge. First a perturbation \((\varepsilon v F(u),0)\) creates the vertical nests while preserving the horizontal centers. For this field a second perturbation \((0,\eta uG(v))\) creates the horizontal nests and preserves the old cycles and the vertical nests. Each of \(F,G\) has all \(b\) odd powers through degree \(2b-1\) at its admissible positive scale.
+
+With \(U=2u^2,\ V=2v^2\), the first component is
+\[
+ 4v\{p(V-1)+\lambda[p'(U-1)-p'(-1)]\}
+ +\frac{4vUV}{\tau}A((U-1)/\tau,(V-1)/\tau)+\varepsilon vF(u).
+\]
+The first two supports are \((0,2j+1)\) for \(0\le j\le b\) and \((2i,1)\) for \(1\le i<b\). Each translated input position \((i,j)\) contributes \((2i+2,2j+3)\), and the odd perturbation contributes \((2i+1,1)\) for \(0\le i<b\). The second component has the exchanged edge and perturbation supports, and translated input positions \((2i+3,2j+2)\) from \(B\). The top pure powers give \(D^+=2b+1\). Let \(s_\tau(A)\) denote the number of nonzero coefficients of \(A((U-1)/\tau,(V-1)/\tau)\). The disjoint supports give
+\begin{equation}\label{eq:renewal-support}
+ N^+=6b+s_\tau(A)+s_\tau(B),\qquad D^+=2b+1 .
+\end{equation}
+Indeed the roots of \(p(t-1)\) are positive, so its coefficients and the nonconstant coefficients of its derivative are nonzero. Proposition~4.1 of the preprint gives \(4L+4b(b-1)\) selected hyperbolic cycles after these two simultaneous perturbations. From the zero field the first renewal has exactly \(6b\) terms and gives \(4b(b-1)\) cycles.
+
+\paragraph{One doubling chain.}
+Take \(X_0=0,\ m_0=3,\ m_{j+1}=2m_j+5\), so \(m_j=8\cdot2^j-5\). Write \(N_{j+1}\) for the actual term count at the next step. For \(j\ge1\), sufficiently short positive transplants at successive steps give
+\[
+ 6(m_j+2)+2(2^j-1)(7\cdot2^j-2)
+ \ \le\ N_{j+1}\ \le\ (m_j+2)(m_j+7).
+\]
+For the upper bound, each translated component occupies at most \(\binom{m_j+2}{2}\) positions. For the lower bound, the first top form at stage 1 is a positive multiple of \(v^{11}\). At the next step the first top form is a positive pure \(v\)-power plus a positive multiple of \(u^2v^3\) times the preceding first top form evaluated at \(u^2,v^2\). The second component has the exchanged weights. The edge derivative and both odd perturbations have lower degree, so all nonzero top coefficients stay positive. Starting at \((0,11)\), the map \((a,c)\mapsto(2a+2,2c+3)\) gives a first-component top exponent \((a_j,c_j)=(2^j-2,7\cdot2^j-3)\), with its transpose in the second component. At each position \((i,k)\) below this pair, the leading coefficient in \(1/\tau\) of the translated polynomial is a nonempty binomial sum of sign \((-1)^{m_j-i-k}\). Choosing one small \(\tau\) preserves both rectangles and the selected finite family, giving the lower bound for this seed, these binary degree choices and these successive small scales.
+
+\paragraph{Rational coefficients and coprimality.}
+Starting at the zero field, choose rational edge roots and then rational parameters in the successive admissible intervals. For the last amplitude write \(Q=Q_0+\eta uG(v)\) with \(P\) fixed. The edge trace gives \(P(0,v)=4vp(2v^2-1)\not\equiv0\). For \(c\ne0\) the odd part of \(P(u,c)/c\) is \(\varepsilon F(u)\not\equiv0\). Hence any irreducible factor of \(P\) dividing \(uG(v)\) over \(\mathbb C\) can only be \(v\), and \(Q_0(u,0)=4up(2u^2-1)\not\equiv0\). A factor of \(P\) dividing \(Q\) at two amplitudes would divide both \(uG(v)\) and \(Q_0\). Avoiding finitely many amplitudes inside the common interval gives coprime components at the stated support. The same preprint prescribes a finite Taylor jet at a point where the congruence divisor is nonzero and studies common factors forced by the congruence \cite[{\S}7.1, p.~17, and Proposition~7.3, p.~18]{LuRenewal}. In the main article, Lemma~\othernumber{lem:whole-disk-division}{3.2} prescribes an integral variation across a disk whose projected interval can contain zeros of the divisor.

@@ -1,0 +1,183 @@
+\section{A perturbed center with very few terms}\label{cl:sec:center-lift}
+\begin{theorem}\label{cl:thm:main}
+For each pair of positive integers \(s,d\) there is an integer \(J_0(s,d)\) such that, for every integer \(J\ge J_0(s,d)\), the field \eqref{cl:eq:field} at scale \(t=1/J\) has exactly \(2s+d+1\) nonzero terms and at least \(4sd\) simultaneous hyperbolic cycles. Its cleared degree is \(B=1+L\max(4,2s+1,2d+1)\), where \(L=\Mclr\) is the even clearing factor defined below.
+\end{theorem}
+The maximum comes from the untilted extremal powers. For \(d=1\) the term giving \(2d+1\) is absent and the maximum is unchanged. Optimizing \(4sd\) over \(2s+d+1=N\) gives \(4,8,12,16,24,32,40\) cycles for \(N=4,\ldots,10\), respectively. These realizations allow the degree to grow with \(J\).
+
+\subsection{A common return integral at the centers}
+
+Set \(r=2s-1\) and
+\[
+ g(U)=\prod_{j=1}^r(U-j)=\sum_{j=0}^r b_jU^j,\qquad b_0=-r!.
+\]
+Every \(b_j\) is nonzero, by the signs of the elementary symmetric
+functions of \(1,\ldots,r\). Begin in the real \(u,v\) plane with
+\[
+ \dot u=e^v-e^{2v},\qquad \dot v=g(e^u).
+\]
+This is \((-H_v,H_u)\) for
+\(H(u,v)=G(u)+(e^v-1)^2/2\), \(G'(u)=g(e^u)\).
+Each odd \(i\in\{1,3,\ldots,r\}\) gives a strict nondegenerate minimum
+at \((u_i,0)=(\log i,0)\), since \(\kappa_i=G''(u_i)=i g'(i)>0\).
+Choose disjoint neighborhoods of these \(s\) minima. The analytic
+coordinates
+\[
+ w=\operatorname{sgn}(u-u_i)\sqrt{2(G(u)-G(u_i))},\qquad z=e^v-1
+\]
+send the energy above the minimum to \((w^2+z^2)/2\).
+Write \(u=u_i+h_i(w)\), \(K_i(w)=h_i'(w)\), with
+\(K_i(0)=1/\sqrt{\kappa_i}\). These changes are orientation preserving,
+and the small circles are traversed counterclockwise.
+
+Let \(t>0\) set the spatial scale. Choose real coefficients
+\(a_0(t),\ldots,a_{d-1}(t)\) as specified below. For a temporarily
+independent parameter \(\varepsilon\), take the analytic field
+\begin{align}
+ \dot u&=e^{\varepsilon a_0(t)u+v}-e^{2v},\notag\\
+ \dot v&= b_0 e^{\varepsilon v/b_0}+
+          \sum_{j=1}^r b_j e^{ju}
+          +\varepsilon\sum_{\ell=1}^{d-1}
+            \frac{a_\ell(t)}{2\ell+1}e^{(2\ell+1)v}.
+ \label{cl:eq:analytic}
+\end{align}
+The derivative of the field with respect to \(\varepsilon\) at zero
+is \((p,q)=(a_0 u e^v,\ v+\sum_{\ell=1}^{d-1}a_\ell e^{(2\ell+1)v}/(2\ell+1))\).
+Its divergence is \(1+\sum_{\ell=0}^{d-1}a_\ell e^{(2\ell+1)v}\).
+The two terms \(1,a_0e^v\) arise by varying exponents already present.
+
+Let \(M_i(t,E)\) be the first variation of the energy displacement
+on the oval \(w^2+z^2=t^2 E\), \(E>0\). Indeed, integrating
+\(\dot H\) for one unperturbed turn gives
+\(\oint p\,dv-q\,du=\iint(p_u+q_v)\,du\,dv\).
+The change in return time contributes zero at first order since \(H\)
+is constant along the unperturbed flow. In the circular disk the
+integrand becomes \(K_i(w)\) times
+\[
+ \frac{1}{1+z}+\sum_{\ell=0}^{d-1}a_\ell(t)(1+z)^{2\ell}.
+\]
+Each vertical slice is symmetric about \(z=0\). Thus its even part
+\[
+ F_t(z)=\frac{1}{1-z^2}+
+ \sum_{\ell=0}^{d-1}a_\ell(t)\sum_{k=0}^\ell \binom{2\ell}{2k}z^{2k}
+\]
+gives exactly the same integral.
+
+Write
+\[
+ \mu_k=\frac{\binom{2k}{k}}{4^k(k+1)},\qquad
+ \sum_{k=0}^d\mu_k c_k E^k=\mu_d\prod_{j=1}^d(E-j).
+\]
+All \(c_k\) are nonzero rational numbers and \(c_d=1\).
+Define the \(a_\ell(t)\) by descending triangular substitution,
+\begin{equation}
+ 1+\sum_{\ell=k}^{d-1}\binom{2\ell}{2k}a_\ell(t)
+      =c_k\,t^{2(d-k)},\qquad k=d-1,\ldots,0.       \label{cl:eq:triangular}
+\end{equation}
+The diagonal is one. Each \(a_k\) is a polynomial in \(t\) of degree
+\(2(d-k)\) with leading coefficient \(c_k\), hence is nonzero for all
+sufficiently small positive \(t\). We obtain the exact identity
+\begin{equation}
+ F_t(z)=\sum_{k=0}^{d-1}c_k t^{2(d-k)} z^{2k}
+             +\frac{z^{2d}}{1-z^2}.                 \label{cl:eq:tail}
+\end{equation}
+
+In the unit disk \(\disk=\{(\xi,\eta):\xi^2+\eta^2<1\}\), substitute
+\((w,z)=t\sqrt E(\xi,\eta)\). The resulting integral is
+\begin{align}
+ \frac{M_i(t,E)}{t^{2d+2}}
+ = E\int_{\disk} K_i(t\sqrt E\,\xi)
+ \left[\sum_{k=0}^{d-1}c_k E^k\eta^{2k}
+ +\frac{E^d\eta^{2d}}{1-t^2E\eta^2}\right]d\xi\,d\eta .
+ \label{cl:eq:unit}
+\end{align}
+Polar integration gives
+\(\int_{\disk}\eta^{2k}\,d\xi\,d\eta=\pi\mu_k\).
+Equation \eqref{cl:eq:unit} therefore converges as \(t\to0\) to
+\begin{equation}
+ L_i(E)=\pi K_i(0)\mu_d\,E\prod_{j=1}^d(E-j).       \label{cl:eq:limit}
+\end{equation}
+On compact subintervals of \(E>0\) this convergence holds in \(C^1\)
+because the bracket, \(K_i\) and their \(E\)-derivatives converge uniformly
+on the fixed integration disk. The only center-dependent factor in
+the limit is positive.
+
+\subsection{From the integral to polynomial limit cycles}
+
+We use the single choice \(\varepsilon=t^{2d+3}\). To control the return
+map as the ovals shrink, first set \(w=tW,\ z=tZ,\ \varepsilon=t\sigma\)
+and regard \(t,\sigma\) as independent. The scaled vector field is
+analytic at \((t,\sigma)=(0,0)\) on compact annuli in \(W,Z\).
+Indeed, the unscaled field in the \(w,z\) chart vanishes at
+\((w,z,\varepsilon)=(0,0,0)\) for every \(t\). After the substitution,
+its analytic numerator is divisible by \(t\). At \(\sigma=0\) the
+scaled field is exactly
+\[
+ (\dot W,\dot Z)=\frac{1+tZ}{K_i(tW)}(-Z,W).
+\]
+On a compact annulus of positive radii containing \(E=W^2+Z^2=1,\ldots,d\)
+in its interior, the angular speed stays positive for small \(t,\sigma\).
+On a slightly smaller annulus initial points complete one turn, by
+continuous dependence, and their return to \(Z=0,\ W>0\) is analytic in
+\(E,t,\sigma\). A separate such chart is used at each of the finitely
+many centers.
+
+Write \(\Delta_i(E,t,\sigma)\) for returned minus initial \(E\).
+It vanishes at \(\sigma=0\). Since \(H-H(u_i,0)=t^2E/2\),
+the first variation computed above gives
+\(\partial_\sigma\Delta_i(E,t,0)=2M_i(t,E)/t\) for \(t>0\).
+Analyticity of the scaled return gives a Taylor remainder
+\(O_{C^1(E)}(\sigma^2)\) uniform for \(t\) near zero. Setting
+\(\sigma=t^{2d+2}\) yields
+\begin{equation}
+ \frac{\Delta_i(E,t,t^{2d+2})}{2t^{4d+3}}
+     =\frac{M_i(t,E)}{t^{2d+2}}+O_{C^1(E)}(t)
+     \longrightarrow L_i(E).                         \label{cl:eq:return}
+\end{equation}
+Choose pairwise disjoint small closed intervals about \(1,\ldots,d\)
+on each of which \(L_i'\) has constant nonzero sign and the endpoint
+values have opposite signs. For all sufficiently small \(t>0\) the
+actual displacement has a unique simple zero in every interval, at all
+\(s\) centers simultaneously. The scalar variational equation with angle
+as independent variable gives a positive return derivative. Simplicity
+of the zero makes this derivative different from one. These periodic
+orbits are hyperbolic and isolated.
+Each makes one turn and is a polar graph, so the \(d\) orbits at a given
+center are distinct and nested.
+
+To write the polynomial, take \(t=1/J\), \(\varepsilon=t^{2d+3}\),
+\(\alpha=\varepsilon a_0(t)\), \(\beta=\varepsilon/b_0\), and
+\[
+ \Mclr{}=2J^{4d+3}\operatorname{lcm}
+  \bigl(|b_0|,\operatorname{den}(c_0),\ldots,\operatorname{den}(c_{d-1})\bigr),
+\]
+where denominators are in lowest terms. By \eqref{cl:eq:triangular},
+\(\Mclr{},\Mclr{}\alpha,\Mclr{}\beta\) are even integers. For sufficiently large \(J\),
+\(|\alpha|,|\beta|<1\). In each open quadrant set \(u=\Mclr{}\log|x|\),
+\(v=\Mclr{}\log|y|\). The inverse coordinate change applied to
+\eqref{cl:eq:analytic}, followed by multiplication of the field by
+\(\Mclr{}x^{\Mclr} y^{\Mclr}>0\) there, gives
+\begin{align}
+ P(x,y)={}& x^{1+\Mclr{}(1+\alpha)}y^{2\Mclr{}}-x^{1+\Mclr{}}y^{3\Mclr{}},\notag\\
+ Q(x,y)={}& b_0 x^{\Mclr} y^{1+\Mclr{}(1+\beta)}
+  +\sum_{j=1}^{r} b_j x^{(j+1)\Mclr{}}y^{1+\Mclr{}}
+  +\varepsilon\sum_{\ell=1}^{d-1}\frac{a_\ell(t)}{2\ell+1}
+                x^{\Mclr} y^{1+(2\ell+2)\Mclr{}}.                \label{cl:eq:field}
+\end{align}
+These polynomials define a field on the entire real plane. The exponents
+in \(P\) differ in \(y\). In \(Q\), the middle sum has distinct \(x\)
+exponents all greater than \(\Mclr{}\). The other terms have \(x\) exponent \(\Mclr{}\)
+and pairwise different \(y\) exponents since \(-1<\beta<0\).
+All coefficients are nonzero for large \(J\). Thus
+\(N(X)=2+(1+r+d-1)=2s+d+1\). Each quadrant is diffeomorphic to the
+whole \(u,v\) plane, and positive changes of speed preserve the section
+return map. Taking the largest of the finitely many thresholds for these support conditions and for the simple return zeros proves Theorem~\ref{cl:thm:main}.
+
+For \(s=2,d=3\), \eqref{cl:eq:triangular} gives
+\((c_0,c_1,c_2)=(-15/32,55/16,-15/4)\). Thus \(L=192J^{15}\) and the cleared degree is \(1+7L\). At the algebraic sample \(J=10^{20}\), direct expansion gives eight nonzero terms and degree \(1+7\cdot192\cdot10^{300}\). The 24-cycle conclusion applies for \(J\ge J_0(2,3)\); the convergence in \eqref{cl:eq:return} leaves this threshold unquantified.
+
+For comparison with primitive fields, set \(M=\Mclr\). The two common coordinate exponents are
+\[
+ a=\min\{M,1+M(1+\alpha)\},\qquad b=1+M(1+\beta).
+\]
+On the algebraic torus the first component vanishes precisely when \(y^M=x^{M\alpha}\). Write \(\alpha=h/k\) in lowest terms with \(k>0\). Each component of this curve has a parametrization \(x=t^k,\ y=\zeta t^h\), for an appropriate root of unity \(\zeta\). After division of \(Q\) by the unit \(x^M y^{1+M}\), its middle terms have distinct orders \(jMk\), \(1\le j\le r\). All the other orders divided by \(Mk\) are \(\alpha\beta\) or \((2\ell+1)\alpha\). For fixed \(s,d\) these have absolute value less than one at the small scales of the proof. Thus the term with \(j=r\) cannot cancel on any component. The full polynomial gcd is \(x^a y^b\). Its removal gives the same \(2s+d+1\) terms and degree \(B-a-b\). Division by the largest even monomial instead preserves the oriented returns on all open quadrants. The full quotient reverses precisely those with \(x^ay^b<0\), preserving the count of hyperbolic cycles.
+

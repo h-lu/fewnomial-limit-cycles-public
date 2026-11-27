@@ -1,0 +1,113 @@
+\section{Summing the finite estimate}\label{sec:sum}
+\begin{proof}[Proof of Theorem~\ref{cor:linear-cap}]
+For a stage put \(q=q_{r-k}\), \(\alpha=2e_{r-k}\). From the definition of \(B\), using \([x]_+\ge x\), \(b\le L/\alpha+1/2\) and \(c\le2L/\alpha\), one obtains
+\begin{equation}\label{eq:Bq-linear-lower}
+ B_{q,\alpha}(L)/q\ \ge\ 4L-3L/q-12q-8qL/\alpha.
+\end{equation}
+The inequality also holds at \(L=0\). The group size changes with the stage. Indeed \(q_j^{-1}\le q_{\max}^{-1}+2e_j^{-1/2}\), \(q_j\le2\sqrt{e_j}\), and \(r/q_{\max}\le1\). The value \(e_j=2\) occurs at most eight times. Thereafter \(e_j=2^i\) occurs for at most \(i+4\) consecutive indices. Consequently
+\begin{equation}\label{eq:qj-sums}
+ \sum_{j=1}^r q_j^{-1}=O(1),\qquad \sum_{j=1}^r q_j/e_j=O(1),
+ \qquad \sum_{j=1}^r 2^{-j}q_j=O(1).
+\end{equation}
+For the last assertion use \(q_j\le e_j\le 2\cdot2^{j/4}\).
+
+Rounding gives \(M_k=T/2^{k+1}+O(1)\). The branch-loss and flatness bounds of Lemma~\ref{lem:recurrent-folds} give
+\[
+ \sum Y_k M_k\ge (r-5/2)T-O(R),\qquad \sum Y_k\alpha_k<12R.
+\]
+Insert \eqref{eq:Bq-linear-lower} at \(L=L_k\le M_k\) in \eqref{eq:finite-main}. The three subtracted sums, before multiplying by \(X_*\), have respective orders \(O(T+R), O(R), O(T+R)\), by \eqref{eq:qj-sums}, \(Y_k\le2^{k+1}\), and \(2^{k+1}=2R/2^j\). Since \(L_k\ge M_k-\alpha_k\),
+\[
+ \mathcal F(N)\ge 4X_*Tr-O(N^2).
+\]
+For all large \(N\), \(X_*=2q_{\max}\lfloor\lfloor N/2\rfloor/(2q_{\max})\rfloor\), so \(0\le N-2X_*<4q_{\max}+1\). Thus \(4X_*T=N^2-(N-2X_*)^2\), \(r=\log_2N+O(1)\), and \(rq_{\max}^2=O((\log N)^3)\). This yields the stated leading coefficient on every residue class.
+
+The diagonal allocation admits the explicit error constant \(50\). To prove \(\mathcal F(N)\ge N^2\log_2N-50N^2\), observe first that its right-hand side is nonpositive for \(N\le2^{50}\). For \(N>2^{50}\), \(r=\lfloor\log_2N\rfloor-7\), \(R\le N/128\), and \(N-18R\ge\lfloor N/2\rfloor\). Put \(w_k=Y_k/2^{k+1}\). Lemma~\ref{lem:recurrent-folds}(c) gives \(\sum(1-w_k)\le5/2,\ \sum Y_k\alpha_k<12R,\ \sum Y_k q_{r-k}<6R\), since \(q_j\le e_j\). Also \(\sum Y_k<2R\). Grouping \(e_j=2^{2i},2^{2i+1}\) as above gives for every \(r\)
+\[
+ \sum 1/q_j\le r/q_{\max}+4+\sum_{i\ge1}(4i+9)/2^i\le22,\qquad
+ \sum q_j/e_j\le8+\sum_{i\ge1}(3i+13/2)/2^i=41/2 .
+\]
+The two floors give \(-3/2<M_k-T/2^{k+1}\le1/2\). In \eqref{eq:Bq-linear-lower} lower-bound the positive term by \(4M_k-4\alpha_k\) and use \(L_k\le M_k\) in the subtracted terms. The positive term loses at most \(10T+12R+48R\) from \(4Tr\). The three remaining losses are at most \(66T+3R/2,\ 72R,\ 82T+4R\), respectively, using \(1/q_j\le1/2,\ q_j/e_j\le1\). Hence
+\[
+ \mathcal F(N)\ge X_*(4Tr-158T-138R).
+\]
+In this range \(r\ge2\) and \(q_{\max}=2^{\lceil\log_2 r\rceil}<2r\). Rounding \(\lfloor N/2\rfloor\) down to a multiple of \(2q_{\max}\) gives \(0\le N-2X_*\le4q_{\max}-1<8r+1\), and \(r(8r+1)^2\le81r^3\le81\cdot4^r<N^2\) (use \(r^3\le4^r\) by induction for \(r\ge2\)). Since \(X_*T\le N^2/4,\ X_*R\le N^2/256\) and \(\log_2N-r<8\), the normalized loss is less than \(8+1+158/4+138/256<50\).
+
+\end{proof}
+
+For \(N=2^b\) with \(b=2^{128}\), the loss \(b-\mathcal F(N)/N^2\) lies in \((137/4,1503/32]\). Section~\paperlink{low-N-supplement}{section.5}{sup:reproduction}{S5} of the supplement obtains this enclosure from the stage sum~\eqref{eq:finite-main} and the loss estimates above \cite{LuElectronic}.
+
+\begin{theorem}[Independent degree and support caps]\label{thm:joint-main}
+There are absolute constants \(C>0\) and \(h_0\) with the following property. For every pair of positive integers \(m,\Delta\) with \(m\le(\Delta+1)(\Delta+2)\) and \(h=\min(m,\Delta)\ge h_0\), there is a polynomial vector field with rational coefficients and coprime components at exact term count \(m\) and degree at most \(\Delta\) with at least
+\[
+ A\log_2 h-C h^2,\qquad A=h\min(2h,2m-h),
+\]
+hyperbolic limit cycles.
+\end{theorem}
+At degree \(\Delta\), the two odd supports have \(\lceil\Delta/2\rceil\) positions each and the positive even drive has \(\lfloor\Delta/2\rfloor\). Their sum is \(\lceil3\Delta/2\rceil\), the first integer \(m\) for which the displayed coefficient reaches \(2\Delta^2\).
+The same estimate already has the form \(2\Delta^2\log_2\Delta-O(\Delta^2)\) at \(m=\lceil3\Delta/2\rceil-s\) for \(0\le s=O(\Delta/\log_2\Delta)\). Indeed the deficit in \(A\) is at most \(2\Delta s\).
+\begin{proof}
+Take \(a=2,\ r=\lfloor\log_2(h/128)\rfloor,\ R=2^r\), and the same \(q_{\max},q_j\) as above. Put \(H=\lfloor h/2\rfloor,\ T=\min(2H,m-H),\ p=\lfloor T/2\rfloor,\ d=T-p,\ X_*=2q_{\max}\lfloor H/(2q_{\max})\rfloor\). Now \(H\le T\le2H\), hence \(p\ge12R,\ d\ge6R\) and \(s=X_*/q_{\max}\ge2\) for large \(h\). The perturbation degree satisfies \(2d=2\lceil T/2\rceil\le2H\le h\), and \(p,X_*\le H\), so all three degrees meet the cap and \(m_0=p+d+X_*\le m\). The preceding sum gives \(4X_*Tr-O(h^2)\), where \(4X_*T=A+O(hq_{\max})\). Indeed \(X_*=h/2+O(q_{\max})\) and \(T=\min(h,m-h/2)+O(1)\). The errors have absolute constants since \(T\le h\), the stage sums \eqref{eq:qj-sums} are bounded independently of the budgets, and \(q_{\max}\le 2\max(2,r)\). Thus \(hq_{\max}r=O(h^2)\) and \(r=\log_2 h+O(1)\) uniformly in the pair \((m,\Delta)\).
+
+For \(m\le\lceil3\Delta/2\rceil\), use the odd \(y\)-powers in \(P\), odd \(x\)-powers in \(Q\), and positive even \(y\)-powers in \(Q\) through degree \(\Delta\). Their union contains all \(m_0\) constructed component positions and has size \(\lceil3\Delta/2\rceil\). Fill \(m-m_0\) vacancies there. At saturation the field occupies all three sets and still has the form \eqref{eq:separable-template}. For a larger feasible budget one may need other powers. A count above \(4\Delta+2\) forces a mixed monomial, since each component has only \(2\Delta+1\) constant or pure-power positions. Apply Remark~\ref{rem:exact-fill} within the \(2\binom{\Delta+2}{2}\) component positions of degree at most \(\Delta\), filling \(m-m_0\) distinct vacant positions one at a time with small nonzero rational coefficients. In both fillings the coefficients can be chosen rational and small in a common persistence neighborhood. At each addition the finite factor exclusion in Remark~\ref{rem:exact-fill} preserves coprimality.
+\end{proof}
+
+\begin{corollary}[Exact degree with linear support]\label{cor:degree-only}
+For every sufficiently large integer \(\Delta\) there exists a rational field of the form \eqref{eq:separable-template} with coprime components, degree exactly \(\Delta\) and exactly \(\lceil3\Delta/2\rceil\) ordinary component terms, all pure powers, with at least \(2\Delta^2\log_2\Delta-C\Delta^2\) simultaneous hyperbolic limit cycles. Consequently the classical Hilbert number \(H(\Delta)\), the supremum of the isolated-cycle count at exact degree \(\Delta\), satisfies \(H(\Delta)\ge 2\Delta^2\log_2\Delta-C\Delta^2\) for an absolute \(C\).
+\end{corollary}
+\begin{proof}
+Set \(m=\lceil3\Delta/2\rceil\) in Theorem~\ref{thm:joint-main}. The pure-power filling in its proof occupies \(2\lceil\Delta/2\rceil+\lfloor\Delta/2\rfloor=m\) positions. If \(\Delta\) is odd, \(y^\Delta\) occurs in \(P\) and \(x^\Delta\) in \(Q\). If \(\Delta\) is even, \(y^\Delta\) occurs in \(Q\). Thus the degree equals the cap in both cases. Each hyperbolic cycle is isolated and counts toward \(H(\Delta)\).
+\end{proof}
+
+\begin{proposition}[A fixed potential during the fold stages]\label{prop:fixed-potential}
+For every sufficiently large integer on either of the following budget lines there exists a rational field with coprime components, exactly \(m\) terms and degree at most \(\Delta\), having at least
+\[
+\begin{cases}
+ N^2\log_2 N-C_1 N^2\log_2\log_2N, & (m,\Delta)=(N,N-1),\\
+ \Delta^2\log_2\Delta-C_2\Delta^2, & m=\lceil3\Delta/2\rceil
+\end{cases}
+\]
+simultaneous hyperbolic limit cycles, for absolute constants \(C_1,C_2\). Only the perturbing polynomial varies during the fold stages.
+\end{proposition}
+\begin{proof}
+Fix a fold allocation as in Section~\ref{sec:joint-proof}, with \(a=2\). At stage \(k\), the number of odd powers of \(z=u_k\) available in the perturbation is
+\[
+ L^0_k=\left\lfloor (d_k+1)/2\right\rfloor,\qquad d_k=\lfloor d/2^k\rfloor .
+\]
+Use Lemma~\ref{lem:horizontal-glue} with these lengths to choose \(W\) and the odd polynomials \(S_k\). Keep \(U=\rho W\) and the model potential \(V_*=\Xi^2+\kappa\Xi\) fixed throughout the stages. As in the model-bracket step of Theorem~\ref{thm:finite-folded}, choose \(\kappa_0\) small, disjoint row charts, and then \(\rho\) small. Lemma~\ref{lem:disk-core} continues all the extended disks. In the coordinate \(z=\tau_k Z\), the slice integral of \(\dd S_k(z/\tau_k)\) is the oriented difference of its endpoint values. Thus the model signs and nonzero slopes persist on these disks for the fixed potential, with a common change of energy scale by \(\rho\).
+
+Start with \(F_r=0\). At stage \(k=r-1,\ldots,0\), the inherited \(F_{k+1}\) is a polynomial in \(u_{k+1}=c_k(2z^2-1)\). Both it and \(V_*\) are even in \(z\), so its moment vanishes on each new disk by the slice reflection in the proof of Theorem~\ref{thm:finite-folded}. Put
+\[
+ F_k=F_{k+1}+\lambda_k S_k(u_k/\tau_k).
+\]
+The moment on each new bracket is exactly \(\lambda_k\) times the chosen moment. Take \(\lambda_k>0\) sufficiently small to preserve the strict signs and slopes on the brackets already chosen. Inactive stages need no correction. Since \(2L^0_k-1\le d_k\) and \(2d_{k+1}\le d_k\), \(F_k\) has degree at most \(d_k\) in \(u_k\). This proves the finite count
+\[
+ X_*\sum_{k=0}^{r-1}Y_k B_{q_{r-k},\alpha_k}(L^0_k)/q_{r-k}.
+\]
+After the stages, subtract \(F_0(0)\) and approximate the pair in the physical coefficients of \(y^2\) as in Theorem~\ref{thm:finite-folded}. The strict brackets allow full rational support within the allocated degrees and one common rational \(\mu\). If required, fill unused pure-power positions within the cap, preserving the cycles and coprimality by Remark~\ref{rem:exact-fill}. The two odd supports and the positive even support offer \(\lceil3\Delta/2\rceil\) positions, enough on both lines.
+
+To sum the count, use \(q_j\) from \eqref{eq:recipe-stages} and \(\alpha_k=2e_{r-k}\). We have \(L^0_k=d/2^{k+1}+O(1)\), \(\sum_k Y_k<2R\), and \(\sum_k(1-Y_k/2^{k+1})\le5/2\). Hence \(\sum Y_kL^0_k=dr+O(d+R)\). In \eqref{eq:Bq-linear-lower}, the three subtracted sums after multiplication by \(Y_k\) are \(O(d+R)\), \(O(R)\) and \(O(d+R)\), respectively. Indeed, putting \(j=r-k\), one has \(Y_kL^0_k\le d+O(Y_k)\), and \eqref{eq:qj-sums} bounds \(\sum 1/q_j,\ \sum 2^{-j}q_j,\ \sum q_j/e_j\). This gives \(4X_*dr-O(X_*(d+R))\).
+
+On the diagonal let \(h=N-1\), \(r=\lfloor\log_2(h/\log_2 h)\rfloor-5\), \(R=2^r\), \(p=12R\), and take
+\[
+ q_{\max}=2^{\lceil\log_2\max(2,r)\rceil},\quad
+ X_*=2q_{\max}\left\lfloor\frac{\lfloor h/2\rfloor}{2q_{\max}}\right\rfloor,\quad
+ d=\min(\lfloor h/2\rfloor,N-X_*-p).
+\]
+Then \(R\asymp h/\log h,\ X_*=h/2+O(\log h),\ d=h/2+O(h/\log h)\). For large \(h\) we have \(d\ge6R,\ p\le\lfloor h/2\rfloor\), and \(X_*/q_{\max}\) is positive and even. The degrees \(2p-1,2X_*-1,2d\) are at most \(h\) and \(p+X_*+d\le N\). Now \(4X_*d=h^2+O(h^2/\log h)\) and \(r=\log_2 h-\log_2\log_2 h+O(1)\), giving the first bound.
+
+The allocation \(p\asymp N/\log N\) gives the stated remainder. For the leading coefficient alone, one can also take \(r=\lfloor\log_2(h/\sqrt{\log_2 h})\rfloor-5\), \(p=12\cdot2^r\), with \(X_*,d\) as above. Then \(p\asymp h/\sqrt{\log h}=o(h)\), \(d/h\to1/2\), \(X_*/h\to1/2\), and \(r/\log_2h\to1\). Thus \(d\ge6R\) eventually and the same estimate \(4X_*dr-O(X_*(d+R))\) still gives leading coefficient one.
+
+At saturation take \(h=\Delta,\ r=\lfloor\log_2(\Delta/24)\rfloor,\ p=d=\lfloor\Delta/2\rfloor\), with \(R,q_{\max},X_*\) as above. Here \(12R\le p,\ 6R\le d\), all three degrees fit, and \(p+d+X_*\le\lceil3\Delta/2\rceil\). Since \(4X_*d=\Delta^2+O(\Delta\log\Delta)\) and \(r=\log_2\Delta+O(1)\), the loss is \(O(\Delta^2)\). In this stage estimate the restrictions \(2d\le\Delta\) and \(2X_*-1\le\Delta\) imply \(4X_*d\le4\lfloor\Delta/2\rfloor\lfloor(\Delta+1)/2\rfloor\le\Delta^2\).
+\end{proof}
+
+\begin{remark}[Scope of the fold count]\label{rem:portability}
+Lemma~\ref{lem:saddle-singular} applies to a Morse merger with simple outer turning points and vertical power \(Z^{2\alpha}\), \(\alpha\) even. Lemma~\ref{lem:disk-core} requires a sublevel core bounded by a regular shell. After cancellation on the disk, Lemma~\ref{lem:whole-disk-division} characterizes the attainable numerator by divisibility by \(\gcd(D_{\rm reg},E_0)\), with its stated degree allowances. Proposition~\othernumber{prop:quintic}{S6.1} of \cite{LuElectronic} exhibits both an attainable and an obstructed primitive on a fifth-degree fold.
+
+For the prescribed brackets of Theorem~\ref{thm:finite-folded}, \(B_{q,\alpha}(L)\le(4q-3)L\), \(Y_k\le2^{k+1}\), and \(L_k\le(p+d)/2^{k+1}+1\). Hence a stage contributes at most \(4X_*(p+d+2^{k+1})\). The physical degree bound gives \(X_*,p,d=O(\Delta)\) and \(2^r\le p/(6a)\). Summing over these \(r=O(\log\Delta)\) stages bounds the number of brackets counted by this formula by \(O(\Delta^2\log\Delta)\). The count leaves open additional zeros on the same annuli and the yield of other first-order separable constructions.
+\end{remark}
+
+\paragraph{One finite budget.}
+At \(N=48\) the allocation \(p=24,\ X_*=d=12\) gives two rows of six two-well clusters, with \(\alpha=4\). Holding the potential fixed gives \(L^0_0=6,\ B_{2,4}(6)=2\), hence 24 cycles. Joint variation gives \(L_0=14,\ (b,c,J)=(3,6,5)\). The per-cluster guarantee is \(2[5]_++2[5-3]_++[5-6]_+=14\), hence 168 cycles. At the same budget \(\mathcal E=529\) and \(\mathcal S=1935\). The drive and potential comparison uses the same fold allocation in both fields.
+
+\paragraph{Open questions.}
+Theorem~\ref{thm:joint-main} gives the coefficient \(m^2\) up to \(m=\Delta\), then \(\Delta(2m-\Delta)\) up to saturation, and \(2\Delta^2\) thereafter. For the two squared-logarithmic preprints discussed in Section~\ref{sec:degree-history}, the sufficient support counts allow a scale of order \(u=\min(\Delta,\sqrt m)\) and give reported bounds of order \(u^2(\log u)^2\). These orders meet those of Theorem~\ref{thm:joint-main} when \(m\) is of order \(\Delta^2/\log_2\Delta\). In particular the mechanical recurrence has coefficient \(c/4\) in units of \(\Delta^2\log_2\Delta\) along \(m\sim c\Delta^2/\log_2\Delta\), reaching two at \(c=8\) \cite[Proposition~3.3]{LuMechanical}, \cite[\S\othernumber{sup:mechanical-budget}{S1.2}]{LuElectronic}. It remains open how large a coefficient of \(\Delta^2\log_2\Delta\) a linear term budget can support, and how few monomials suffice for squared-logarithmic growth in the degree.

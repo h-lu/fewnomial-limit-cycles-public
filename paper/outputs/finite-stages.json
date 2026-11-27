@@ -1,0 +1,2943 @@
+[
+  {
+    "N": 32,
+    "base": {
+      "method": "base",
+      "n": 15,
+      "t": 16,
+      "support": [
+        1,
+        31
+      ],
+      "D": 31,
+      "cycles": 225
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 15,
+      "d": 15,
+      "support": [
+        2,
+        30
+      ],
+      "D": 30,
+      "cycles": 783
+    },
+    "fold": null,
+    "uniform": {
+      "method": "stationary",
+      "n": 15,
+      "d": 15,
+      "support": [
+        2,
+        30
+      ],
+      "D": 30,
+      "cycles": 783
+    },
+    "separate_strips": {
+      "p": 1,
+      "b": 6,
+      "k": 16,
+      "s": 12,
+      "per_sheet": 5,
+      "term_ceiling": 31,
+      "degree_ceiling": 31,
+      "cycles": 160
+    },
+    "classical_seed": {
+      "n": 15,
+      "k": 15,
+      "seed_cycles": 29,
+      "support": [
+        30,
+        2
+      ],
+      "D": 30,
+      "cycles": 870
+    }
+  },
+  {
+    "N": 47,
+    "base": {
+      "method": "base",
+      "n": 23,
+      "t": 23,
+      "support": [
+        1,
+        46
+      ],
+      "D": 45,
+      "cycles": 506
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 22,
+      "d": 23,
+      "support": [
+        2,
+        45
+      ],
+      "D": 46,
+      "cycles": 1849
+    },
+    "fold": null,
+    "uniform": {
+      "method": "stationary",
+      "n": 22,
+      "d": 23,
+      "support": [
+        2,
+        45
+      ],
+      "D": 46,
+      "cycles": 1849
+    },
+    "separate_strips": {
+      "p": 2,
+      "b": 4,
+      "k": 23,
+      "s": 16,
+      "per_sheet": 13,
+      "term_ceiling": 46,
+      "degree_ceiling": 45,
+      "cycles": 598
+    },
+    "classical_seed": {
+      "n": 23,
+      "k": 22,
+      "seed_cycles": 57,
+      "support": [
+        45,
+        2
+      ],
+      "D": 46,
+      "cycles": 2508
+    }
+  },
+  {
+    "N": 48,
+    "base": {
+      "method": "base",
+      "n": 23,
+      "t": 24,
+      "support": [
+        1,
+        47
+      ],
+      "D": 47,
+      "cycles": 529
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 23,
+      "d": 23,
+      "support": [
+        2,
+        46
+      ],
+      "D": 46,
+      "cycles": 1935
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 6,
+      "X": 12,
+      "p": 24,
+      "d": 12,
+      "support": [
+        24,
+        24
+      ],
+      "D": 47,
+      "cycles": 168,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 18,
+          "L": 14,
+          "used": 14,
+          "B": 14,
+          "count": 168
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 23,
+      "d": 23,
+      "support": [
+        2,
+        46
+      ],
+      "D": 46,
+      "cycles": 1935
+    },
+    "separate_strips": {
+      "p": 2,
+      "b": 4,
+      "k": 24,
+      "s": 16,
+      "per_sheet": 13,
+      "term_ceiling": 47,
+      "degree_ceiling": 47,
+      "cycles": 624
+    },
+    "classical_seed": {
+      "n": 23,
+      "k": 23,
+      "seed_cycles": 57,
+      "support": [
+        46,
+        2
+      ],
+      "D": 46,
+      "cycles": 2622
+    }
+  },
+  {
+    "N": 49,
+    "base": {
+      "method": "base",
+      "n": 24,
+      "t": 24,
+      "support": [
+        1,
+        48
+      ],
+      "D": 47,
+      "cycles": 552
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 23,
+      "d": 24,
+      "support": [
+        2,
+        47
+      ],
+      "D": 48,
+      "cycles": 2025
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 6,
+      "X": 12,
+      "p": 24,
+      "d": 13,
+      "support": [
+        24,
+        25
+      ],
+      "D": 47,
+      "cycles": 168,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 19,
+          "L": 15,
+          "used": 14,
+          "B": 14,
+          "count": 168
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 23,
+      "d": 24,
+      "support": [
+        2,
+        47
+      ],
+      "D": 48,
+      "cycles": 2025
+    },
+    "separate_strips": {
+      "p": 2,
+      "b": 4,
+      "k": 24,
+      "s": 16,
+      "per_sheet": 13,
+      "term_ceiling": 47,
+      "degree_ceiling": 47,
+      "cycles": 624
+    },
+    "classical_seed": {
+      "n": 24,
+      "k": 23,
+      "seed_cycles": 60,
+      "support": [
+        47,
+        2
+      ],
+      "D": 48,
+      "cycles": 2760
+    }
+  },
+  {
+    "N": 64,
+    "base": {
+      "method": "base",
+      "n": 31,
+      "t": 32,
+      "support": [
+        1,
+        63
+      ],
+      "D": 63,
+      "cycles": 961
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 31,
+      "d": 31,
+      "support": [
+        2,
+        62
+      ],
+      "D": 62,
+      "cycles": 3599
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 14,
+      "X": 28,
+      "p": 24,
+      "d": 12,
+      "support": [
+        24,
+        40
+      ],
+      "D": 55,
+      "cycles": 392,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 18,
+          "L": 14,
+          "used": 14,
+          "B": 14,
+          "count": 392
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 31,
+      "d": 31,
+      "support": [
+        2,
+        62
+      ],
+      "D": 62,
+      "cycles": 3599
+    },
+    "separate_strips": {
+      "p": 2,
+      "b": 6,
+      "k": 32,
+      "s": 24,
+      "per_sheet": 21,
+      "term_ceiling": 63,
+      "degree_ceiling": 63,
+      "cycles": 1344
+    },
+    "classical_seed": {
+      "n": 31,
+      "k": 31,
+      "seed_cycles": 85,
+      "support": [
+        62,
+        2
+      ],
+      "D": 62,
+      "cycles": 5270
+    }
+  },
+  {
+    "N": 100,
+    "base": {
+      "method": "base",
+      "n": 49,
+      "t": 50,
+      "support": [
+        1,
+        99
+      ],
+      "D": 99,
+      "cycles": 2401
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 49,
+      "d": 49,
+      "support": [
+        2,
+        98
+      ],
+      "D": 98,
+      "cycles": 9215
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 24,
+      "X": 48,
+      "p": 26,
+      "d": 26,
+      "support": [
+        26,
+        74
+      ],
+      "D": 95,
+      "cycles": 1248,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 26,
+          "L": 22,
+          "used": 22,
+          "B": 26,
+          "count": 1248
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 49,
+      "d": 49,
+      "support": [
+        2,
+        98
+      ],
+      "D": 98,
+      "cycles": 9215
+    },
+    "separate_strips": {
+      "p": 3,
+      "b": 4,
+      "k": 50,
+      "s": 32,
+      "per_sheet": 41,
+      "term_ceiling": 97,
+      "degree_ceiling": 99,
+      "cycles": 4100
+    },
+    "classical_seed": {
+      "n": 49,
+      "k": 49,
+      "seed_cycles": 148,
+      "support": [
+        98,
+        2
+      ],
+      "D": 98,
+      "cycles": 14504
+    }
+  },
+  {
+    "N": 128,
+    "base": {
+      "method": "base",
+      "n": 63,
+      "t": 64,
+      "support": [
+        1,
+        127
+      ],
+      "D": 127,
+      "cycles": 3969
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 63,
+      "d": 63,
+      "support": [
+        2,
+        126
+      ],
+      "D": 126,
+      "cycles": 15375
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 32,
+      "X": 64,
+      "p": 32,
+      "d": 32,
+      "support": [
+        32,
+        96
+      ],
+      "D": 127,
+      "cycles": 2048,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 32,
+          "L": 28,
+          "used": 26,
+          "B": 32,
+          "count": 2048
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 63,
+      "d": 63,
+      "support": [
+        2,
+        126
+      ],
+      "D": 126,
+      "cycles": 15375
+    },
+    "separate_strips": {
+      "p": 3,
+      "b": 6,
+      "k": 64,
+      "s": 48,
+      "per_sheet": 65,
+      "term_ceiling": 127,
+      "degree_ceiling": 127,
+      "cycles": 8320
+    },
+    "classical_seed": {
+      "n": 63,
+      "k": 63,
+      "seed_cycles": 197,
+      "support": [
+        126,
+        2
+      ],
+      "D": 126,
+      "cycles": 24822
+    }
+  },
+  {
+    "N": 255,
+    "base": {
+      "method": "base",
+      "n": 127,
+      "t": 127,
+      "support": [
+        1,
+        254
+      ],
+      "D": 253,
+      "cycles": 16002
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 126,
+      "d": 127,
+      "support": [
+        2,
+        253
+      ],
+      "D": 254,
+      "cycles": 63001
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 62,
+      "X": 124,
+      "p": 65,
+      "d": 66,
+      "support": [
+        65,
+        190
+      ],
+      "D": 247,
+      "cycles": 10168,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 65,
+          "L": 61,
+          "used": 61,
+          "B": 82,
+          "count": 10168
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 126,
+      "d": 127,
+      "support": [
+        2,
+        253
+      ],
+      "D": 254,
+      "cycles": 63001
+    },
+    "separate_strips": {
+      "p": 4,
+      "b": 6,
+      "k": 127,
+      "s": 96,
+      "per_sheet": 177,
+      "term_ceiling": 254,
+      "degree_ceiling": 253,
+      "cycles": 44958
+    },
+    "classical_seed": {
+      "n": 127,
+      "k": 126,
+      "seed_cycles": 421,
+      "support": [
+        253,
+        2
+      ],
+      "D": 254,
+      "cycles": 106092
+    }
+  },
+  {
+    "N": 256,
+    "base": {
+      "method": "base",
+      "n": 127,
+      "t": 128,
+      "support": [
+        1,
+        255
+      ],
+      "D": 255,
+      "cycles": 16129
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 127,
+      "d": 127,
+      "support": [
+        2,
+        254
+      ],
+      "D": 254,
+      "cycles": 63503
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 64,
+      "X": 128,
+      "p": 64,
+      "d": 64,
+      "support": [
+        64,
+        192
+      ],
+      "D": 255,
+      "cycles": 10240,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 10240
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 127,
+      "d": 127,
+      "support": [
+        2,
+        254
+      ],
+      "D": 254,
+      "cycles": 63503
+    },
+    "separate_strips": {
+      "p": 4,
+      "b": 6,
+      "k": 128,
+      "s": 96,
+      "per_sheet": 177,
+      "term_ceiling": 255,
+      "degree_ceiling": 255,
+      "cycles": 45312
+    },
+    "classical_seed": {
+      "n": 127,
+      "k": 127,
+      "seed_cycles": 421,
+      "support": [
+        254,
+        2
+      ],
+      "D": 254,
+      "cycles": 106934
+    }
+  },
+  {
+    "N": 257,
+    "base": {
+      "method": "base",
+      "n": 128,
+      "t": 128,
+      "support": [
+        1,
+        256
+      ],
+      "D": 255,
+      "cycles": 16256
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 127,
+      "d": 128,
+      "support": [
+        2,
+        255
+      ],
+      "D": 256,
+      "cycles": 64009
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 64,
+      "X": 128,
+      "p": 64,
+      "d": 65,
+      "support": [
+        64,
+        193
+      ],
+      "D": 255,
+      "cycles": 10496,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 65,
+          "L": 61,
+          "used": 61,
+          "B": 82,
+          "count": 10496
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 127,
+      "d": 128,
+      "support": [
+        2,
+        255
+      ],
+      "D": 256,
+      "cycles": 64009
+    },
+    "separate_strips": {
+      "p": 4,
+      "b": 6,
+      "k": 128,
+      "s": 96,
+      "per_sheet": 177,
+      "term_ceiling": 255,
+      "degree_ceiling": 255,
+      "cycles": 45312
+    },
+    "classical_seed": {
+      "n": 128,
+      "k": 127,
+      "seed_cycles": 424,
+      "support": [
+        255,
+        2
+      ],
+      "D": 256,
+      "cycles": 107696
+    }
+  },
+  {
+    "N": 261,
+    "base": {
+      "method": "base",
+      "n": 130,
+      "t": 130,
+      "support": [
+        1,
+        260
+      ],
+      "D": 259,
+      "cycles": 16770
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 129,
+      "d": 130,
+      "support": [
+        2,
+        259
+      ],
+      "D": 260,
+      "cycles": 66049
+    },
+    "fold": {
+      "r": 1,
+      "R": 2,
+      "q_max": 2,
+      "s": 64,
+      "X": 128,
+      "p": 66,
+      "d": 67,
+      "support": [
+        66,
+        195
+      ],
+      "D": 255,
+      "cycles": 11008,
+      "stages": [
+        {
+          "k": 0,
+          "j": 1,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 67,
+          "L": 63,
+          "used": 62,
+          "B": 86,
+          "count": 11008
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 129,
+      "d": 130,
+      "support": [
+        2,
+        259
+      ],
+      "D": 260,
+      "cycles": 66049
+    },
+    "separate_strips": {
+      "p": 4,
+      "b": 6,
+      "k": 130,
+      "s": 96,
+      "per_sheet": 177,
+      "term_ceiling": 257,
+      "degree_ceiling": 259,
+      "cycles": 46020
+    },
+    "classical_seed": {
+      "n": 130,
+      "k": 129,
+      "seed_cycles": 431,
+      "support": [
+        259,
+        2
+      ],
+      "D": 260,
+      "cycles": 111198
+    }
+  },
+  {
+    "N": 512,
+    "base": {
+      "method": "base",
+      "n": 255,
+      "t": 256,
+      "support": [
+        1,
+        511
+      ],
+      "D": 511,
+      "cycles": 65025
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 255,
+      "d": 255,
+      "support": [
+        2,
+        510
+      ],
+      "D": 510,
+      "cycles": 258063
+    },
+    "fold": {
+      "r": 2,
+      "R": 4,
+      "q_max": 2,
+      "s": 128,
+      "X": 256,
+      "p": 128,
+      "d": 128,
+      "support": [
+        128,
+        384
+      ],
+      "D": 511,
+      "cycles": 86016,
+      "stages": [
+        {
+          "k": 0,
+          "j": 2,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 45056
+        },
+        {
+          "k": 1,
+          "j": 1,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 40960
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 255,
+      "d": 255,
+      "support": [
+        2,
+        510
+      ],
+      "D": 510,
+      "cycles": 258063
+    },
+    "separate_strips": {
+      "p": 5,
+      "b": 6,
+      "k": 256,
+      "s": 192,
+      "per_sheet": 449,
+      "term_ceiling": 511,
+      "degree_ceiling": 511,
+      "cycles": 229888
+    },
+    "classical_seed": {
+      "n": 255,
+      "k": 255,
+      "seed_cycles": 869,
+      "support": [
+        510,
+        2
+      ],
+      "D": 510,
+      "cycles": 443190
+    }
+  },
+  {
+    "N": 1024,
+    "base": {
+      "method": "base",
+      "n": 511,
+      "t": 512,
+      "support": [
+        1,
+        1023
+      ],
+      "D": 1023,
+      "cycles": 261121
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 511,
+      "d": 511,
+      "support": [
+        2,
+        1022
+      ],
+      "D": 1022,
+      "cycles": 1040399
+    },
+    "fold": {
+      "r": 3,
+      "R": 8,
+      "q_max": 4,
+      "s": 128,
+      "X": 512,
+      "p": 256,
+      "d": 256,
+      "support": [
+        256,
+        768
+      ],
+      "D": 1023,
+      "cycles": 532480,
+      "stages": [
+        {
+          "k": 0,
+          "j": 3,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 188416
+        },
+        {
+          "k": 1,
+          "j": 2,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 180224
+        },
+        {
+          "k": 2,
+          "j": 1,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 163840
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 511,
+      "d": 511,
+      "support": [
+        2,
+        1022
+      ],
+      "D": 1022,
+      "cycles": 1040399
+    },
+    "separate_strips": {
+      "p": 6,
+      "b": 6,
+      "k": 512,
+      "s": 384,
+      "per_sheet": 1089,
+      "term_ceiling": 1023,
+      "degree_ceiling": 1023,
+      "cycles": 1115136
+    },
+    "classical_seed": {
+      "n": 511,
+      "k": 511,
+      "seed_cycles": 1765,
+      "support": [
+        1022,
+        2
+      ],
+      "D": 1022,
+      "cycles": 1803830
+    }
+  },
+  {
+    "N": 2048,
+    "base": {
+      "method": "base",
+      "n": 1023,
+      "t": 1024,
+      "support": [
+        1,
+        2047
+      ],
+      "D": 2047,
+      "cycles": 1046529
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 1023,
+      "d": 1023,
+      "support": [
+        2,
+        2046
+      ],
+      "D": 2046,
+      "cycles": 4177935
+    },
+    "fold": {
+      "r": 4,
+      "R": 16,
+      "q_max": 4,
+      "s": 256,
+      "X": 1024,
+      "p": 512,
+      "d": 512,
+      "support": [
+        512,
+        1536
+      ],
+      "D": 2047,
+      "cycles": 2899968,
+      "stages": [
+        {
+          "k": 0,
+          "j": 4,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 770048
+        },
+        {
+          "k": 1,
+          "j": 3,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 753664
+        },
+        {
+          "k": 2,
+          "j": 2,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 720896
+        },
+        {
+          "k": 3,
+          "j": 1,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 655360
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 1023,
+      "d": 1023,
+      "support": [
+        2,
+        2046
+      ],
+      "D": 2046,
+      "cycles": 4177935
+    },
+    "separate_strips": {
+      "p": 6,
+      "b": 14,
+      "k": 1024,
+      "s": 896,
+      "per_sheet": 2625,
+      "term_ceiling": 2047,
+      "degree_ceiling": 2047,
+      "cycles": 5376000
+    },
+    "classical_seed": {
+      "n": 1023,
+      "k": 1023,
+      "seed_cycles": 3557,
+      "support": [
+        2046,
+        2
+      ],
+      "D": 2046,
+      "cycles": 7277622
+    }
+  },
+  {
+    "N": 4096,
+    "base": {
+      "method": "base",
+      "n": 2047,
+      "t": 2048,
+      "support": [
+        1,
+        4095
+      ],
+      "D": 4095,
+      "cycles": 4190209
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 2047,
+      "d": 2047,
+      "support": [
+        2,
+        4094
+      ],
+      "D": 4094,
+      "cycles": 16744463
+    },
+    "fold": {
+      "r": 5,
+      "R": 32,
+      "q_max": 8,
+      "s": 256,
+      "X": 2048,
+      "p": 1024,
+      "d": 1024,
+      "support": [
+        1024,
+        3072
+      ],
+      "D": 4095,
+      "cycles": 14712832,
+      "stages": [
+        {
+          "k": 0,
+          "j": 5,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 3112960
+        },
+        {
+          "k": 1,
+          "j": 4,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 3080192
+        },
+        {
+          "k": 2,
+          "j": 3,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 3014656
+        },
+        {
+          "k": 3,
+          "j": 2,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 2883584
+        },
+        {
+          "k": 4,
+          "j": 1,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 2621440
+        }
+      ]
+    },
+    "uniform": {
+      "method": "stationary",
+      "n": 2047,
+      "d": 2047,
+      "support": [
+        2,
+        4094
+      ],
+      "D": 4094,
+      "cycles": 16744463
+    },
+    "separate_strips": {
+      "p": 7,
+      "b": 14,
+      "k": 2048,
+      "s": 1792,
+      "per_sheet": 6145,
+      "term_ceiling": 4095,
+      "degree_ceiling": 4095,
+      "cycles": 25169920
+    },
+    "classical_seed": {
+      "n": 2047,
+      "k": 2047,
+      "seed_cycles": 7141,
+      "support": [
+        4094,
+        2
+      ],
+      "D": 4094,
+      "cycles": 29235254
+    }
+  },
+  {
+    "N": 8192,
+    "base": {
+      "method": "base",
+      "n": 4095,
+      "t": 4096,
+      "support": [
+        1,
+        8191
+      ],
+      "D": 8191,
+      "cycles": 16769025
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 4095,
+      "d": 4095,
+      "support": [
+        2,
+        8190
+      ],
+      "D": 8190,
+      "cycles": 67043343
+    },
+    "fold": {
+      "r": 6,
+      "R": 64,
+      "q_max": 8,
+      "s": 512,
+      "X": 4096,
+      "p": 2048,
+      "d": 2048,
+      "support": [
+        2048,
+        6144
+      ],
+      "D": 8191,
+      "cycles": 71368704,
+      "stages": [
+        {
+          "k": 0,
+          "j": 6,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 12517376
+        },
+        {
+          "k": 1,
+          "j": 5,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 12451840
+        },
+        {
+          "k": 2,
+          "j": 4,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 12320768
+        },
+        {
+          "k": 3,
+          "j": 3,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 12058624
+        },
+        {
+          "k": 4,
+          "j": 2,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 11534336
+        },
+        {
+          "k": 5,
+          "j": 1,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 10485760
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        2048,
+        6144
+      ],
+      "D": 8191,
+      "cycles": 71368704
+    },
+    "separate_strips": {
+      "p": 8,
+      "b": 14,
+      "k": 4096,
+      "s": 3584,
+      "per_sheet": 14081,
+      "term_ceiling": 8191,
+      "degree_ceiling": 8191,
+      "cycles": 115351552
+    },
+    "classical_seed": {
+      "n": 4095,
+      "k": 4095,
+      "seed_cycles": 14309,
+      "support": [
+        8190,
+        2
+      ],
+      "D": 8190,
+      "cycles": 117190710
+    }
+  },
+  {
+    "N": 16384,
+    "base": {
+      "method": "base",
+      "n": 8191,
+      "t": 8192,
+      "support": [
+        1,
+        16383
+      ],
+      "D": 16383,
+      "cycles": 67092481
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 8191,
+      "d": 8191,
+      "support": [
+        2,
+        16382
+      ],
+      "D": 16382,
+      "cycles": 268304399
+    },
+    "fold": {
+      "r": 7,
+      "R": 128,
+      "q_max": 8,
+      "s": 1024,
+      "X": 8192,
+      "p": 4096,
+      "d": 4096,
+      "support": [
+        4096,
+        12288
+      ],
+      "D": 16383,
+      "cycles": 335675392,
+      "stages": [
+        {
+          "k": 0,
+          "j": 7,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 50200576
+        },
+        {
+          "k": 1,
+          "j": 6,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 50069504
+        },
+        {
+          "k": 2,
+          "j": 5,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 49807360
+        },
+        {
+          "k": 3,
+          "j": 4,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 49283072
+        },
+        {
+          "k": 4,
+          "j": 3,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 48234496
+        },
+        {
+          "k": 5,
+          "j": 2,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 46137344
+        },
+        {
+          "k": 6,
+          "j": 1,
+          "Y": 128,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 41943040
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        4096,
+        12288
+      ],
+      "D": 16383,
+      "cycles": 335675392
+    },
+    "separate_strips": {
+      "p": 9,
+      "b": 14,
+      "k": 8192,
+      "s": 7168,
+      "per_sheet": 31745,
+      "term_ceiling": 16383,
+      "degree_ceiling": 16383,
+      "cycles": 520110080
+    },
+    "classical_seed": {
+      "n": 8191,
+      "k": 8191,
+      "seed_cycles": 28645,
+      "support": [
+        16382,
+        2
+      ],
+      "D": 16382,
+      "cycles": 469262390
+    }
+  },
+  {
+    "N": 32768,
+    "base": {
+      "method": "base",
+      "n": 16383,
+      "t": 16384,
+      "support": [
+        1,
+        32767
+      ],
+      "D": 32767,
+      "cycles": 268402689
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 16383,
+      "d": 16383,
+      "support": [
+        2,
+        32766
+      ],
+      "D": 32766,
+      "cycles": 1073479695
+    },
+    "fold": {
+      "r": 8,
+      "R": 256,
+      "q_max": 8,
+      "s": 2048,
+      "X": 16384,
+      "p": 8192,
+      "d": 8192,
+      "support": [
+        8192,
+        24576
+      ],
+      "D": 32767,
+      "cycles": 1543766016,
+      "stages": [
+        {
+          "k": 0,
+          "j": 8,
+          "Y": 2,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 8192,
+          "L": 8188,
+          "used": 8186,
+          "B": 12272,
+          "count": 201064448
+        },
+        {
+          "k": 1,
+          "j": 7,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 200802304
+        },
+        {
+          "k": 2,
+          "j": 6,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 200278016
+        },
+        {
+          "k": 3,
+          "j": 5,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 199229440
+        },
+        {
+          "k": 4,
+          "j": 4,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 197132288
+        },
+        {
+          "k": 5,
+          "j": 3,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 192937984
+        },
+        {
+          "k": 6,
+          "j": 2,
+          "Y": 128,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 184549376
+        },
+        {
+          "k": 7,
+          "j": 1,
+          "Y": 256,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 167772160
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        8192,
+        24576
+      ],
+      "D": 32767,
+      "cycles": 1543766016
+    },
+    "separate_strips": {
+      "p": 10,
+      "b": 14,
+      "k": 16384,
+      "s": 14336,
+      "per_sheet": 70657,
+      "term_ceiling": 32767,
+      "degree_ceiling": 32767,
+      "cycles": 2315288576
+    },
+    "classical_seed": {
+      "n": 16383,
+      "k": 16383,
+      "seed_cycles": 57317,
+      "support": [
+        32766,
+        2
+      ],
+      "D": 32766,
+      "cycles": 1878048822
+    }
+  },
+  {
+    "N": 65536,
+    "base": {
+      "method": "base",
+      "n": 32767,
+      "t": 32768,
+      "support": [
+        1,
+        65535
+      ],
+      "D": 65535,
+      "cycles": 1073676289
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 32767,
+      "d": 32767,
+      "support": [
+        2,
+        65534
+      ],
+      "D": 65534,
+      "cycles": 4294443023
+    },
+    "fold": {
+      "r": 9,
+      "R": 512,
+      "q_max": 16,
+      "s": 2048,
+      "X": 32768,
+      "p": 16384,
+      "d": 16384,
+      "support": [
+        16384,
+        49152
+      ],
+      "D": 65535,
+      "cycles": 7547387904,
+      "stages": [
+        {
+          "k": 0,
+          "j": 9,
+          "Y": 2,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 16384,
+          "L": 16376,
+          "used": 16376,
+          "B": 53208,
+          "count": 1743519744
+        },
+        {
+          "k": 1,
+          "j": 8,
+          "Y": 4,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 8192,
+          "L": 8188,
+          "used": 8186,
+          "B": 12272,
+          "count": 804257792
+        },
+        {
+          "k": 2,
+          "j": 7,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 803209216
+        },
+        {
+          "k": 3,
+          "j": 6,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 801112064
+        },
+        {
+          "k": 4,
+          "j": 5,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 796917760
+        },
+        {
+          "k": 5,
+          "j": 4,
+          "Y": 56,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 689963008
+        },
+        {
+          "k": 6,
+          "j": 3,
+          "Y": 112,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 675282944
+        },
+        {
+          "k": 7,
+          "j": 2,
+          "Y": 224,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 645922816
+        },
+        {
+          "k": 8,
+          "j": 1,
+          "Y": 448,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 587202560
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        16384,
+        49152
+      ],
+      "D": 65535,
+      "cycles": 7547387904
+    },
+    "separate_strips": {
+      "p": 11,
+      "b": 14,
+      "k": 32768,
+      "s": 28672,
+      "per_sheet": 155649,
+      "term_ceiling": 65535,
+      "degree_ceiling": 65535,
+      "cycles": 10200612864
+    },
+    "classical_seed": {
+      "n": 32767,
+      "k": 32767,
+      "seed_cycles": 114661,
+      "support": [
+        65534,
+        2
+      ],
+      "D": 65534,
+      "cycles": 7514193974
+    }
+  },
+  {
+    "N": 131072,
+    "base": {
+      "method": "base",
+      "n": 65535,
+      "t": 65536,
+      "support": [
+        1,
+        131071
+      ],
+      "D": 131071,
+      "cycles": 4294836225
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 65535,
+      "d": 65535,
+      "support": [
+        2,
+        131070
+      ],
+      "D": 131070,
+      "cycles": 17178820623
+    },
+    "fold": {
+      "r": 10,
+      "R": 1024,
+      "q_max": 16,
+      "s": 4096,
+      "X": 65536,
+      "p": 32768,
+      "d": 32768,
+      "support": [
+        32768,
+        98304
+      ],
+      "D": 131071,
+      "cycles": 37166252032,
+      "stages": [
+        {
+          "k": 0,
+          "j": 10,
+          "Y": 2,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 32768,
+          "L": 32760,
+          "used": 32760,
+          "B": 106456,
+          "count": 6976700416
+        },
+        {
+          "k": 1,
+          "j": 9,
+          "Y": 4,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 16384,
+          "L": 16376,
+          "used": 16376,
+          "B": 53208,
+          "count": 6974078976
+        },
+        {
+          "k": 2,
+          "j": 8,
+          "Y": 8,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 8192,
+          "L": 8188,
+          "used": 8186,
+          "B": 12272,
+          "count": 3217031168
+        },
+        {
+          "k": 3,
+          "j": 7,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 3212836864
+        },
+        {
+          "k": 4,
+          "j": 6,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 3204448256
+        },
+        {
+          "k": 5,
+          "j": 5,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 3187671040
+        },
+        {
+          "k": 6,
+          "j": 4,
+          "Y": 112,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 2759852032
+        },
+        {
+          "k": 7,
+          "j": 3,
+          "Y": 224,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 2701131776
+        },
+        {
+          "k": 8,
+          "j": 2,
+          "Y": 448,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 2583691264
+        },
+        {
+          "k": 9,
+          "j": 1,
+          "Y": 896,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 2348810240
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        32768,
+        98304
+      ],
+      "D": 131071,
+      "cycles": 37166252032
+    },
+    "separate_strips": {
+      "p": 12,
+      "b": 14,
+      "k": 65536,
+      "s": 57344,
+      "per_sheet": 339969,
+      "term_ceiling": 131071,
+      "degree_ceiling": 131071,
+      "cycles": 44560416768
+    },
+    "classical_seed": {
+      "n": 65535,
+      "k": 65535,
+      "seed_cycles": 229349,
+      "support": [
+        131070,
+        2
+      ],
+      "D": 131070,
+      "cycles": 30060773430
+    }
+  },
+  {
+    "N": 262144,
+    "base": {
+      "method": "base",
+      "n": 131071,
+      "t": 131072,
+      "support": [
+        1,
+        262143
+      ],
+      "D": 262143,
+      "cycles": 17179607041
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 131071,
+      "d": 131071,
+      "support": [
+        2,
+        262142
+      ],
+      "D": 262142,
+      "cycles": 68717379599
+    },
+    "fold": {
+      "r": 11,
+      "R": 2048,
+      "q_max": 16,
+      "s": 8192,
+      "X": 131072,
+      "p": 65536,
+      "d": 65536,
+      "support": [
+        65536,
+        196608
+      ],
+      "D": 262143,
+      "cycles": 176577052672,
+      "stages": [
+        {
+          "k": 0,
+          "j": 11,
+          "Y": 2,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 65536,
+          "L": 65528,
+          "used": 65528,
+          "B": 212952,
+          "count": 27912044544
+        },
+        {
+          "k": 1,
+          "j": 10,
+          "Y": 4,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 32768,
+          "L": 32760,
+          "used": 32760,
+          "B": 106456,
+          "count": 27906801664
+        },
+        {
+          "k": 2,
+          "j": 9,
+          "Y": 8,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 16384,
+          "L": 16376,
+          "used": 16376,
+          "B": 53208,
+          "count": 27896315904
+        },
+        {
+          "k": 3,
+          "j": 8,
+          "Y": 16,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 8192,
+          "L": 8188,
+          "used": 8186,
+          "B": 12272,
+          "count": 12868124672
+        },
+        {
+          "k": 4,
+          "j": 7,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 12851347456
+        },
+        {
+          "k": 5,
+          "j": 6,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 12817793024
+        },
+        {
+          "k": 6,
+          "j": 5,
+          "Y": 128,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 12750684160
+        },
+        {
+          "k": 7,
+          "j": 4,
+          "Y": 224,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 11039408128
+        },
+        {
+          "k": 8,
+          "j": 3,
+          "Y": 448,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 10804527104
+        },
+        {
+          "k": 9,
+          "j": 2,
+          "Y": 896,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 10334765056
+        },
+        {
+          "k": 10,
+          "j": 1,
+          "Y": 1792,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 9395240960
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        65536,
+        196608
+      ],
+      "D": 262143,
+      "cycles": 176577052672
+    },
+    "separate_strips": {
+      "p": 13,
+      "b": 14,
+      "k": 131072,
+      "s": 114688,
+      "per_sheet": 737281,
+      "term_ceiling": 262143,
+      "degree_ceiling": 262143,
+      "cycles": 193273790464
+    },
+    "classical_seed": {
+      "n": 131071,
+      "k": 131071,
+      "seed_cycles": 458725,
+      "support": [
+        262142,
+        2
+      ],
+      "D": 262142,
+      "cycles": 120251088950
+    }
+  },
+  {
+    "N": 524288,
+    "base": {
+      "method": "base",
+      "n": 262143,
+      "t": 262144,
+      "support": [
+        1,
+        524287
+      ],
+      "D": 524287,
+      "cycles": 68718952449
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 262143,
+      "d": 262143,
+      "support": [
+        2,
+        524286
+      ],
+      "D": 524286,
+      "cycles": 274873712655
+    },
+    "fold": {
+      "r": 12,
+      "R": 4096,
+      "q_max": 16,
+      "s": 16384,
+      "X": 262144,
+      "p": 131072,
+      "d": 131072,
+      "support": [
+        131072,
+        393216
+      ],
+      "D": 524287,
+      "cycles": 817966874624,
+      "stages": [
+        {
+          "k": 0,
+          "j": 12,
+          "Y": 2,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 131072,
+          "L": 131064,
+          "used": 131064,
+          "B": 425944,
+          "count": 111658663936
+        },
+        {
+          "k": 1,
+          "j": 11,
+          "Y": 4,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 65536,
+          "L": 65528,
+          "used": 65528,
+          "B": 212952,
+          "count": 111648178176
+        },
+        {
+          "k": 2,
+          "j": 10,
+          "Y": 8,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 32768,
+          "L": 32760,
+          "used": 32760,
+          "B": 106456,
+          "count": 111627206656
+        },
+        {
+          "k": 3,
+          "j": 9,
+          "Y": 16,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 16384,
+          "L": 16376,
+          "used": 16376,
+          "B": 53208,
+          "count": 111585263616
+        },
+        {
+          "k": 4,
+          "j": 8,
+          "Y": 32,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 8192,
+          "L": 8188,
+          "used": 8186,
+          "B": 12272,
+          "count": 51472498688
+        },
+        {
+          "k": 5,
+          "j": 7,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 51405389824
+        },
+        {
+          "k": 6,
+          "j": 6,
+          "Y": 128,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 51271172096
+        },
+        {
+          "k": 7,
+          "j": 5,
+          "Y": 256,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 51002736640
+        },
+        {
+          "k": 8,
+          "j": 4,
+          "Y": 448,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 44157632512
+        },
+        {
+          "k": 9,
+          "j": 3,
+          "Y": 896,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 43218108416
+        },
+        {
+          "k": 10,
+          "j": 2,
+          "Y": 1792,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 41339060224
+        },
+        {
+          "k": 11,
+          "j": 1,
+          "Y": 3584,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 37580963840
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        131072,
+        393216
+      ],
+      "D": 524287,
+      "cycles": 817966874624
+    },
+    "separate_strips": {
+      "p": 14,
+      "b": 14,
+      "k": 262144,
+      "s": 229376,
+      "per_sheet": 1589249,
+      "term_ceiling": 524287,
+      "degree_ceiling": 524287,
+      "cycles": 833224179712
+    },
+    "classical_seed": {
+      "n": 262143,
+      "k": 262143,
+      "seed_cycles": 917477,
+      "support": [
+        524286,
+        2
+      ],
+      "D": 524286,
+      "cycles": 481020346422
+    }
+  },
+  {
+    "N": 1048576,
+    "base": {
+      "method": "base",
+      "n": 524287,
+      "t": 524288,
+      "support": [
+        1,
+        1048575
+      ],
+      "D": 1048575,
+      "cycles": 274876858369
+    },
+    "stationary": {
+      "method": "stationary",
+      "n": 524287,
+      "d": 524287,
+      "support": [
+        2,
+        1048574
+      ],
+      "D": 1048574,
+      "cycles": 1099503239183
+    },
+    "fold": {
+      "r": 13,
+      "R": 8192,
+      "q_max": 16,
+      "s": 32768,
+      "X": 524288,
+      "p": 262144,
+      "d": 262144,
+      "support": [
+        262144,
+        786432
+      ],
+      "D": 1048575,
+      "cycles": 3718523125760,
+      "stages": [
+        {
+          "k": 0,
+          "j": 13,
+          "Y": 2,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 262144,
+          "L": 262136,
+          "used": 262136,
+          "B": 851928,
+          "count": 446655627264
+        },
+        {
+          "k": 1,
+          "j": 12,
+          "Y": 4,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 131072,
+          "L": 131064,
+          "used": 131064,
+          "B": 425944,
+          "count": 446634655744
+        },
+        {
+          "k": 2,
+          "j": 11,
+          "Y": 8,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 65536,
+          "L": 65528,
+          "used": 65528,
+          "B": 212952,
+          "count": 446592712704
+        },
+        {
+          "k": 3,
+          "j": 10,
+          "Y": 16,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 32768,
+          "L": 32760,
+          "used": 32760,
+          "B": 106456,
+          "count": 446508826624
+        },
+        {
+          "k": 4,
+          "j": 9,
+          "Y": 32,
+          "e": 4,
+          "q": 2,
+          "alpha": 8,
+          "M": 16384,
+          "L": 16376,
+          "used": 16376,
+          "B": 53208,
+          "count": 446341054464
+        },
+        {
+          "k": 5,
+          "j": 8,
+          "Y": 64,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 8192,
+          "L": 8188,
+          "used": 8186,
+          "B": 12272,
+          "count": 205889994752
+        },
+        {
+          "k": 6,
+          "j": 7,
+          "Y": 128,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 4096,
+          "L": 4092,
+          "used": 4090,
+          "B": 6128,
+          "count": 205621559296
+        },
+        {
+          "k": 7,
+          "j": 6,
+          "Y": 256,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 2048,
+          "L": 2044,
+          "used": 2042,
+          "B": 3056,
+          "count": 205084688384
+        },
+        {
+          "k": 8,
+          "j": 5,
+          "Y": 512,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 1024,
+          "L": 1020,
+          "used": 1018,
+          "B": 1520,
+          "count": 204010946560
+        },
+        {
+          "k": 9,
+          "j": 4,
+          "Y": 896,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 512,
+          "L": 508,
+          "used": 506,
+          "B": 752,
+          "count": 176630530048
+        },
+        {
+          "k": 10,
+          "j": 3,
+          "Y": 1792,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 256,
+          "L": 252,
+          "used": 250,
+          "B": 368,
+          "count": 172872433664
+        },
+        {
+          "k": 11,
+          "j": 2,
+          "Y": 3584,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 128,
+          "L": 124,
+          "used": 122,
+          "B": 176,
+          "count": 165356240896
+        },
+        {
+          "k": 12,
+          "j": 1,
+          "Y": 7168,
+          "e": 2,
+          "q": 2,
+          "alpha": 4,
+          "M": 64,
+          "L": 60,
+          "used": 58,
+          "B": 80,
+          "count": 150323855360
+        }
+      ]
+    },
+    "uniform": {
+      "method": "fold",
+      "support": [
+        262144,
+        786432
+      ],
+      "D": 1048575,
+      "cycles": 3718523125760
+    },
+    "separate_strips": {
+      "p": 14,
+      "b": 30,
+      "k": 524288,
+      "s": 491520,
+      "per_sheet": 3424257,
+      "term_ceiling": 1048575,
+      "degree_ceiling": 1048575,
+      "cycles": 3590593708032
+    },
+    "classical_seed": {
+      "n": 524287,
+      "k": 524287,
+      "seed_cycles": 1834981,
+      "support": [
+        1048574,
+        2
+      ],
+      "D": 1048574,
+      "cycles": 1924113367094
+    }
+  }
+]

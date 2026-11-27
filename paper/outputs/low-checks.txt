@@ -1,0 +1,6 @@
+N=4..10 uniform [1, 2, 4, 6, 9, 25, 35]
+N=4..10 capped specialized [1, 4, 6, 10, 16, 25, 35]
+N=4..10 unrestricted specialized [4, 8, 32, 68, 108, 148, 192]
+Quartic signed intervals {2: [{'E': '4', 'lo_milli': 580, 'hi_milli': 587, 'sign': 1}, {'E': '9', 'lo_milli': -1294, 'hi_milli': -1283, 'sign': -1}], 3: [{'E': '1.25', 'lo_milli': 1182, 'hi_milli': 1199, 'sign': 1}, {'E': '4', 'lo_milli': -9425, 'hi_milli': -9385, 'sign': -1}], 4: [{'E': '1.25', 'lo_milli': 1066, 'hi_milli': 1160, 'sign': 1}, {'E': '4', 'lo_milli': -42498, 'hi_milli': -42252, 'sign': -1}, {'E': '36', 'lo_milli': 371493, 'hi_milli': 373856, 'sign': 1}]}
+Fixed integer degree: 9106819 binary digits, hexadecimal-text SHA-256 45bd93020c93a71a58f271ce1dad392ad6946c225306cca6c43e325657055b6e
+Finite support and cap checked at N=1..2048. Last-period maxima checked against every prefix at N=48..269.

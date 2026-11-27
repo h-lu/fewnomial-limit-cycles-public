@@ -1,0 +1,32 @@
+\input{tex/preamble}
+\hypersetup{pdftitle={Small supports without a degree cap},pdfauthor={Haibo Lu}}
+\renewcommand{\thesection}{U\arabic{section}}
+\renewcommand{\thetable}{U\arabic{table}}
+\setcounter{tocdepth}{1}
+\title{Small supports without a degree cap}
+\author{Haibo Lu}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We collect small-support planar polynomial fields for which the degree can grow on clearing exponents. The constructions include separated powers and specified fields with six through nine terms. We give their supports, their cleared and coprime degrees, and the return estimates for each witness. The scientific archive contains the exact exponent and bracket data \cite{LuReplay}.
+\end{abstract}
+\begingroup
+\renewcommand{\numberline}[1]{\makebox[2.5em][l]{#1}}
+\tableofcontents
+\endgroup
+\input{tex/unrestricted-sources}
+\input{tex/center-lift}
+\input{tex/separated}
+\input{tex/fixed-six}
+\input{tex/fixed-eight}
+\input{tex/fixed-errors}
+\input{tex/fixed-seven-nine}
+\begingroup
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\input{tex/primitive-fields}
+\par\endgroup
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

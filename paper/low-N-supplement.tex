@@ -1,0 +1,50 @@
+\input{tex/preamble}
+\hypersetup{pdftitle={Degree-capped fields and finite return certificates},pdfauthor={Haibo Lu},filecolor=blue!50!black}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{tocdepth}{1}
+\makeatletter
+\let\basesectiontoc\l@section
+\renewcommand{\l@section}[2]{\begingroup\let\orig@numberline\numberline\renewcommand{\numberline}[1]{\makebox[2.5em][l]{##1}}\basesectiontoc{#1}{#2}\endgroup}
+\makeatother
+\title{Degree-capped fields and finite return certificates\\[4pt]\large Supplement to \emph{A superquadratic lower bound for limit cycles of planar polynomial vector fields with \(N\) monomials and degree at most \(N-1\)}}
+\author{Haibo Lu}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give the literature and ordinary-support calculations behind the degree-capped comparisons. A one-coordinate lift gives four hyperbolic cycles at five terms and degree four. Two-well fields cover six through eight terms, and a fully specified rational field has 783 hyperbolic cycles at degree 31. We also evaluate the fold loss at a dyadic budget and exhibit both an attainable and an obstructed primitive on a fifth-degree fold.
+\end{abstract}
+The source archive contains the integer and interval calculations \cite{LuReplay}. Separate companion notes treat fields of unrestricted degree and returns on a single-row binary saddle tree.
+
+\tableofcontents
+\input{tex/sources}
+\input{tex/renewal-support-detail}
+\input{tex/mechanical-support-detail}
+\input{tex/strip-budgets}
+\input{tex/canard-strips}
+\input{tex/low-cap}
+\input{tex/stationary}
+\input{tex/witness}
+\clearpage
+\section{Bounds for the loss at one dyadic budget}\label{sup:reproduction}
+In equation~(\paperlink{main}{equation.4.7}{eq:finite-main}{4.7}) of the article take \(N=2^b\) with \(b=2^{128}\). Then \(r=b-7,\ R=N/128,\ X_*=T=N/2\). For this folded count the normalized loss satisfies
+\begin{equation}\label{eq:single-deficit}
+ \frac{137}{4}<\delta_N:=b-\frac{\mathcal F(N)}{N^2}\le\frac{1503}{32}.
+\end{equation}
+For \(j=r-k\) we have \(M_k=2^{j+5}\). Put \(w_k=Y_k/2^{k+1}\) and let \(B_k^*\) be the maximum over the permitted prefixes at that stage. Dividing the stage sum by \(N^2\) gives
+\[
+ \delta_N=7+\sum_{j=1}^r\left(1-\frac{w_k B_k^*}{4q_j M_k}\right).
+\]
+Each summand is nonnegative since \(w_k\le1\) and \(B_k^*\le4q_jM_k\). Retain \(j=1,\ldots,128\) and keep only block indices \(i\le20\) in the product for \(w_k\). This can only increase the retained weights and gives a lower bound for the loss. The resulting finite rational sum exceeds \(137/4\) (\path{verify_transfer.py}, function \texttt{deficit\_certificate} \cite{LuReplay}).
+
+For the upper bound, \(p=d=N/4\) is divisible by \(2^{k+1}\) at every stage, so \(M_k=T/2^{k+1}\). Apply the stage inequality~(\paperlink{main}{equation.5.1}{eq:Bq-linear-lower}{5.1}) and the estimates in the proof of Theorem~\paperlink{main}{theorem.1.1}{cor:linear-cap}{1.1} in Section~\othernumber{sec:sum}{5} of the article. The seven omitted levels, branch loss, two sums involving \(q_j\), and two errors proportional to \(R\) give respectively
+\[
+ 7+\frac52+\frac{3\cdot22}{4}+\frac{41}{2}+\frac{24+36}{128}=\frac{1503}{32}.
+\]
+
+\input{tex/quintic-fold}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

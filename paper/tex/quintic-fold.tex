@@ -1,0 +1,52 @@
+\section{A fifth-degree fold and an obstruction to prescribing a primitive}\label{sec:quintic}
+
+The asymmetric fold \(J(z)=z^4(1+z)\) illustrates why Lemma~\othernumber{lem:whole-disk-division}{3.2} (applied below with \((A,B)=(H,B)\)) varies the potential along with the drive. Their coupled variation realizes a limiting primitive of degree thirteen with a drive correction of degree eleven. With the potential fixed, corrections of that degree cannot converge to the prescribed primitive. A second inherited drive on the same disks obstructs polynomial realization of that specified primitive at every degree. Subtraction of the two branch values on a level is the balance of Grau, Ma\~nosas and Villadelprat \cite[{\S}1, before Theorem~A]{GrauEtAl2011}. The example has $N=27$ and $D=29>26=N-1$. At the same term count Proposition~\othernumber{prop:stationary-budget}{6.1} gives $529$ hyperbolic cycles at degree $26$.
+
+\begin{proposition}\label{prop:quintic}
+Let $z=y^2-1$, $J(z)=z^4(1+z)$, and take the inherited drive $J$ and potentials
+\[
+ U(x)=\tau^{12}x^2,\qquad \bar V=A(J),\qquad
+ A(t)=t^3/3+\tau^4 t^2/2 .
+\]
+For every rational $0<\tau\le2^{-40}$, polynomial changes $\lambda H(z)$ of $\bar V$ and $\lambda B(z)$ of the drive, with $\deg H\le9$, $\deg B=11$, give a simple zero of the area moment in each of the two rows near $y=\pm1$, for one common small positive rational $\lambda$. The limiting primitive in $Z=z/\tau$ has degree $13$. At $\tau=2^{-40}$, a field of the form (\othernumber{eq:separable-template}{1.1}), with rational coefficients, coprime components, exact term counts $\splitcount{15}{12}$ and degree $29$, realizes the two corresponding hyperbolic cycles. Their return multipliers are reciprocal.
+\end{proposition}
+
+\begin{proof}
+In the scaled chart the potential $A(J(\tau Z))/\tau^{12}$ tends on compact sets with all derivatives to
+$\Psi(Z)=Z^8/2+Z^{12}/3$. Use energies $E\in[3/4,5/4]$ for $x^2+\Psi(Z)$ and take the levels $1/2,3/2$ for the inner core and outer boundary of Lemma~\othernumber{lem:disk-core}{3.3}. These disks lie in $|Z|<2$. Both physical charts are regular there for small $\tau$. On each side of $z=0$, $J$ is monotone locally, since $J'=z^3(4+5z)$. Also $A'(t)>0$ for $t>0$. The two endpoints of each nonempty vertical slice have the same value of $J$, so the inherited drive has zero moment on each disk.
+
+Choose $S(0)=0$ and $S'=\Psi+(3/2)Z\Psi'-1$. With $\mathcal A(E)$ the area of $\{x^2+\Psi(Z)<E\}$, integration first in $x$ gives
+\begin{equation}\label{eq:quintic-moment}
+ \iint_{x^2+\Psi<E} S'(Z)\,\dd x\dd Z=(E-1)\mathcal A(E).
+\end{equation}
+Indeed the integral of $\partial_Z[Z(E-\Psi)^{3/2}]$ between the turning points vanishes. After $Z=E^{1/8}u$, $\mathcal A(E)/E^{5/8}$ decreases with $E$ since the coefficient of $u^{12}$ in the scaled potential increases. Thus $0\le E\mathcal A'(E)\le5\mathcal A(E)/8$. The right side of \eqref{eq:quintic-moment} has opposite endpoint signs and derivative at least $19\mathcal A(E)/24$ on the bracket.
+
+Here $D_0=J(J+\tau^4)$, $E_0=1$. The factor $C=z^4$ includes the full multiplicity of the root inside the disk, leaving $D_{\rm reg}=D_0/C=(1+z)(J+\tau^4)$. Prescribe
+\[
+ N_0=z^4\tau^4\bigl(1+(z/\tau)^4\bigr)S(z/\tau).
+\]
+After cancellation the effective primitive is
+\[
+ \left.\frac{N_0}{D_0}\right|_{z=\tau Z}
+ =\frac{(1+Z^4)S(Z)}{(1+\tau Z)\{1+Z^4(1+\tau Z)\}} .
+\]
+It converges to $S$ in $C^2([-2,2])$. For $\tau\le1/4$ the denominator is at least $1/2$ on this interval. Omitting $C$ would leave a pole of order three at $z=0$. The division gives $C\mid H$ and $(\deg D_0,\deg N_0)=(10,21)$, so $\deg H\le9$ and $\deg B=11$. Indeed degree $11$ is necessary for this numerator even if $\deg H$ is allowed to reach the inherited potential degree $15$, since $D_0B-H=N_0$. A drive change alone of degree at most $11$ cannot converge under this rescaling to $S$ of degree $13$, by closedness of the space of polynomials of degree at most $11$ on a nontrivial interval.
+
+Here one can fix the scale explicitly. Write $u=1+\tau Z$, $w=Zu^{1/4}$ and $\theta=Z^4/(1+Z^4)$. The scaled energy becomes exactly $x^2+\Psi(w)$. The effective primitive in $w$ is $T(w)=K S(Z)$, where $K^{-1}=u(1+\theta(u-1))$. For $\tau\le1/8$, $|Z|\le2$ gives $3/4\le u\le5/4$. The chart covers $|w|\le3/2$ since $|w(\pm2)|\ge 2(3/4)^{1/4}>3/2$, and $\Psi(3/2)>3/2$ puts the entire outer disk inside this chart. In the following bounds primes on \(w,K,\theta\) denote derivatives with respect to \(Z\). The mean value theorem gives $|w-Z|\le2\tau$, $|w'-1|\le2\tau$ and $w'\ge3/4$. Also $K^{-1}\ge9/16$, $|K^{-1}-1|\le9\tau/2$. Using $|\theta'|\le32$ gives $|(K^{-1})'|\le83\tau$, hence $|K-1|\le9\tau$ and $|K'|\le512\tau$. From the displayed $S'$ one has $|S|,|S'|,|S''|\le2^{19}$ on $[-2,2]$. On the outer disk these bounds give
+\[
+ |T'(w)-S'(w)|\le
+ \frac{2^{19}(512+9+2+2)\tau}{3/4}<2^{30}\tau .
+\]
+Indeed differentiate $KS$ and compare $S'(Z)$ with $S'(w)$ before dividing by $w'$. At $\tau\le2^{-40}$ the error in the moment is at most $2^{-10}\mathcal A(E)$, and its energy derivative has error at most $2^{-10}\mathcal A'(E)$ by the coarea formula on the regular boundary. These bounds preserve both signs and the slope, with a common orientation reversal on the negative row.
+
+For each such $\tau$, the first variation (\othernumber{eq:shape-derivative-green}{3.5}) and the vanishing inherited moments give both simple zeros at physical energies $\tau^{12}E$ for one sufficiently small positive rational $\lambda$. Subtract the constant drive value at $y=0$. At $\tau=2^{-40}$ the family already contains every required power of $v=y^2$ for all but finitely many $\lambda$. To check the coefficients, first evaluate them at $\lambda=1$. The products over $i=1,\ldots,15$ and $i=1,\ldots,11$ of the $v^i$ coefficients of $A(J(v-1))+H(v-1)$ and $J(v-1)+B(v-1)$ are respectively $71$ and $7$ modulo $101$. These short divisions can be reproduced over $\mathbb F_{101}$ by setting $\tau=87$, taking $H=(-N_0)\bmod D_0$ and $B=(N_0+H)/D_0$. Consequently every required coefficient is a nonzero polynomial in $\lambda$. With $\tau=2^{-40}$ fixed, choose a positive rational $\lambda$ in the common interval above, avoiding the finitely many coefficient roots. Lemma~\othernumber{lem:hyperbolic-return}{1.2} then gives an interval $0<\mu<\mu_0(\tau,\lambda)$ valid on both collars. Choose any rational \(\mu\) in this interval. At the fixed scale \(\tau=2^{-40}\), this one rational pair \((\lambda,\mu)\) gives one hyperbolic cycle near \(y=1\) and one near \(y=-1\). The resources are the $15$ odd powers through $y^{29}$ in the first component, $x$ and the $11$ positive even powers through $y^{22}$ in the second. The coefficient of $x$ is $-2\tau^{12}$, so the two components are coprime. Reflection in $y=0$ reverses time for this field. It exchanges the two collars and conjugates a return map to the inverse return on the other, giving the reciprocal multipliers.
+\end{proof}
+
+\paragraph{A failure with the same fold and the same disks.}
+Replace the inherited drive $J$ by $J^2/2+\tau^4J$, keeping $N_0$ and the potential fixed. Its derivative in $J$ is now $E_0=J+\tau^4$. The inherited moment still vanishes on every disk, but $\Gamma=\gcd(D_{\rm reg},E_0)=J+\tau^4$ has degree five. For $0<\tau\le1/4$ this polynomial has a real root $\xi\in(-2,-1)$. There $R=(\tau^4+z^4)S(z/\tau)$ is nonzero, since
+\[
+ S(u)=u\bigl(-1+13u^8/18+19u^{12}/39\bigr)
+\]
+has no zero for $|u|\ge2$. Adding a constant to the primitive changes the numerator by a multiple of $D_{\rm reg}$. Since $\Gamma\nmid R$, the specified primitive has no polynomial realization at any degree, even up to a constant. Other primitives may give the same integrated moment or other cycles.
+
+The quintic has prime degree and local order four at the origin. Its transfer uses the common value of $J$ on the two slice endpoints and the nonvanishing of the remaining factor on the disk. The branch multiplicities and recurrent critical values used in Theorem~\othernumber{thm:finite-folded}{4.1} require the separate quadratic construction of Lemma~\othernumber{lem:recurrent-folds}{3.1}.

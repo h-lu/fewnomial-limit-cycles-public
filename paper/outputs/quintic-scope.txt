@@ -1,0 +1,8 @@
+tau = 2^-40. Degrees of A(J), D0, N0, H, B: 15, 10, 21, 9, 11.
+Translated coefficient products at lambda = 1 modulo 101: 71, 7.
+[y^29]P = 10; [x]Q = -2 tau^12; [y^22]Q = 19 mu lambda/(39 tau^13).
+Exact support (15, 12), N = 27, D = 29, cap = 26.
+Elementary field at N = 27: n = t = 13, lower bound 156, degree 25.
+The residual factor J + tau^4 does not divide the prescribed numerator R.
+Squares of the five published 2019 radii match the first five small-oval marks.
+Largest transcribed energy = 361/400; disk bound y^2 >= 3/20.
